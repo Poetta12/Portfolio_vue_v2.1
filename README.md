@@ -1,4 +1,5 @@
 # Portfolio_vue_v2.1
+<<<<<<< HEAD
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -59,3 +60,6 @@ npm run test:e2e -- --debug
 ```sh
 npm run lint
 ```
+=======
+portfolio vs 2.1
+>>>>>>> 9c70fb9a1bf08f26554b3fae905710f1d0da324b
