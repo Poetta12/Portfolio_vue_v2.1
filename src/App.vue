@@ -19,7 +19,9 @@ import '@/assets/Icomoon/style.css'
 
 <style scoped>
 main {
-  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem; /* Réduit le padding pour les petits écrans */
 }
 
 header {
@@ -37,6 +39,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  padding: 1rem 0; /* Ajoute du padding pour les petits écrans */
 }
 
 nav a.router-link-exact-active {
@@ -48,26 +51,24 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  display: block; /* Change à block pour les petits écrans */
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border); /* Ajoute une bordure basse pour les petits écrans */
 }
 
 nav a:first-of-type {
   border: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   main {
-    padding: 1rem;
+    padding: 2rem; /* Augmente le padding pour les écrans moyens et plus grands */
   }
-}
 
-@media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
-    padding: 0 4rem;
+    padding: 0 4rem; /* Augmente le padding pour les écrans moyens et plus grands */
   }
 
   .logo {
@@ -82,10 +83,21 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
+    margin-left: 0; /* Réinitialise la marge pour les écrans moyens et plus grands */
     font-size: 1rem;
-    padding: 1rem 0;
+    padding: 0; /* Réinitialise le padding pour les écrans moyens et plus grands */
     margin-top: 1rem;
+  }
+
+  nav a {
+    display: inline-block; /* Change à inline-block pour les écrans moyens et plus grands */
+    padding: 0 1rem;
+    border-left: 1px solid var(--color-border);
+    border-bottom: 0; /* Supprime la bordure basse pour les écrans moyens et plus grands */
+  }
+
+  nav a:first-of-type {
+    border: 0;
   }
 }
 </style>

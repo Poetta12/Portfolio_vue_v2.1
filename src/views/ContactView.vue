@@ -5,7 +5,7 @@
         <h2>Contact</h2>
         <p>Contactez-moi via le formulaire ci-dessous :</p>
       </div>
-      <img src="/src/assets/logos/logo.png" alt="Logo" class="logo" />
+      <img src="/src/assets/logos/logo.png" alt="Logo" class="logo hidden" />
     </div>
     <form @submit.prevent="handleSubmit" id="contact_form" novalidate>
       <div class="form-group" :class="{ invalid: !isNameValid }">
@@ -194,26 +194,24 @@ onMounted(() => {
 
 #contact-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  place-content: space-between;
   margin-bottom: 2rem;
 }
 
 #contact-header img {
-  width: 150px;
+  width: 100px;
 }
 #contact-container {
   background-color: #111;
   color: #fff;
-  padding: 3rem;
+  padding: 1rem;
   border: 1px solid #333;
   box-shadow: 0 0 20px #0ff3;
   border-radius: 15px;
   font-family: Orbitron, sans-serif;
-  transition: transform 0.3s ease;
-  max-width: 1200px;
-  margin: 2rem auto;
-  width: 60%;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
 
 #contact-container:hover {
@@ -221,14 +219,14 @@ onMounted(() => {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   color: #00ffff;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .form-group {
@@ -238,7 +236,7 @@ p {
 label {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #00ffff;
 }
 
@@ -246,7 +244,7 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   font-size: 1rem;
   color: #fff;
   text-shadow: 1px 1px 2px #000;
@@ -268,7 +266,7 @@ select {
 }
 
 textarea {
-  height: 150px;
+  height: 100px;
   resize: none;
 }
 
@@ -295,7 +293,7 @@ textarea::placeholder {
 
 #form_button:hover {
   background-color: #fdc17b;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #form_button:focus {
@@ -305,15 +303,87 @@ textarea::placeholder {
 
 #bloc-submit {
   display: flex;
-}
-#bloc-submit div {
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #bloc-submit #form_button {
   width: 100%;
-  height: 78px;
+  height: 50px;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+#rc-imageselect,
+.g-recaptcha {
+  text-align: center;
+  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+}
+.recaptcha {
+  margin: auto;
+}
+@media (min-width: 371px) {
+  #rc-imageselect,
+  .g-recaptcha {
+    text-align: center;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+  .submit {
+    width: 300px;
+    margin: auto;
+  }
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 600px) {
+  #contact-header {
+    flex-direction: row;
+    place-content: space-between;
+  }
+
+  #contact-header img {
+    width: 150px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  #form_button {
+    font-size: 1.5rem;
+    height: 78px;
+  }
+}
+@media (min-width: 768px) {
+  #contact-header img.hidden {
+    display: block;
+  }
+  #bloc-submit #form_button {
+    font-size: 1.5rem;
+    height: 74px;
+    margin-bottom: 0;
+  }
+  #bloc-submit {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 </style>
