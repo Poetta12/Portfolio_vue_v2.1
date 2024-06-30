@@ -6,7 +6,7 @@ const router = useRouter()
 
 const downloadCV = () => {
   const pdfUrl =
-    'https://drive.google.com/file/d/17YlNwXMS51f5C5qWoNrWkZtd0Xzp-5Zv/view?usp=drive_link'
+    'https://drive.google.com/file/d/1g--iGF3stf8Ku8JaW8DtQw8BkpLFBCTe/view?usp=drive_link'
   // const pdfUrl = '/public/CV-Pedro_Costa.pdf'
   const link = document.createElement('a')
   link.href = pdfUrl
