@@ -201,11 +201,29 @@
       <section class="references">
         <h3>Références</h3>
         <ul>
-          <li>Brieuc Lebars, Code Phenix (brieuc@codephenix.com)</li>
-          <li>Aliou Diaby, Formateur indépendant Développeur Web (diabyaliou19@gmail.com)</li>
           <li>
-            Philippe Strapazzon, Campus Numérique in the Alps
-            (philippe.strappazzon@le-campus-numerique.fr)
+            <p>
+              Brieuc Lebars, Code Phenix <br />
+              <a href="mailto:brieuc@codephenix.com"
+                ><span class="icon-email"></span>brieuc@codephenix.com</a
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              Aliou Diaby, Formateur indépendant Développeur Web <br />
+              <a href="mailto:diabyaliou19@gmail.com"
+                ><span class="icon-email"></span>diabyaliou19@gmail.com</a
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              Philippe Strapazzon, Campus Numérique in the Alps <br />
+              <a href="mailto:philippe.strappazzon@le-campus-numerique.fr"
+                ><span class="icon-email"></span>philippe.strappazzon@le-campus-numerique.fr</a
+              >
+            </p>
           </li>
         </ul>
       </section>
@@ -253,7 +271,7 @@ body {
 
 .left-side {
   width: 35%; /* Largeur du côté gauche */
-  background: #333; /* Fond légèrement plus clair */
+  background: #111; /* Fond légèrement plus clair */
   font-size: 1rem;
 }
 
@@ -279,14 +297,16 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-.left-side ul li a:hover {
+.left-side ul li a:hover,
+.references ul li a:hover {
   color: #a2cbf5; /* Couleur de lien au survol */
 }
 
 .links ul li {
   margin-bottom: 10px;
 }
-.links ul li:before {
+.links ul li:before,
+.references ul li a span {
   padding-right: 10px;
 }
 .skills ul,
@@ -360,8 +380,8 @@ section {
 
 section h3 {
   font-size: 1.5rem;
-  color: #0ff;
-  border-bottom: 2px solid #0ff;
+  color: #009fff;
+  border-bottom: 2px solid #009fff;
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
@@ -405,6 +425,16 @@ section h3 {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 15px;
+}
+
+.references ul li a {
+  display: flex;
+  align-items: center;
+  color: #009fff;
+}
+
+.references ul li a:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 .tooltip {

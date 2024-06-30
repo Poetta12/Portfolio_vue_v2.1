@@ -12,10 +12,12 @@
     "isolatedModules": true
     // Add other compiler options as needed
   },
-  "files": [],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
   "exclude": [
-    "node_modules",
-    "**/*.html"  // Exclude all HTML files
+    "node_modules"
   ]
 }
-
