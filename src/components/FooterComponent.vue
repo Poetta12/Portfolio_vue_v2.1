@@ -183,7 +183,6 @@ footer {
 #footerColumn > div {
   flex: 0 0 23%;
   max-width: 23%;
-  text-align: left;
 }
 
 #footerColumn h5 {
