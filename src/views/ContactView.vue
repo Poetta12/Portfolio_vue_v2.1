@@ -125,7 +125,11 @@ onMounted(() => {
       </div>
       <div id="bloc-submit">
         <div class="recaptcha">
-          <div class="g-recaptcha" data-sitekey="6LfcPQMqAAAAAB5-L1sVv4dmQEZoh7fLM6HTh4co"></div>
+          <div
+            class="g-recaptcha"
+            :data-sitekey="'6LfcPQMqAAAAAB5-L1sVv4dmQEZoh7fLM6HTh4co'"
+            data-callback="onReCAPTCHASuccess"
+          ></div>
         </div>
         <div class="submit">
           <input type="submit" value="Envoyer le message" id="form_button" />
@@ -185,16 +189,35 @@ textarea {
   padding: 1rem;
   font-size: 1rem;
   color: #fff;
-  /* background-color: #fff; */
+  text-shadow: 1px 1px 2px #000;
   border: none;
   border-radius: 5px;
   margin-bottom: 1rem;
-  background: linear-gradient(#111, #0ff);
+  background: linear-gradient(#0ff, #111);
+}
+
+option {
+  color: #222;
+  text-shadow: none;
+}
+
+select {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 1px 1px 1px #333;
 }
 
 textarea {
   height: 150px;
   resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  opacity: 0.5; /* Firefox */
+  font-family: 'Orbitron', sans-serif;
 }
 
 #form_button {
