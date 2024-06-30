@@ -7,7 +7,7 @@ const router = useRouter()
 const downloadCV = () => {
   // const pdfUrl =
   //   'https://drive.google.com/file/d/17YlNwXMS51f5C5qWoNrWkZtd0Xzp-5Zv/view?usp=drive_link'
-  const pdfUrl = 'FullStack/Env_Vue/Vue3_world/Portfolio_vue_v2.1/public/docs/CV-Pedro_Costa.pdf'
+  const pdfUrl = '/public/docs/CV-Pedro_Costa.pdf'
   const link = document.createElement('a')
   link.href = pdfUrl
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
