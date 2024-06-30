@@ -62,6 +62,7 @@ const viewCV = () => {
           <div>
             <button class="cv-view icon-eye" @click="viewCV"></button>
             <button class="icon-download2" @click="downloadCV"></button>
+            <a href="/public/CV-Pedro_Costa.pdf">CV TEST</a>
           </div>
         </section>
       </article>
