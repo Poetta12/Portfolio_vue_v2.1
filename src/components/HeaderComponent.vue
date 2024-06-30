@@ -21,7 +21,8 @@ watchEffect(() => {
   <header>
     <div id="header-container">
       <div class="logo">
-        <img src="/public/logo/WDS_logo_white-150x123.png" alt="Logo" />
+        <!-- <img src="/public/logo/logo.png" alt="Logo" /> -->
+        <img src="/src/assets/logos/logo.png" alt="Logo" />
       </div>
       <ul id="header-reseaux">
         <li><a href="https://www.poettatech.fr" class="icon-profile"></a></li>
