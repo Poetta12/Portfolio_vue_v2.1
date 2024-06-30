@@ -1,75 +1,14 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-
-const name = ref('')
-const email = ref('')
-const telephone = ref('')
-const subject = ref('')
-const message = ref('')
-let recaptchaResponse = ref('')
-
-const handleSubmit = async () => {
-  if (!recaptchaResponse.value) {
-    alert('Veuillez compléter le reCAPTCHA.')
-    return
-  }
-
-  const formData = {
-    name: name.value,
-    email: email.value,
-    telephone: telephone.value,
-    subject: subject.value,
-    message: message.value,
-    'g-recaptcha-response': recaptchaResponse.value
-  }
-
-  try {
-    const response = await axios.post('https://formspree.io/f/mjkbbqko', formData)
-    if (response.status === 200) {
-      alert('Votre message a été envoyé avec succès!')
-      clearForm()
-    } else {
-      alert('Une erreur est survenue. Veuillez réessayer plus tard.')
-    }
-  } catch (error) {
-    alert('Une erreur est survenue. Veuillez réessayer plus tard.')
-    console.error(error)
-  }
-}
-
-const clearForm = () => {
-  name.value = ''
-  email.value = ''
-  telephone.value = ''
-  subject.value = ''
-  message.value = ''
-  recaptchaResponse.value = ''
-  if (window.grecaptcha) {
-    window.grecaptcha.reset()
-  }
-}
-
-onMounted(() => {
-  const script = document.createElement('script')
-  script.src = 'https://www.google.com/recaptcha/api.js'
-  script.async = true
-  script.defer = true
-  script.onload = () => {
-    window.onReCAPTCHASuccess = (response) => {
-      recaptchaResponse.value = response
-    }
-  }
-  document.head.appendChild(script)
-})
-</script>
-
 <template>
   <div id="contact-container">
-    <h2>Contact</h2>
-    <p>Contactez-moi via le formulaire ci-dessous :</p>
-    <form @submit.prevent="handleSubmit" id="contact_form">
-      <div class="form-group">
+    <div id="contact-header">
+      <div>
+        <h2>Contact</h2>
+        <p>Contactez-moi via le formulaire ci-dessous :</p>
+      </div>
+      <img src="/src/assets/logos/logo.png" alt="Logo" class="logo" />
+    </div>
+    <form @submit.prevent="handleSubmit" id="contact_form" novalidate>
+      <div class="form-group" :class="{ invalid: !isNameValid }">
         <label for="name">Nom</label>
         <input
           v-model="name"
@@ -77,10 +16,15 @@ onMounted(() => {
           placeholder="Je m'appelle ..."
           name="name"
           id="name_input"
+          pattern="[A-Za-zÀ-ÖØ-öø-ÿ-' ]+"
+          title="Nom invalide. Utilisez uniquement des lettres, des tirets ou des espaces."
           required
         />
+        <span class="tooltip" v-if="!isNameValid"
+          >Nom invalide. Utilisez uniquement des lettres, des tirets ou des espaces.</span
+        >
       </div>
-      <div class="form-group">
+      <div class="form-group" :class="{ invalid: !isEmailValid }">
         <label for="email">Email</label>
         <input
           v-model="email"
@@ -90,8 +34,11 @@ onMounted(() => {
           id="email_input"
           required
         />
+        <span class="tooltip" v-if="!isEmailValid"
+          >Email invalide. Veuillez entrer une adresse email valide.</span
+        >
       </div>
-      <div class="form-group">
+      <div class="form-group" :class="{ invalid: !isTelephoneValid }">
         <label for="telephone">Téléphone</label>
         <input
           v-model="telephone"
@@ -99,8 +46,13 @@ onMounted(() => {
           placeholder="Mon numéro est ..."
           name="telephone"
           id="telephone_input"
+          pattern="[0-9]{10}"
+          title="Numéro de téléphone invalide. Veuillez entrer 10 chiffres."
           required
         />
+        <span class="tooltip" v-if="!isTelephoneValid"
+          >Numéro de téléphone invalide. Veuillez entrer 10 chiffres.</span
+        >
       </div>
       <div class="form-group">
         <label for="subject">Sujet</label>
@@ -139,20 +91,129 @@ onMounted(() => {
   </div>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
+
+const name = ref('')
+const email = ref('')
+const telephone = ref('')
+const subject = ref('')
+const message = ref('')
+let recaptchaResponse = ref('')
+const isNameValid = ref(true)
+const isEmailValid = ref(true)
+const isTelephoneValid = ref(true)
+
+const handleSubmit = async () => {
+  // Validation regex
+  const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ-' ]+$/
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  const phoneRegex = /^[0-9]{10}$/
+
+  // Validation des champs
+  if (!nameRegex.test(name.value)) {
+    isNameValid.value = false
+    return
+  } else {
+    isNameValid.value = true
+  }
+
+  if (!emailRegex.test(email.value)) {
+    isEmailValid.value = false
+    return
+  } else {
+    isEmailValid.value = true
+  }
+
+  if (!phoneRegex.test(telephone.value)) {
+    isTelephoneValid.value = false
+    return
+  } else {
+    isTelephoneValid.value = true
+  }
+
+  // Autres validations selon vos besoins
+  // ...
+
+  // Envoyer le formulaire si tout est valide
+  const formData = {
+    name: name.value,
+    email: email.value,
+    telephone: telephone.value,
+    subject: subject.value,
+    message: message.value,
+    'g-recaptcha-response': recaptchaResponse.value
+  }
+
+  try {
+    const response = await axios.post('https://formspree.io/f/mjkbbqko', formData)
+    if (response.status === 200) {
+      alert('Votre message a été envoyé avec succès!')
+      clearForm()
+    } else {
+      alert('Une erreur est survenue. Veuillez réessayer plus tard.')
+    }
+  } catch (error) {
+    alert('Une erreur est survenue. Veuillez réessayer plus tard.')
+    console.error(error)
+  }
+}
+
+const clearForm = () => {
+  name.value = ''
+  email.value = ''
+  telephone.value = ''
+  subject.value = ''
+  message.value = ''
+  recaptchaResponse.value = ''
+  isNameValid.value = true
+  isEmailValid.value = true
+  isTelephoneValid.value = true
+  if (window.grecaptcha) {
+    window.grecaptcha.reset()
+  }
+}
+
+onMounted(() => {
+  const script = document.createElement('script')
+  script.src = 'https://www.google.com/recaptcha/api.js'
+  script.async = true
+  script.defer = true
+  script.onload = () => {
+    window.onReCAPTCHASuccess = (response) => {
+      recaptchaResponse.value = response
+    }
+  }
+  document.head.appendChild(script)
+})
+</script>
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+#contact-header {
+  display: flex;
+  align-items: center;
+  place-content: space-between;
+  margin-bottom: 2rem;
+}
+
+#contact-header img {
+  width: 150px;
+}
 #contact-container {
   background-color: #111;
   color: #fff;
   padding: 3rem;
   border: 1px solid #333;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px #0ff3;
   border-radius: 15px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: Orbitron, sans-serif;
   transition: transform 0.3s ease;
-  max-width: 768px;
+  max-width: 1200px;
   margin: 2rem auto;
+  width: 60%;
 }
 
 #contact-container:hover {
@@ -168,7 +229,6 @@ h2 {
 
 p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
 }
 
 .form-group {
