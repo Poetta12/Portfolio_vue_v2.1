@@ -27,6 +27,11 @@ const goToHome = () => {
   closeMenu()
   router.push('/')
 }
+
+// Scroll to top after route change
+router.afterEach(() => {
+  window.scrollTo(0, 0)
+})
 </script>
 
 <template>
@@ -42,7 +47,7 @@ const goToHome = () => {
         <li><a href="https://www.linkedin.com/in/pedronfcosta/" class="icon-linkedin"></a></li>
       </ul>
       <!-- Burger Button -->
-      <div @click="toggleMenu" :class="{ open: menuOpen }" class="menu-button hide-desktop">
+      <div @click="toggleMenu" :class="{ open: menuOpen }" class="menu-button">
         <span></span>
         <span></span>
         <span></span>
@@ -54,8 +59,9 @@ const goToHome = () => {
           <li><router-link to="/poetta" @click="closeMenu">Poetta</router-link></li>
           <li><router-link to="/cv" @click="closeMenu">CV</router-link></li>
           <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
+          <li><router-link to="/portfolio" @click="closeMenu">Portfolio</router-link></li>
           <!-- <li><a href="#">PortFolio</a></li>
-          <li><a href="#">Contact</a></li> -->
+      <li><a href="#">Contact</a></li> -->
         </ul>
       </nav>
     </div>
@@ -63,7 +69,8 @@ const goToHome = () => {
 </template>
 
 <style scoped>
-/* Les styles restent inchangés */
+/* Styles de base pour les écrans mobiles */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 header {
@@ -103,33 +110,11 @@ header {
 }
 
 #header-reseaux {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  width: 30%;
-  margin: auto;
-}
-
-#header-reseaux li {
-  display: flex;
-  align-items: center;
-}
-
-#header-reseaux a {
-  font-size: 2rem;
-  color: #fdc17b;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease;
-}
-
-#header-reseaux a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  display: none; /* Caché par défaut sur mobile */
 }
 
 .menu-button {
-  display: none;
+  display: flex;
   background: none;
   border: none;
   cursor: pointer;
@@ -141,6 +126,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 2000;
+  margin-right: 1rem;
 }
 
 .menu-button span {
@@ -165,9 +151,26 @@ header {
 
 .main-nav {
   display: flex;
+  align-items: self-end;
   justify-content: flex-end;
-  align-items: center;
-  position: relative;
+  text-align: end;
+  padding-bottom: 50px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  max-width: 300px;
+  background-color: #111;
+  z-index: 1500;
+  flex-direction: column;
+  padding-top: 4rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-nav.show {
+  transform: translateX(0);
 }
 
 .main-nav ul {
@@ -175,92 +178,93 @@ header {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: column;
 }
 
 .main-nav ul li {
-  margin-left: 1rem;
+  margin: 1rem;
 }
 
 .main-nav ul li a {
-  display: inline-block;
   text-decoration: none;
   color: #fff;
-  padding: 0 1rem;
-  transition: background-color 0.3s ease;
   font-size: 1.5rem;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.main-nav ul li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+.main-nav ul li a:hover {
+  color: #fdc17b;
 }
 
 .menu-button.hide-desktop {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .menu-button.hide-desktop {
+/* Media queries pour les écrans plus larges (desktop) */
+
+@media (min-width: 769px) {
+  #header-reseaux {
     display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 30%;
+    margin: auto;
+  }
+
+  #header-reseaux li {
+    display: flex;
+    align-items: center;
+  }
+
+  #header-reseaux a {
+    font-size: 2rem;
+    color: #fdc17b;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.3s ease;
+  }
+
+  #header-reseaux a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
   }
 
   .main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 999;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
-  }
-
-  .main-nav.show {
-    transform: translateX(0);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
   }
 
   .main-nav ul {
-    flex-direction: column;
-    margin-top: 5rem;
-    padding: 0.3rem;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px 0 0 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
   }
 
   .main-nav ul li {
-    margin: 0.5rem 0;
+    margin-left: 1rem;
   }
 
-  .menu-button {
-    display: flex;
-    margin-right: 1rem;
+  .main-nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 1rem;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 
-  .menu-button span {
-    width: 30px;
-    height: 4px;
-    background-color: #fdc17b;
+  .main-nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
   }
 
-  .menu-button.open span:nth-child(1) {
-    transform: translateY(12px) rotate(45deg);
-  }
-
-  .menu-button.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-button.open span:nth-child(3) {
-    transform: translateY(-12px) rotate(-45deg);
-  }
-
-  .menu-opened {
-    overflow: hidden;
+  .menu-button.hide-desktop {
+    display: none;
   }
 }
 </style>

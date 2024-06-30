@@ -73,7 +73,7 @@ const viewCV = () => {
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 #about {
-  width: 60%;
+  width: 100%; /* Largeur maximale par défaut pour les appareils mobiles */
   margin: auto;
   padding: 3rem 1rem;
   background-color: #111;
@@ -124,8 +124,8 @@ const viewCV = () => {
 }
 
 .profile-details h2 {
+  text-align: center;
   font-size: 3rem;
-  margin: 0;
   color: #00ffff;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
@@ -135,7 +135,7 @@ const viewCV = () => {
   color: #fdc17b;
   margin: 0;
   text-shadow: 0 0 10px rgba(255, 193, 123, 0.8);
-  text-align: right;
+  text-align: center; /* Alignement au centre pour les appareils mobiles */
 }
 
 .contact-info {
@@ -160,42 +160,42 @@ const viewCV = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   margin-bottom: 1rem;
 }
 
 .contact-info li span {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #00ffff;
 }
 
 .contact-info li a,
 .contact-info li p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .cv-download {
-  display: flex;
-  width: 60%;
+  width: 80%; /* Largeur maximale par défaut pour les appareils mobiles */
   margin: auto;
 }
 
 .cv-download div {
   display: flex;
-  place-content: flex-end;
-  width: 90%;
+  place-content: center; /* Alignement centré pour les appareils mobiles */
+  width: 100%; /* Largeur maximale par défaut pour les appareils mobiles */
 }
 
 .cv-download h2 {
   font-size: 1.8rem;
   color: #00ffff;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  text-align: center; /* Alignement centré pour les appareils mobiles */
 }
 
 .cv-download button {
-  width: 40%;
+  width: 100%; /* Largeur maximale par défaut pour les appareils mobiles */
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -207,7 +207,7 @@ const viewCV = () => {
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
-  text-align: center;
+  text-align: center; /* Alignement centré pour les appareils mobiles */
 }
 
 .cv-download button:hover {
@@ -222,7 +222,7 @@ const viewCV = () => {
 
 @media (min-width: 768px) {
   #about {
-    width: 60%;
+    width: 100%; /* Largeur pour les tablettes et écrans plus larges */
     padding: 3rem;
   }
 

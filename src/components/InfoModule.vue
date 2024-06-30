@@ -87,8 +87,8 @@ window.onclick = function (event) {
 
 <style scoped>
 #info-module {
-  width: 60%;
-  padding: 2rem 0;
+  width: 100%;
+
   margin: auto;
 }
 
@@ -152,9 +152,7 @@ window.onclick = function (event) {
 
 #bloc1 section {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: auto;
 }
 
 #bloc1 article {
@@ -162,7 +160,7 @@ window.onclick = function (event) {
   place-content: space-between;
   align-items: center;
   cursor: pointer;
-  width: 24%;
+  width: 100%; /* Ajustement pour mobile */
   background-color: #111;
   color: #fdc17b;
   padding: 15px;
@@ -195,6 +193,8 @@ window.onclick = function (event) {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 10px;
+  text-align: center;
 }
 
 .read-more:hover {
@@ -202,16 +202,28 @@ window.onclick = function (event) {
   color: #111;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 440px) {
+  #bloc1 section {
+    display: flex;
+    place-content: space-between;
+    flex-wrap: wrap;
+  }
   #bloc1 article {
-    width: 45%;
-    max-width: 400px;
+    width: 49%;
   }
 }
 
-@media (max-width: 1024px) {
-  #info-module {
-    width: 70%;
+@media (min-width: 768px) {
+  #bloc1 article {
+    width: 49%;
+    max-width: 400px;
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #bloc1 article {
+    width: 24%; /* Retour à la largeur pour les grands écrans */
   }
 }
 </style>
