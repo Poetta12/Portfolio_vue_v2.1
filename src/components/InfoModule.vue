@@ -87,7 +87,7 @@ window.onclick = function (event) {
 
 <style scoped>
 #info-module {
-  width: 90%;
+  width: 60%;
   padding: 2rem 0;
   margin: auto;
 }

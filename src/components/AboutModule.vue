@@ -73,7 +73,7 @@ const viewCV = () => {
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 #about {
-  width: 80%;
+  width: 60%;
   margin: auto;
   padding: 3rem 1rem;
   background-color: #111;
@@ -222,7 +222,7 @@ const viewCV = () => {
 
 @media (min-width: 768px) {
   #about {
-    width: 90%;
+    width: 60%;
     padding: 3rem;
   }
 

@@ -1,10 +1,15 @@
 <script setup>
 import { ref, watchEffect } from 'vue'
+import { useRouter } from 'vue-router'
 
 const menuOpen = ref(false)
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
+}
+
+const closeMenu = () => {
+  menuOpen.value = false
 }
 
 // Observer les changements de menuOpen et gérer le scroll
@@ -15,13 +20,19 @@ watchEffect(() => {
     document.body.style.overflow = 'auto'
   }
 })
+
+const router = useRouter()
+
+const goToHome = () => {
+  closeMenu()
+  router.push('/')
+}
 </script>
 
 <template>
   <header>
     <div id="header-container">
-      <div class="logo">
-        <!-- <img src="/public/logo/logo.png" alt="Logo" /> -->
+      <div class="logo" @click="goToHome">
         <img src="/src/assets/logos/logo.png" alt="Logo" />
       </div>
       <ul id="header-reseaux">
@@ -41,7 +52,8 @@ watchEffect(() => {
         <ul>
           <li><router-link to="/" @click="closeMenu">Accueil</router-link></li>
           <li><router-link to="/poetta" @click="closeMenu">Poetta</router-link></li>
-          <li><router-link to="/CV">CV</router-link></li>
+          <li><router-link to="/cv" @click="closeMenu">CV</router-link></li>
+          <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
           <!-- <li><a href="#">PortFolio</a></li>
           <li><a href="#">Contact</a></li> -->
         </ul>
@@ -51,6 +63,7 @@ watchEffect(() => {
 </template>
 
 <style scoped>
+/* Les styles restent inchangés */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 header {
@@ -76,6 +89,7 @@ header {
 
 .logo {
   width: 75px;
+  cursor: pointer;
 }
 
 .logo img {
