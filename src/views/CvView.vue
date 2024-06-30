@@ -205,7 +205,7 @@
             <p>
               Brieuc Lebars, Code Phenix <br />
               <a href="mailto:brieuc@codephenix.com"
-                ><span class="icon-email"></span>brieuc@codephenix.com</a
+                ><span class="icon-mail1"></span>brieuc@codephenix.com</a
               >
             </p>
           </li>
@@ -213,7 +213,7 @@
             <p>
               Aliou Diaby, Formateur indépendant Développeur Web <br />
               <a href="mailto:diabyaliou19@gmail.com"
-                ><span class="icon-email"></span>diabyaliou19@gmail.com</a
+                ><span class="icon-mail1"></span>diabyaliou19@gmail.com</a
               >
             </p>
           </li>
@@ -221,7 +221,7 @@
             <p>
               Philippe Strapazzon, Campus Numérique in the Alps <br />
               <a href="mailto:philippe.strappazzon@le-campus-numerique.fr"
-                ><span class="icon-email"></span>philippe.strappazzon@le-campus-numerique.fr</a
+                ><span class="icon-mail1"></span>philippe.strappazzon@le-campus-numerique.fr</a
               >
             </p>
           </li>

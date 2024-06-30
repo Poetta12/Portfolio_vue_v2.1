@@ -172,6 +172,8 @@ header {
   color: #fff;
   padding: 0 1rem;
   transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .main-nav ul li:hover {

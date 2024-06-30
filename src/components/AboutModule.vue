@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const downloadCV = () => {
-  const pdfUrl =
-    'https://drive.google.com/file/d/17YlNwXMS51f5C5qWoNrWkZtd0Xzp-5Zv/view?usp=drive_link'
+  // const pdfUrl =
+  //   'https://drive.google.com/file/d/17YlNwXMS51f5C5qWoNrWkZtd0Xzp-5Zv/view?usp=drive_link'
+  const pdfUrl = 'FullStack/Env_Vue/Vue3_world/Portfolio_vue_v2.1/public/docs/CV-Pedro_Costa.pdf'
   const link = document.createElement('a')
   link.href = pdfUrl
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
@@ -13,8 +17,8 @@ const downloadCV = () => {
 }
 
 const viewCV = () => {
-  const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
-  window.open(pdfUrl, '_blank')
+  // Utilisation de router.push pour naviguer vers la route nommée 'CV'
+  router.push({ name: 'CV' })
 }
 </script>
 
@@ -100,8 +104,8 @@ const viewCV = () => {
 }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #00ffff;
@@ -120,7 +124,7 @@ const viewCV = () => {
 }
 
 .profile-details h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
   color: #00ffff;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
@@ -131,6 +135,7 @@ const viewCV = () => {
   color: #fdc17b;
   margin: 0;
   text-shadow: 0 0 10px rgba(255, 193, 123, 0.8);
+  text-align: right;
 }
 
 .contact-info {
@@ -173,13 +178,14 @@ const viewCV = () => {
 
 .cv-download {
   display: flex;
-  width: 100%;
+  width: 60%;
+  margin: auto;
 }
 
 .cv-download div {
   display: flex;
   place-content: flex-end;
-  width: 100%;
+  width: 90%;
 }
 
 .cv-download h2 {
