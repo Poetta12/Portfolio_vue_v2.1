@@ -4,10 +4,19 @@
       <section class="personal-info">
         <h3>Informations personnelles</h3>
         <ul>
-          <li>Email: <a href="mailto:pedro.costa@poettatech.fr">pedro.costa@poettatech.fr</a></li>
-          <li>Téléphone: <a href="callto:0753812381">0753812381</a></li>
-          <li>Localisation: Annecy, 74000</li>
-          <li>Permis: B</li>
+          <li>
+            <span class="icon-email"></span
+            ><a href="mailto:pedro.costa@poettatech.fr">pedro.costa@poettatech.fr</a>
+          </li>
+          <li><span class="icon-phone"></span><a href="callto:0753812381">0753812381</a></li>
+          <li>
+            <span class="icon-location1"></span>
+            <p>Annecy, 74000</p>
+          </li>
+          <li>
+            <span class="icon-v-card"></span>
+            <p>Permis: B</p>
+          </li>
         </ul>
       </section>
 
@@ -25,14 +34,16 @@
         <h3>Formation</h3>
         <ul>
           <li>
-            <strong>Dev Avancé, TP6</strong> (Campus Numérique in the Alps, avr. 2024 - janv. 2026)
+            <strong>Dev Avancé</strong>
+            <span>(Campus Numérique in the Alps, avr. 2024 - janv. 2026)</span>
           </li>
           <li>
-            <strong>Licence - JAVA</strong> (Conservatoire National des Arts et Métiers, sept. 2023
-            - juin 2026)
+            <strong>Licence - JAVA</strong>
+            <span>(Conservatoire National des Arts et Métiers, sept. 2023 - juin 2026)</span>
           </li>
           <li>
-            <strong>Licence - MUC</strong> (Universidade Nova de Lisboa, sept. 2020 - juin 2023)
+            <strong>Licence - MUC</strong>
+            <span>(Universidade Nova de Lisboa, sept. 2020 - juin 2023)</span>
           </li>
         </ul>
       </section>
@@ -132,7 +143,7 @@
     <div class="right-side">
       <header>
         <h1>Pedro Costa</h1>
-        <h2>Développeur full stack junior</h2>
+        <h2>Développeur Full Stack Jr</h2>
       </header>
 
       <section class="profile">
@@ -232,11 +243,12 @@
 </template>
 
 <script setup>
-import jsLogo from '@/assets/logos/js.png' // Utilisation d'un chemin d'importation absolu avec Vite
+//import jsLogo from '@/assets/logos/js.png' // Utilisation d'un chemin d'importation absolu avec Vite
 </script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 /* Assurez-vous d'inclure ce reset au début de votre fichier CSS */
 *,
 *::before,
@@ -254,25 +266,25 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column-reverse;
   width: 100%;
-  max-width: 1100px; /* Largeur maximale ajustée pour le contenu */
   margin: 20px auto;
   font-family: 'Orbitron', sans-serif;
-  border-radius: 10px;
+  border-radius: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 .left-side,
 .right-side {
-  padding: 20px;
+  width: 100%;
+  padding: 15px;
 }
 
 .left-side {
-  width: 35%; /* Largeur du côté gauche */
   background: #111; /* Fond légèrement plus clair */
   font-size: 1rem;
+  text-align: center; /* Centre le texte sur les petits écrans */
 }
 
 .left-side h3 {
@@ -286,10 +298,15 @@ body {
 }
 
 .left-side ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   margin-bottom: 10px;
 }
 
-.left-side ul li a {
+.left-side ul li a,
+.left-side ul li p {
   color: #0ff;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -302,24 +319,39 @@ body {
   color: #a2cbf5; /* Couleur de lien au survol */
 }
 
+.education ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+.education ul li:after {
+  width: 50%;
+  height: 1px;
+  margin: auto;
+  content: '';
+  border-bottom: 1px solid #0ff;
+}
+
 .links ul li {
   margin-bottom: 10px;
 }
+
 .links ul li:before,
 .references ul li a span {
   padding-right: 10px;
 }
+
 .skills ul,
 .languages ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /* Alignement à gauche */
+  justify-content: center; /* Centre les compétences et langues sur les petits écrans */
 }
 
 .skills img,
 .languages img {
-  width: 65px; /* Taille des logos réduite */
-  height: 65px;
+  width: 64px; /* Taille des logos réduite */
+  height: 64px;
   filter: grayscale(100%) brightness(0.5); /* Effet visuel pour les logos */
   transition: filter 0.3s ease;
 }
@@ -331,24 +363,18 @@ body {
 
 .skills ul li,
 .languages ul li {
-  margin-right: 20px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
-.languages ul li {
-  margin-right: 10px;
-}
-
 .skills ul li span,
 .languages ul li span {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #fff;
 }
 
 .right-side {
-  width: 65%; /* Largeur du côté droit */
   background: #fff; /* Fond légèrement plus clair */
   color: #111;
   font-weight: 600;
@@ -357,20 +383,21 @@ body {
 header {
   background: linear-gradient(135deg, #fdc17b, #0ff); /* Dégradé pour le header */
   padding: 20px;
-  border-radius: 0 100px 100px 0; /* Coins arrondis sur le header */
+  border-radius: 0 70px 70px 0; /* Coins arrondis sur le header */
   margin-bottom: 20px;
   margin-left: -20px;
+  text-align: center; /* Centre le texte sur les petits écrans */
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   color: #333;
   font-weight: bold;
 }
 
 header h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #222;
 }
 
@@ -384,17 +411,6 @@ section h3 {
   border-bottom: 2px solid #009fff;
   padding-bottom: 5px;
   margin-bottom: 20px;
-}
-
-.skills ul li,
-.languages ul li {
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-
-.skills ul li span,
-.languages ul li span {
-  font-size: 1rem;
 }
 
 .experience > ul {
@@ -475,38 +491,78 @@ section h3 {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .container {
-    flex-direction: column;
-    max-width: 100%; /* Pleine largeur sur les petits écrans */
-    border-radius: 0;
+    flex-direction: row;
+    max-width: 1200px; /* Largeur maximale ajustée pour le contenu */
+    border-radius: 10px;
   }
 
-  .left-side,
+  .left-side {
+    width: 35%; /* Largeur du côté gauche */
+    text-align: left; /* Alignement à gauche pour les écrans plus larges */
+  }
+
+  .left-side ul li {
+    justify-content: start;
+  }
+
+  .left-side ul li a,
+  .left-side ul li p {
+    font-size: 1.2rem;
+  }
+
   .right-side {
-    width: 100%; /* Pleine largeur sur les petits écrans */
-    padding: 15px;
-  }
-
-  .left-side h3,
-  .right-side header h1 {
-    text-align: center; /* Centre le texte sur les petits écrans */
+    width: 65%; /* Largeur du côté droit */
   }
 
   .skills ul,
   .languages ul {
-    justify-content: center; /* Centre les compétences et langues sur les petits écrans */
+    justify-content: space-evenly; /* Alignement à gauche pour les écrans plus larges */
   }
 
   .skills img,
   .languages img {
-    width: 40px;
-    height: 40px;
+    width: 65px; /* Taille des logos ajustée pour les écrans plus larges */
+    height: 65px;
   }
 
   .skills ul li span,
   .languages ul li span {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  header {
+    margin-left: -15px;
+  }
+}
+@media (min-width: 1024px) {
+  #left-side .personal-info {
+    background: orange;
+  }
+  .education ul li {
+    width: 100%;
+    display: flex;
+    place-content: space-between;
+    flex-direction: row;
+  }
+
+  .education ul li:after {
+    width: 0;
+    height: 0;
+    content: '';
+    border-bottom: none;
+  }
+  .education ul li span {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills img,
+  .languages img {
+    width: 90px;
+    height: 90px;
   }
 }
 </style>
