@@ -62,14 +62,10 @@ const goToHome = () => {
 </template>
 
 <style scoped>
-/* Styles communs pour les écrans mobiles et de bureau */
-
+/* Import de la police */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-#header-reseaux {
-  display: none; /* Caché par défaut sur mobile */
-}
-
+/* Styles par défaut pour mobile */
 header {
   position: sticky;
   top: 0;
@@ -106,22 +102,8 @@ header {
   transform: scale(1.1);
 }
 
-#header-reseaux li {
-  display: flex;
-  align-items: center;
-}
-
-#header-reseaux a {
-  font-size: 2rem;
-  color: #fdc17b;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease;
-}
-
-#header-reseaux a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+#header-reseaux {
+  display: none; /* Caché par défaut sur mobile */
 }
 
 .menu-button {
@@ -160,18 +142,22 @@ header {
 
 .main-nav {
   position: fixed;
-  bottom: 0;
-  left: 350px;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   flex-direction: column;
-  place-content: end;
   align-items: flex-end;
+  place-content: end;
   z-index: 999;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
+}
+
+.main-nav.flex {
+  transform: translateX(0);
 }
 
 .main-nav ul {
@@ -212,6 +198,8 @@ header {
 .flex {
   display: flex;
 }
+
+/* Media queries pour les écrans plus larges */
 @media (min-width: 769px) {
   #header-reseaux {
     display: flex;
@@ -220,14 +208,32 @@ header {
     width: 30%;
     margin: auto;
   }
+
+  #header-reseaux li {
+    display: flex;
+    align-items: center;
+  }
+
+  #header-reseaux a {
+    font-size: 2rem;
+    color: #fdc17b;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.3s ease;
+  }
+
+  #header-reseaux a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  }
 }
 
 @media (min-width: 1024px) {
-  /* Media query pour les écrans plus larges */
+  .menu-button {
+    display: none;
+  }
 
   .main-nav {
-    width: 100%;
-    left: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -245,14 +251,6 @@ header {
     margin-top: 0;
     background: none;
     border-radius: 0;
-  }
-
-  .main-nav ul li {
-    margin-top: 0;
-  }
-
-  .menu-button {
-    display: none;
   }
 
   .menu-button.hide-desktop {
