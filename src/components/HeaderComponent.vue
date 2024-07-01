@@ -152,7 +152,7 @@ header {
   place-content: start;
   z-index: 999;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   overflow: hidden;
 }
 
@@ -161,11 +161,14 @@ header {
 }
 
 .main-nav ul {
+  height: inherit;
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
+  place-content: center;
+  align-items: end;
   margin-top: 5rem;
   padding: 0.3rem;
   background: rgba(0, 0, 0, 0.7);
@@ -174,6 +177,7 @@ header {
 
 .main-nav ul li {
   margin: 0.5rem 0;
+  margin: 30px 0;
 }
 
 .main-nav ul li a {
