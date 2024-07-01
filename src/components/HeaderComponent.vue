@@ -149,7 +149,7 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
   flex-direction: column;
   align-items: flex-end;
-  place-content: end;
+  place-content: start;
   z-index: 999;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
