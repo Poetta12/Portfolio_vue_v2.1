@@ -27,11 +27,6 @@ const goToHome = () => {
   closeMenu()
   router.push('/')
 }
-
-// Scroll to top after route change
-router.afterEach(() => {
-  window.scrollTo(0, 0)
-})
 </script>
 
 <template>
@@ -47,21 +42,19 @@ router.afterEach(() => {
         <li><a href="https://www.linkedin.com/in/pedronfcosta/" class="icon-linkedin"></a></li>
       </ul>
       <!-- Burger Button -->
-      <div @click="toggleMenu" :class="{ open: menuOpen }" class="menu-button">
+      <div @click="toggleMenu" :class="{ open: menuOpen }" class="menu-button hide-desktop">
         <span></span>
         <span></span>
         <span></span>
       </div>
       <!-- Navigation Menu -->
-      <nav :class="{ show: menuOpen }" class="main-nav">
+      <nav :class="{ 'main-nav': true, flex: menuOpen, hidden: !menuOpen }">
         <ul>
           <li><router-link to="/" @click="closeMenu">Accueil</router-link></li>
           <li><router-link to="/poetta" @click="closeMenu">Poetta</router-link></li>
           <li><router-link to="/cv" @click="closeMenu">CV</router-link></li>
-          <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
           <li><router-link to="/portfolio" @click="closeMenu">Portfolio</router-link></li>
-          <!-- <li><a href="#">PortFolio</a></li>
-      <li><a href="#">Contact</a></li> -->
+          <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
         </ul>
       </nav>
     </div>
@@ -69,9 +62,13 @@ router.afterEach(() => {
 </template>
 
 <style scoped>
-/* Styles de base pour les écrans mobiles */
+/* Styles communs pour les écrans mobiles et de bureau */
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+#header-reseaux {
+  display: none; /* Caché par défaut sur mobile */
+}
 
 header {
   position: sticky;
@@ -109,12 +106,25 @@ header {
   transform: scale(1.1);
 }
 
-#header-reseaux {
-  display: none; /* Caché par défaut sur mobile */
+#header-reseaux li {
+  display: flex;
+  align-items: center;
+}
+
+#header-reseaux a {
+  font-size: 2rem;
+  color: #fdc17b;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+#header-reseaux a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 
 .menu-button {
-  display: flex;
   background: none;
   border: none;
   cursor: pointer;
@@ -126,7 +136,6 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 2000;
-  margin-right: 1rem;
 }
 
 .menu-button span {
@@ -150,27 +159,19 @@ header {
 }
 
 .main-nav {
-  display: flex;
-  align-items: self-end;
-  justify-content: flex-end;
-  text-align: end;
-  padding-bottom: 50px;
   position: fixed;
-  top: 0;
-  right: 0;
   bottom: 0;
-  width: 70%;
-  max-width: 300px;
-  background-color: #111;
-  z-index: 1500;
+  left: 350px;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   flex-direction: column;
-  padding-top: 4rem;
-  transform: translateX(100%);
+  place-content: end;
+  align-items: flex-end;
+  z-index: 999;
+  transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
-}
-
-.main-nav.show {
-  transform: translateX(0);
+  overflow: hidden;
 }
 
 .main-nav ul {
@@ -179,30 +180,38 @@ header {
   margin: 0;
   display: flex;
   flex-direction: column;
+  margin-top: 5rem;
+  padding: 0.3rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px 0 0 10px;
 }
 
 .main-nav ul li {
-  margin: 1rem;
+  margin: 0.5rem 0;
 }
 
 .main-nav ul li a {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
+  padding: 0 1rem;
+  transition: background-color 0.3s ease;
   font-size: 1.5rem;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-.main-nav ul li a:hover {
-  color: #fdc17b;
+.main-nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
 .menu-button.hide-desktop {
-  display: none;
+  display: flex;
 }
 
-/* Media queries pour les écrans plus larges (desktop) */
-
+.flex {
+  display: flex;
+}
 @media (min-width: 769px) {
   #header-reseaux {
     display: flex;
@@ -211,56 +220,39 @@ header {
     width: 30%;
     margin: auto;
   }
+}
 
-  #header-reseaux li {
-    display: flex;
-    align-items: center;
-  }
-
-  #header-reseaux a {
-    font-size: 2rem;
-    color: #fdc17b;
-    transition:
-      color 0.3s ease,
-      text-shadow 0.3s ease;
-  }
-
-  #header-reseaux a:hover {
-    color: #00ffff;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-  }
+@media (min-width: 1024px) {
+  /* Media query pour les écrans plus larges */
 
   .main-nav {
+    width: 100%;
+    left: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     position: relative;
+    background: none;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    transform: none;
+    overflow: visible;
   }
 
   .main-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    background: none;
+    border-radius: 0;
   }
 
   .main-nav ul li {
-    margin-left: 1rem;
+    margin-top: 0;
   }
 
-  .main-nav ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    padding: 0 1rem;
-    transition: background-color 0.3s ease;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .main-nav ul li:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+  .menu-button {
+    display: none;
   }
 
   .menu-button.hide-desktop {

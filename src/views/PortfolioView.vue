@@ -33,7 +33,9 @@ import Modal from '../components/ModalComponent.vue'
 const projects = ref([
   {
     title: 'HandiPhil',
-    imageUrl: '/src/assets/img/HandiPhil.png',
+    imageUrl: '/assets/img/HandiPhil.png',
+    //imageUrl:
+    //'https://drive.google.com/file/d/1RuLBoyiSQBCm2L9r_gYH-IME-E5zz-nc/view?usp=drive_link',
     description: `En tant que développeur web, j'ai eu l'opportunité enrichissante de travailler sur mon tout premier projet client, Handiphil, pour le Fonds de Dotation Handiphil. Ce projet revêt une importance particulière car il soutient activement l'inclusion des personnes handicapées mentales, cognitives ou psychiques en Île-de-France.
 
     Mon rôle central dans ce projet comprenait la conception et le développement d'un site web dynamique utilisant WordPress. J'ai été chargé de personnaliser le thème WordPress avec du code JavaScript, CSS, HTML et PHP pour répondre aux besoins spécifiques de l'association et assurer une expérience utilisateur optimale.
@@ -43,7 +45,9 @@ const projects = ref([
   },
   {
     title: 'La Cravate Solidaire',
-    imageUrl: '/src/assets/img/La_Cravate_Solidaire.png',
+    imageUrl: './assets/img/La_Cravate_Solidaire.png',
+    //imageUrl:
+    //'https://drive.google.com/file/d/1PDLqpmfsqSkUBD618d1W-fWCHJfNPUbg/view?usp=drive_link',
     description: `Pour mon deuxième projet client, j'ai collaboré avec La Cravate Solidaire (https://lacravatesolidaire.org/), une association œuvrant pour l'emploi des personnes en difficulté. 
 
     J'ai développé des compétences approfondies en Vue.js pour créer des composants interactifs et dynamiques, améliorant ainsi l'expérience utilisateur du site. En parallèle, j'ai assuré un design responsive en utilisant CSS, SASS et Bootstrap, garantissant une navigation optimale sur tous les appareils. 
@@ -58,6 +62,8 @@ const projects = ref([
   {
     title: 'Sumika',
     imageUrl: '/src/assets/img/Sumika.png',
+    //imageUrl:
+    //'https://drive.google.com/file/d/1z4OAC8B2KJ8Qk-YagNRm-_mAN_CnlrK0/view?usp=drive_link',
     description: `Pour mon troisième projet avec Sumika Europe (https://www.sumikaeurope.com), j'ai dirigé le développement d'un site web dynamique en utilisant WordPress, tout en intégrant des animations personnalisées avec CSS et JavaScript conformément au cahier des charges. 
 
     J'ai également configuré un module avancé avec Advanced Custom Fields (ACF) en PHP et HTML, offrant au client un tableau de bord sécurisé pour gérer efficacement le contenu du site.
@@ -69,7 +75,9 @@ const projects = ref([
   },
   {
     title: 'PoettaTech WSDS',
-    imageUrl: '/src/assets/img/PoettaTech_WSDS.png',
+    imageUrl: './src/assets/img/PoettaTech_WSDS.png',
+    //imageUrl:
+    //'https://drive.google.com/file/d/1-A2wDKSxZpVNkdIZ1EwTUFebifsUuTVY/view?usp=drive_link',
     description: `Poettatch.fr est mon portfolio personnel développé avec Vue.js, mettant en avant mes compétences en développement web. Le site présente une interface interactive avec un design responsive optimisé pour tous les appareils. 
     
     J'ai intégré des animations fluides et des fonctionnalités avancées en JavaScript pour enrichir l'expérience utilisateur. Les sections incluent mes informations personnelles, mes liens professionnels (LinkedIn, GitHub), mon parcours éducatif, mes compétences techniques (HTML, CSS, JavaScript, PHP, Vue.js, etc.), ainsi que mes expériences professionnelles précédentes. 

@@ -68,7 +68,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding: 0 4rem; /* Augmente le padding pour les écrans moyens et plus grands */
+    padding: 0 2rem; /* Augmente le padding pour les écrans moyens et plus grands */
   }
 
   .logo {
