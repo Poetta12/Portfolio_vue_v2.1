@@ -58,7 +58,7 @@ const projects = ref([
   },
   {
     title: 'Sumika',
-    imageUrl: '/src/assets/img/Sumika.png',
+    imageUrl: '/Sumika.png',
     description: `<p>Pour mon troisième projet avec Sumika Europe (https://www.sumikaeurope.com), j'ai dirigé le développement d'un site web dynamique en utilisant WordPress, tout en intégrant des animations personnalisées avec CSS et JavaScript conformément au cahier des charges.</p>
 
     <p>J'ai également configuré un module avancé avec Advanced Custom Fields (ACF) en PHP et HTML, offrant au client un tableau de bord sécurisé pour gérer efficacement le contenu du site.</p>
@@ -70,7 +70,7 @@ const projects = ref([
   },
   {
     title: 'PoettaTech WSDS',
-    imageUrl: './src/assets/img/PoettaTech_WSDS.png',
+    imageUrl: '/PoettaTech_WSDS.png',
     description: `<p>Poettatch.fr est mon portfolio personnel développé avec Vue.js, mettant en avant mes compétences en développement web. Le site présente une interface interactive avec un design responsive optimisé pour tous les appareils.</p>
     
     <p>J'ai intégré des animations fluides et des fonctionnalités avancées en JavaScript pour enrichir l'expérience utilisateur. Les sections incluent mes informations personnelles, mes liens professionnels (LinkedIn, GitHub), mon parcours éducatif, mes compétences techniques (HTML, CSS, JavaScript, PHP, Vue.js, etc.), ainsi que mes expériences professionnelles précédentes.</p>
