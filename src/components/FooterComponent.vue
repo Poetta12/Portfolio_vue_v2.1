@@ -121,14 +121,13 @@ footer {
 }
 
 #footerNav ul {
+  font-size: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   border-top: 1px solid #00ffff;
   border-bottom: 1px solid #00ffff;
-  padding: 1rem 0;
   margin-bottom: 2rem;
-  list-style: disclosure-closed;
+  list-style: none;
 }
 
 #footerNav button {
@@ -295,8 +294,12 @@ footer {
     padding: 1rem;
   }
   #footerNav ul {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    line-height: 2.5;
+  }
+  #footerNav ul li {
+    width: 33%;
   }
 
   #footerColumn {
