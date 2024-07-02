@@ -6,7 +6,9 @@
         <button class="modal-close" @click="closeModal">&times;</button>
       </header>
       <section class="modal-body">
-        <slot name="body"></slot>
+        <div class="modal-description">
+          <slot name="body"></slot>
+        </div>
       </section>
     </div>
   </div>
@@ -19,7 +21,7 @@ const emit = defineEmits(['close'])
 
 const closeModal = () => {
   emit('close')
-  document.body.classList.remove('modal-open') // Supprime la classe qui empêche le défilement du corps
+  document.body.classList.remove('modal-open')
 }
 
 // Ajouter la classe pour empêcher le défilement du corps
@@ -37,20 +39,20 @@ document.body.classList.add('modal-open')
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto; /* Permet le défilement à l'intérieur de la modal */
-  z-index: 9999; /* Assure que la modal est au-dessus de tout */
+  overflow-y: auto;
+  z-index: 9999;
 }
 
 .modal-content {
   background: #222;
   padding: 1rem;
   border-radius: 10px;
-  max-width: 90%; /* Pleine largeur pour les appareils mobiles */
-  max-height: 90vh; /* Limite la hauteur pour éviter le débordement */
+  max-width: 90%;
+  max-height: 90vh;
   position: relative;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
   border: 1px solid rgba(0, 255, 255, 0.5);
-  overflow-y: auto; /* Permet le défilement du contenu à l'intérieur de la modal */
+  overflow-y: auto;
 }
 
 .modal-header,
@@ -70,31 +72,32 @@ document.body.classList.add('modal-open')
 }
 
 .modal-close {
-  position: fixed;
-  bottom: 30px; /* Ajusté pour les appareils mobiles */
-  right: 20px; /* Ajusté pour les appareils mobiles */
+  position: absolute;
+  top: 5px;
+  right: 10px;
   background: none;
   border: none;
-  font-size: 2rem; /* Bouton de fermeture plus petit pour les appareils mobiles */
+  font-size: 2rem;
   cursor: pointer;
   color: red;
-  border: 1px solid red;
-  border-radius: 70px;
-  padding: 0 9px 2px;
-  z-index: 1; /* Assure que le bouton est au-dessus du contenu de la modal */
+  z-index: 1;
+}
+
+.modal-description {
+  color: #fff; /* Couleur du texte pour la modal */
+  font-size: 1rem; /* Taille de police pour la modal */
+  line-height: 1.5; /* Hauteur de ligne pour la modal */
 }
 
 /* Media query pour les écrans plus larges */
 @media (min-width: 601px) {
   .modal-content {
-    width: 600px; /* Largeur fixe pour les écrans plus larges */
-    padding: 1rem; /* Restaure le padding */
+    width: 600px;
+    padding: 1rem;
   }
 
   .modal-close {
-    font-size: 5rem; /* Bouton de fermeture plus grand pour les écrans plus larges */
-    bottom: 50px; /* Position restaurée */
-    right: 50px; /* Position restaurée */
+    font-size: 3rem;
   }
 }
 </style>
