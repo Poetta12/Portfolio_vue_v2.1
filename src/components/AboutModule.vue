@@ -259,6 +259,7 @@ const viewCV = () => {
   #about {
     width: 100%; /* Largeur pour les tablettes et écrans plus larges */
     padding: 3rem;
+    margin: 1rem auto;
   }
 
   .about-content {

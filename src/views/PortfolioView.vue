@@ -96,7 +96,7 @@ const closeModal = () => {
 
 <style scoped>
 #portfolio {
-  padding: 2rem 1rem; /* Smaller padding for mobile */
+  padding: 0 1rem; /* Smaller padding for mobile */
   background-color: #111;
   color: #fff;
   font-family: 'Orbitron', sans-serif;
@@ -182,7 +182,7 @@ const closeModal = () => {
 /* Media queries for larger screens */
 @media (min-width: 768px) {
   #portfolio {
-    padding: 3rem 1.5rem;
+    margin: 1rem auto;
   }
 
   .portfolio-item {
@@ -214,9 +214,6 @@ const closeModal = () => {
 }
 
 @media (min-width: 1024px) {
-  #portfolio {
-    padding: 4rem 2rem;
-  }
   .portfolio-item {
     width: 49%; /* Slightly larger width for desktops */
     margin: 2rem 0;

@@ -204,7 +204,7 @@ onMounted(() => {
 }
 #contact-container {
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: auto;
   background-color: #111;
   color: #fff;
   padding: 1rem;
@@ -375,6 +375,10 @@ textarea::placeholder {
   }
 }
 @media (min-width: 768px) {
+  #contact-container {
+    margin: 1rem auto;
+  }
+
   #contact-header img.hidden {
     display: block;
   }
