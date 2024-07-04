@@ -81,6 +81,7 @@ const viewCV = () => {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
   border-radius: 15px;
   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
   transition: transform 0.3s ease;
 }
 

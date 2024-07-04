@@ -86,6 +86,7 @@ window.onclick = function (event) {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 #info-module {
   width: 100%;
 
@@ -121,6 +122,8 @@ window.onclick = function (event) {
   top: 50%;
   left: 50%; /* Centrer horizontalement */
   transform: translate(-50%, -50%); /* Centrer verticalement et horizontalement */
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .close {
@@ -153,6 +156,8 @@ window.onclick = function (event) {
 #bloc1 section {
   width: 100%;
   margin: auto;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 #bloc1 article {

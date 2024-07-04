@@ -209,9 +209,10 @@ onMounted(() => {
   border: 1px solid #333;
   box-shadow: 0 0 20px #0ff3;
   border-radius: 15px;
-  font-family: Orbitron, sans-serif;
   transition: transform 0.5s ease;
   width: 100%;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 #contact-container:hover {
@@ -262,6 +263,7 @@ option {
 select {
   color: rgba(255, 255, 255, 0.5);
   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
   text-shadow: 1px 1px 1px #333;
 }
 
@@ -276,6 +278,7 @@ textarea::placeholder {
   text-shadow: 1px 1px 2px #000;
   opacity: 0.5; /* Firefox */
   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 #form_button {

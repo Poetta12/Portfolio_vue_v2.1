@@ -100,6 +100,7 @@ const closeModal = () => {
   background-color: #111;
   color: #fff;
   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .portfolio-section {

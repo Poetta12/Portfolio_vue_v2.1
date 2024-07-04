@@ -29,6 +29,7 @@ document.body.classList.add('modal-open')
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 .modal {
   position: fixed;
   top: 0;
@@ -41,8 +42,9 @@ document.body.classList.add('modal-open')
   align-items: center;
   overflow-y: auto;
   z-index: 9999;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
-
 .modal-content {
   background: #222;
   padding: 1rem;

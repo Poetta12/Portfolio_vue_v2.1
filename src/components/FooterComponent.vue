@@ -1,4 +1,8 @@
 <script setup>
+const goToHome = () => {
+  closeMenu()
+  router.push('/')
+}
 // Aucune logique JavaScript spécifique n'est nécessaire pour ce composant
 </script>
 
@@ -6,11 +10,16 @@
   <footer>
     <div id="footerNav">
       <ul>
-        <li><button id="accueilFoo">Accueil</button></li>
+        <!-- <li><button id="accueilFoo">Accueil</button></li>
         <li><button id="poettaFoo">Poetta</button></li>
         <li><button id="portFolioFoo">PortFolio</button></li>
         <li><button id="cvFoo">CV</button></li>
-        <li><button id="contactFoo">Contact</button></li>
+        <li><button id="contactFoo">Contact</button></li> -->
+        <li><router-link to="/" @click="closeMenu">Accueil</router-link></li>
+        <li><router-link to="/poetta" @click="closeMenu">Poetta</router-link></li>
+        <li><router-link to="/cv" @click="closeMenu">CV</router-link></li>
+        <li><router-link to="/portfolio" @click="closeMenu">Portfolio</router-link></li>
+        <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
       </ul>
     </div>
 
@@ -117,6 +126,7 @@ footer {
   padding: 2rem;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 

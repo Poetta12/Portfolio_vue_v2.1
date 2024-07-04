@@ -58,6 +58,8 @@
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .hero-section {
@@ -76,7 +78,6 @@
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .hero-content p {
@@ -118,7 +119,6 @@
 .about-content h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .services-section {
@@ -136,7 +136,6 @@
 .services-content h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .services-list {
@@ -157,7 +156,6 @@
 .service-item h3 {
   font-size: 1.8rem; /* Ajustez la taille de la police */
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .service-item p {

@@ -269,10 +269,11 @@ body {
   flex-direction: column-reverse;
   width: 100%;
   margin: 20px auto;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .left-side,
@@ -295,6 +296,8 @@ body {
 
 .left-side ul {
   list-style: none;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .left-side ul li {
@@ -311,7 +314,6 @@ body {
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 1rem;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .left-side ul li a:hover,
@@ -334,6 +336,10 @@ body {
 
 .links ul li {
   margin-bottom: 10px;
+}
+.links ul li a {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .links ul li:before,
@@ -501,6 +507,7 @@ section h3 {
   .left-side {
     width: 35%; /* Largeur du côté gauche */
     text-align: left; /* Alignement à gauche pour les écrans plus larges */
+    min-width: 315px;
   }
 
   .left-side ul li {
@@ -509,7 +516,7 @@ section h3 {
 
   .left-side ul li a,
   .left-side ul li p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .right-side {
