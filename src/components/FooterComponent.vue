@@ -10,11 +10,6 @@ const goToHome = () => {
   <footer>
     <div id="footerNav">
       <ul>
-        <!-- <li><button id="accueilFoo">Accueil</button></li>
-        <li><button id="poettaFoo">Poetta</button></li>
-        <li><button id="portFolioFoo">PortFolio</button></li>
-        <li><button id="cvFoo">CV</button></li>
-        <li><button id="contactFoo">Contact</button></li> -->
         <li><router-link to="/" @click="closeMenu">Accueil</router-link></li>
         <li><router-link to="/poetta" @click="closeMenu">Poetta</router-link></li>
         <li><router-link to="/cv" @click="closeMenu">CV</router-link></li>
@@ -22,7 +17,7 @@ const goToHome = () => {
         <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
       </ul>
     </div>
-
+    
     <div id="responsive_footer">
       <div id="about_resp">
         <h4>PoettaTech WSDS</h4>
@@ -43,7 +38,7 @@ const goToHome = () => {
           </p>
         </div>
       </div>
-
+      
       <div id="footerColumn">
         <div>
           <h5>Langages</h5>
@@ -82,7 +77,7 @@ const goToHome = () => {
           </ul>
         </div>
       </div>
-
+      
       <div id="footerNetwork">
         <h5>Suivez moi sur</h5>
         <ul>
@@ -100,16 +95,16 @@ const goToHome = () => {
           </li>
           <li class="tooltip">
             <a
-              href="https://www.linkedin.com/in/pedronfcosta/"
-              class="icon-linkedin"
-              data-tooltip="LinkedIn"
+            href="https://www.linkedin.com/in/pedronfcosta/"
+            class="icon-linkedin"
+            data-tooltip="LinkedIn"
             ></a>
             <span class="tooltiptext">LinkedIn</span>
           </li>
         </ul>
       </div>
     </div>
-
+    
     <div id="footerRights">
       <p class="icon-copyright">2012 PoettaTech. All Rights Reserved |</p>
       <p>Designed & created by <span>Poetta</span>@PoettaTech WSDS</p>
@@ -133,25 +128,25 @@ footer {
 #footerNav ul {
   font-size: 1.5rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
   border-top: 1px solid #00ffff;
   border-bottom: 1px solid #00ffff;
   margin-bottom: 2rem;
   list-style: none;
 }
 
-#footerNav button {
-  color: #00ffff;
+#footerNav a {
+  color: #fdc17b;
   font-size: 1em;
   font-weight: bold;
   background: none;
   border: none;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
 
-#footerNav button:hover {
-  color: #fdc17b;
+#footerNav a:hover {
+  color: #c9720e;
 }
 
 #responsive_footer {
@@ -170,15 +165,15 @@ footer {
 #about_resp h4 {
   font-size: 2em;
   margin-bottom: 1rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  color: #fdc17b;
+  text-shadow: 0 0 10px  rgba(253, 193, 123, .8);
 }
 
 #footerAbout h5 {
   font-size: 1.2em;
-  color: #00ffff;
+  color: #fdc17b;
   margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  text-shadow: 0 0 10px  rgba(253, 193, 123, .8);
 }
 
 #footerColumn {
@@ -196,9 +191,9 @@ footer {
 
 #footerColumn h5 {
   font-size: 1.5em;
-  color: #00ffff;
+  color: #fdc17b;
   margin-bottom: 1rem;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  text-shadow: 0 0 10px  rgba(253, 193, 123, .8);
 }
 
 #footerColumn ul {
@@ -211,7 +206,7 @@ footer {
 }
 
 #footerColumn a {
-  color: #00ffff;
+  color: #fdc17b;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -230,10 +225,10 @@ footer {
 
 #footerNetwork h5 {
   font-size: 2rem;
-  color: #00ffff;
+  color: #fdc17b;
   margin-bottom: 0.5rem;
   padding-right: 20px;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
 }
 
 #footerNetwork ul {
@@ -250,13 +245,13 @@ footer {
 
 #footerNetwork a {
   font-size: 2.5em;
-  color: #00ffff;
+  color: #fdc17b;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 #footerNetwork a:hover {
-  color: #fdc17b;
+  color: #c9720e
 }
 
 .tooltip .tooltiptext {
@@ -282,7 +277,7 @@ footer {
 }
 
 #footerRights {
-  border-top: 1px solid #00ffff;
+  border-top: 1px solid #fdc17b;
   padding-top: 1rem;
   text-align: center;
   margin-top: 2rem;
@@ -291,51 +286,56 @@ footer {
 #footerRights p {
   font-size: 0.9em;
   margin: 0;
-  color: #00ffff;
+  color: #fdc17b;
 }
 
 #footerRights span {
-  color: #fdc17b;
+  color: #c9720e;
   font-weight: bold;
 }
 
 @media (max-width: 768px) {
-  footer[data-v-7490b180] {
+  footer {
     padding: 1rem;
   }
+  
   #footerNav ul {
-    flex-wrap: wrap;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    border-top: 1px solid #fdc17b;
+    border-bottom: 1px solid #fdc17b;
+    margin-bottom: 2rem;
+    list-style: none;
     line-height: 2.5;
   }
-  #footerNav ul li {
-    width: 33%;
-  }
-
+  
   #footerColumn {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
+  
   #footerColumn > div {
     flex: 0 0 45%;
     max-width: 45%;
     margin-bottom: 1rem;
   }
-
+  
   #footerNetwork {
     flex-direction: column;
     align-items: center;
   }
-
+  
   #footerNetwork h5 {
     font-size: 1.5rem;
   }
-
+  
   #footerNetwork ul {
     justify-content: center;
   }
-
+  
   #footerNetwork a {
     font-size: 2rem;
   }

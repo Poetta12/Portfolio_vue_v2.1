@@ -387,7 +387,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #fdc17b, #0ff); /* Dégradé pour le header */
+  background: linear-gradient(135deg, #fdc17b, #c9720e); /* Dégradé pour le header */
   padding: 20px;
   border-radius: 0 70px 70px 0; /* Coins arrondis sur le header */
   margin-bottom: 20px;

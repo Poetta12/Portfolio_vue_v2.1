@@ -1,5 +1,5 @@
 <script setup>
-// Aucune logique JavaScript spécifique n'est nécessaire pour ce composant
+// Aucun JavaScript
 </script>
 
 <template>
@@ -87,7 +87,7 @@
 
 .cta-button {
   display: inline-block;
-  background-color: #00ffff;
+  background-color: #fdc17b;
   color: #000;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -97,7 +97,7 @@
 }
 
 .cta-button:hover {
-  background-color: #ff00ff;
+  background-color: #00ffff;
 }
 
 .about-section {

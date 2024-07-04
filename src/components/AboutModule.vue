@@ -78,7 +78,7 @@ const viewCV = () => {
   background-color: #111;
   color: #fff;
   border: 1px solid #333;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(253, 193, 123, .3);
   border-radius: 15px;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.1rem;
@@ -108,8 +108,8 @@ const viewCV = () => {
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #00ffff;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  border: 3px solid #fdc17b;
+  box-shadow: 0 0 15px rgba(253, 193, 123, .5);
   transition: box-shadow 0.3s ease;
 }
 
@@ -120,21 +120,21 @@ const viewCV = () => {
 }
 
 .profile-photo:hover {
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+  box-shadow: 0 0 30px rgba(253, 193, 123, .8);
 }
 
 .profile-details h2 {
   text-align: center;
   font-size: 3rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  color: #fdc17b;
+  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
 }
 
 .profile-details h6 {
   font-size: 1.2rem;
   color: #fdc17b;
   margin: 0;
-  text-shadow: 0 0 10px rgba(255, 193, 123, 0.8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
   text-align: center; /* Alignement au centre pour les appareils mobiles */
 }
 
@@ -146,8 +146,8 @@ const viewCV = () => {
 .contact-info h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  color: #fdc17b;
+  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
 }
 
 .contact-info ul {
@@ -166,7 +166,7 @@ const viewCV = () => {
 
 .contact-info li span {
   font-size: 1.3rem;
-  color: #00ffff;
+  color: #fdc17b;
 }
 
 .contact-info li a,
@@ -189,8 +189,8 @@ const viewCV = () => {
 
 .cv-download h2 {
   font-size: 1.8rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  color: #fdc17b;
+  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
   text-align: center; /* Alignement centré pour les appareils mobiles */
 }
 
@@ -200,7 +200,7 @@ const viewCV = () => {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: #333;
-  background-color: #00ffff;
+  background-color: #fdc17b;
   border: none;
   border-radius: 5px;
   cursor: pointer;
