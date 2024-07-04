@@ -15,7 +15,7 @@ const goToHome = () => {
       <ul>
         <li :class="{ active: $route.path === '/' }"><router-link to="/">Accueil</router-link></li>
         <li :class="{ active: $route.path === '/poetta' }">
-          <router-link to="/poetta">Poetta</router-link>
+          <router-link to="/poetta">Pedro Costa</router-link>
         </li>
         <li :class="{ active: $route.path === '/cv' }"><router-link to="/cv">CV</router-link></li>
         <li :class="{ active: $route.path === '/portfolio' }">
