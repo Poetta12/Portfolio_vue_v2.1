@@ -19,7 +19,7 @@ import '@/assets/Icomoon/style.css'
 
 <style scoped>
 main {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
   padding: 1rem; /* Réduit le padding pour les petits écrans */
 }
@@ -62,7 +62,7 @@ nav a:first-of-type {
 
 @media (min-width: 768px) {
   main {
-    padding: 2rem; /* Augmente le padding pour les écrans moyens et plus grands */
+    padding: 0 2rem; /* Augmente le padding pour les écrans moyens et plus grands */
   }
 
   header {

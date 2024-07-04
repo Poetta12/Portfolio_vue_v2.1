@@ -52,8 +52,8 @@ document.body.classList.add('modal-open')
   max-width: 90%;
   max-height: 90vh;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  border: 1px solid rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
+  border: 1px solid rgba(253, 193, 123, 0.5);
   overflow-y: auto;
 }
 

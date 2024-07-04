@@ -121,7 +121,7 @@ const closeModal = () => {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Smaller shadow for mobile */
+  box-shadow: 0 0 10px rgba(201, 114, 14, 0.2); /* Smaller shadow for mobile */
   transition: transform 0.3s ease;
   padding: 1rem; /* Smaller padding for mobile */
 }
@@ -161,7 +161,7 @@ const closeModal = () => {
   display: inline-block;
   margin-top: 0.5rem; /* Smaller margin for mobile */
   padding: 0.3rem 0.5rem; /* Smaller padding for mobile */
-  background-color: #00ffff;
+  background-color: #fdc17b;
   color: #333;
   font-weight: bold;
   text-decoration: none;
@@ -170,7 +170,7 @@ const closeModal = () => {
 }
 
 .portfolio-description a:hover {
-  background-color: #fdc17b;
+  background-color: #c9720e;
 }
 
 #more-btn-container {
@@ -195,7 +195,7 @@ const closeModal = () => {
   }
 
   .portfolio-item:hover {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Larger shadow for tablets */
+    box-shadow: 0 0 15px rgba(201, 114, 14, 0.2); /* Larger shadow for tablets */
   }
 
   .portfolio-image {
@@ -224,7 +224,7 @@ const closeModal = () => {
   }
 
   .portfolio-item:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); /* Larger shadow for desktops */
+    box-shadow: 0 0 20px rgba(201, 114, 14, 0.2); /* Larger shadow for desktops */
   }
 
   .portfolio-image {

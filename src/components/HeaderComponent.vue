@@ -33,7 +33,7 @@ const goToHome = () => {
   <header>
     <div id="header-container">
       <div class="logo" @click="goToHome">
-        <img src="/src/assets/logos/logo.png" alt="Logo" />
+        <img src="/src/assets/logos/logo_2.png" alt="Logo" />
       </div>
       <ul id="header-reseaux">
         <li><a href="https://www.poettatech.fr" class="icon-profile"></a></li>
@@ -50,11 +50,27 @@ const goToHome = () => {
       <!-- Navigation Menu -->
       <nav :class="{ 'main-nav': true, flex: menuOpen, hidden: !menuOpen }">
         <ul>
-          <li><router-link to="/" @click="closeMenu">Accueil</router-link></li>
-          <li><router-link to="/poetta" @click="closeMenu">Poetta</router-link></li>
-          <li><router-link to="/cv" @click="closeMenu">CV</router-link></li>
-          <li><router-link to="/portfolio" @click="closeMenu">Portfolio</router-link></li>
-          <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
+          <li>
+            <router-link to="/" @click="closeMenu" active-class="active-link">Accueil</router-link>
+          </li>
+          <li>
+            <router-link to="/poetta" @click="closeMenu" active-class="active-link"
+              >Pedro Costa</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/cv" @click="closeMenu" active-class="active-link">CV</router-link>
+          </li>
+          <li>
+            <router-link to="/portfolio" @click="closeMenu" active-class="active-link"
+              >Mes Projets</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/contact" @click="closeMenu" active-class="active-link"
+              >Contact</router-link
+            >
+          </li>
         </ul>
       </nav>
     </div>
@@ -76,9 +92,9 @@ header {
   background-color: #111;
   color: #fff;
   height: 12vh;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.25rem;
 }
 
 #header-container {
@@ -89,7 +105,7 @@ header {
 }
 
 .logo {
-  width: 75px;
+  width: 100px;
   cursor: pointer;
 }
 
@@ -228,8 +244,8 @@ header {
   }
 
   #header-reseaux a:hover {
-    color: #00ffff;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    color: #c9720e;
+    /*text-shadow: 0 0 10px rgba(201, 114, 14, 0.2);*/
   }
 }
 
@@ -257,9 +273,17 @@ header {
     background: none;
     border-radius: 0;
   }
-
+  .main-nav ul li a {
+    font-size: 1rem;
+  }
   .menu-button.hide-desktop {
     display: none;
   }
+}
+
+/* Ajouter cette section pour styliser le lien actif */
+.active-link {
+  color: #fdc17b;
+  border-bottom: 2px solid #fdc17b;
 }
 </style>

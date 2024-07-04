@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -65,6 +64,21 @@ const viewCV = () => {
         </section>
       </article>
     </section>
+    <div id="about-descrip">
+      <h2>A propos</h2>
+      <p>
+        Avec une carrière réussie dans le commerce et la gestion, j'ai récemment fait la transition
+        vers le domaine du développement numérique pour relever les défis et saisir les opportunités
+        du monde moderne. Ayant obtenu mon certificat en développement web et mobile front-end et
+        ayant pu avoir une première expérience professionnelle de 8 mois, je suis désormais
+        déterminé à approfondir mes compétences en devenant développeur Logiciel / Full Stack. Je
+        m'engage dans un programme de formation intensif au Campus Numérique in the Alps à Annecy,
+        où j'acquerrai une expertise à la fois en développement web front-end et back-end, ainsi
+        qu'en algorithmes et programmation. Captivé par l'innovation technologique et animé par le
+        désir de créer des solutions numériques impactantes, je suis prêt à relever de nouveaux
+        défis et à contribuer au succès de projets numériques ambitieux.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -78,7 +92,7 @@ const viewCV = () => {
   background-color: #111;
   color: #fff;
   border: 1px solid #333;
-  box-shadow: 0 0 20px rgba(253, 193, 123, .3);
+  box-shadow: 0 0 20px rgba(253, 193, 123, 0.3);
   border-radius: 15px;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.1rem;
@@ -87,6 +101,27 @@ const viewCV = () => {
 
 #about:hover {
   transform: scale(1.02);
+}
+
+#about-descrip {
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+#about-descrip:before {
+  display: block;
+  content: ' ';
+  border-top: 1px dotted #fdc17b;
+  width: 50%;
+  margin: auto;
+  height: 5px;
+}
+
+#about-descrip h2 {
+  font-size: 1.2em;
+  color: #fdc17b;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
 }
 
 .about-content {
@@ -109,7 +144,7 @@ const viewCV = () => {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #fdc17b;
-  box-shadow: 0 0 15px rgba(253, 193, 123, .5);
+  box-shadow: 0 0 15px rgba(253, 193, 123, 0.5);
   transition: box-shadow 0.3s ease;
 }
 
@@ -120,21 +155,21 @@ const viewCV = () => {
 }
 
 .profile-photo:hover {
-  box-shadow: 0 0 30px rgba(253, 193, 123, .8);
+  box-shadow: 0 0 30px rgba(253, 193, 123, 0.8);
 }
 
 .profile-details h2 {
   text-align: center;
   font-size: 3rem;
   color: #fdc17b;
-  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
 }
 
 .profile-details h6 {
   font-size: 1.2rem;
   color: #fdc17b;
   margin: 0;
-  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
   text-align: center; /* Alignement au centre pour les appareils mobiles */
 }
 
@@ -147,7 +182,7 @@ const viewCV = () => {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #fdc17b;
-  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
 }
 
 .contact-info ul {
@@ -190,7 +225,7 @@ const viewCV = () => {
 .cv-download h2 {
   font-size: 1.8rem;
   color: #fdc17b;
-  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
   text-align: center; /* Alignement centré pour les appareils mobiles */
 }
 
@@ -211,7 +246,7 @@ const viewCV = () => {
 }
 
 .cv-download button:hover {
-  background-color: #fdc17b;
+  background-color: #c9720e;
   transform: scale(1.1);
 }
 

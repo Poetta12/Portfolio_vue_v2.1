@@ -8,37 +8,26 @@ const goToHome = () => {
 
 <template>
   <footer>
+    <div id="about_resp">
+      <h4>PoettaTech WSDS</h4>
+    </div>
     <div id="footerNav">
       <ul>
-        <li><router-link to="/" @click="closeMenu">Accueil</router-link></li>
-        <li><router-link to="/poetta" @click="closeMenu">Poetta</router-link></li>
-        <li><router-link to="/cv" @click="closeMenu">CV</router-link></li>
-        <li><router-link to="/portfolio" @click="closeMenu">Portfolio</router-link></li>
-        <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
+        <li :class="{ active: $route.path === '/' }"><router-link to="/">Accueil</router-link></li>
+        <li :class="{ active: $route.path === '/poetta' }">
+          <router-link to="/poetta">Poetta</router-link>
+        </li>
+        <li :class="{ active: $route.path === '/cv' }"><router-link to="/cv">CV</router-link></li>
+        <li :class="{ active: $route.path === '/portfolio' }">
+          <router-link to="/portfolio">Mes Projets</router-link>
+        </li>
+        <li :class="{ active: $route.path === '/contact' }">
+          <router-link to="/contact">Contact</router-link>
+        </li>
       </ul>
     </div>
-    
+
     <div id="responsive_footer">
-      <div id="about_resp">
-        <h4>PoettaTech WSDS</h4>
-        <div id="footerAbout">
-          <h5>A propos</h5>
-          <p>
-            Avec une carrière réussie dans le commerce et la gestion, j'ai récemment fait la
-            transition vers le domaine du développement numérique pour relever les défis et saisir
-            les opportunités du monde moderne. Ayant obtenu mon certificat en développement web et
-            mobile front-end et ayant pu avoir une première expérience professionnelle de 8 mois, je
-            suis désormais déterminé à approfondir mes compétences en devenant développeur Logiciel
-            / Full Stack. Je m'engage dans un programme de formation intensif au Campus Numérique in
-            the Alps à Annecy, où j'acquerrai une expertise à la fois en développement web front-end
-            et back-end, ainsi qu'en algorithmes et programmation. Captivé par l'innovation
-            technologique et animé par le désir de créer des solutions numériques impactantes, je
-            suis prêt à relever de nouveaux défis et à contribuer au succès de projets numériques
-            ambitieux.
-          </p>
-        </div>
-      </div>
-      
       <div id="footerColumn">
         <div>
           <h5>Langages</h5>
@@ -77,7 +66,7 @@ const goToHome = () => {
           </ul>
         </div>
       </div>
-      
+
       <div id="footerNetwork">
         <h5>Suivez moi sur</h5>
         <ul>
@@ -95,16 +84,16 @@ const goToHome = () => {
           </li>
           <li class="tooltip">
             <a
-            href="https://www.linkedin.com/in/pedronfcosta/"
-            class="icon-linkedin"
-            data-tooltip="LinkedIn"
+              href="https://www.linkedin.com/in/pedronfcosta/"
+              class="icon-linkedin"
+              data-tooltip="LinkedIn"
             ></a>
             <span class="tooltiptext">LinkedIn</span>
           </li>
         </ul>
       </div>
     </div>
-    
+
     <div id="footerRights">
       <p class="icon-copyright">2012 PoettaTech. All Rights Reserved |</p>
       <p>Designed & created by <span>Poetta</span>@PoettaTech WSDS</p>
@@ -121,8 +110,8 @@ footer {
   padding: 2rem;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  letter-spacing: 0.25rem;
+  box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
 }
 
 #footerNav ul {
@@ -130,10 +119,15 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border-top: 1px solid #00ffff;
-  border-bottom: 1px solid #00ffff;
+  border-top: 1px solid #fdc17b;
+  border-bottom: 1px solid #fdc17b;
   margin-bottom: 2rem;
   list-style: none;
+}
+
+#footerNav li {
+  margin: 0 10px;
+  position: relative;
 }
 
 #footerNav a {
@@ -143,10 +137,17 @@ footer {
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 #footerNav a:hover {
   color: #c9720e;
+}
+
+#footerNav .active a {
+  color: #c9720e; /* Couleur pour la page active */
+  text-decoration: underline; /* Soulignement pour la page active */
 }
 
 #responsive_footer {
@@ -166,14 +167,7 @@ footer {
   font-size: 2em;
   margin-bottom: 1rem;
   color: #fdc17b;
-  text-shadow: 0 0 10px  rgba(253, 193, 123, .8);
-}
-
-#footerAbout h5 {
-  font-size: 1.2em;
-  color: #fdc17b;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px  rgba(253, 193, 123, .8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
 }
 
 #footerColumn {
@@ -181,7 +175,6 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
-  margin-top: 2rem;
 }
 
 #footerColumn > div {
@@ -193,7 +186,7 @@ footer {
   font-size: 1.5em;
   color: #fdc17b;
   margin-bottom: 1rem;
-  text-shadow: 0 0 10px  rgba(253, 193, 123, .8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
 }
 
 #footerColumn ul {
@@ -228,7 +221,7 @@ footer {
   color: #fdc17b;
   margin-bottom: 0.5rem;
   padding-right: 20px;
-  text-shadow: 0 0 10px rgba(253, 193, 123, .8);
+  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
 }
 
 #footerNetwork ul {
@@ -251,7 +244,7 @@ footer {
 }
 
 #footerNetwork a:hover {
-  color: #c9720e
+  color: #c9720e;
 }
 
 .tooltip .tooltiptext {
@@ -298,7 +291,7 @@ footer {
   footer {
     padding: 1rem;
   }
-  
+
   #footerNav ul {
     font-size: 1.5rem;
     display: flex;
@@ -311,31 +304,31 @@ footer {
     list-style: none;
     line-height: 2.5;
   }
-  
+
   #footerColumn {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  
+
   #footerColumn > div {
     flex: 0 0 45%;
     max-width: 45%;
     margin-bottom: 1rem;
   }
-  
+
   #footerNetwork {
     flex-direction: column;
     align-items: center;
   }
-  
+
   #footerNetwork h5 {
     font-size: 1.5rem;
   }
-  
+
   #footerNetwork ul {
     justify-content: center;
   }
-  
+
   #footerNetwork a {
     font-size: 2rem;
   }

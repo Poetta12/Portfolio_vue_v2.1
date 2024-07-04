@@ -5,7 +5,7 @@
         <h2>Contact</h2>
         <p>Contactez-moi via le formulaire ci-dessous :</p>
       </div>
-      <img src="/src/assets/logos/logo.png" alt="Logo" class="logo hidden" />
+      <img src="/src/assets/logos/logo_2.png" alt="Logo" class="logo hidden" />
     </div>
     <form @submit.prevent="handleSubmit" id="contact_form" novalidate>
       <div class="form-group" :class="{ invalid: !isNameValid }">
@@ -203,11 +203,13 @@ onMounted(() => {
   width: 100px;
 }
 #contact-container {
+  max-width: 1000px;
+  margin: 2rem auto;
   background-color: #111;
   color: #fff;
   padding: 1rem;
   border: 1px solid #333;
-  box-shadow: 0 0 20px #0ff3;
+  box-shadow: 0 0 20px rgba(201, 114, 14, 0.2);
   border-radius: 15px;
   transition: transform 0.5s ease;
   width: 100%;
@@ -216,14 +218,14 @@ onMounted(() => {
 }
 
 #contact-container:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  color: #fdc17b;
+  text-shadow: 0 0 10px rgba(201, 114, 14, 0.8);
 }
 
 p {
@@ -238,7 +240,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: #00ffff;
+  color: #fdc17b;
 }
 
 input,
@@ -252,7 +254,7 @@ textarea {
   border: none;
   border-radius: 5px;
   margin-bottom: 1rem;
-  background: linear-gradient(#0ff, #111);
+  background: linear-gradient(#fdc17b, #111);
 }
 
 option {
@@ -282,9 +284,6 @@ textarea::placeholder {
 }
 
 #form_button {
-  background-color: #00ffff;
-  color: #333;
-  font-size: 1rem;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
@@ -295,8 +294,8 @@ textarea::placeholder {
 }
 
 #form_button:hover {
-  background-color: #fdc17b;
-  transform: scale(1.05);
+  background-color: #c9720e;
+  transform: scale(1.01);
 }
 
 #form_button:focus {

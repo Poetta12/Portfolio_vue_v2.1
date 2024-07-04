@@ -52,13 +52,8 @@
         <h3>Compétences</h3>
         <ul>
           <li class="tooltip">
-            <img src="/src/assets/logos/HTML5.png" alt="logo html" /><span class="tooltiptext"
-              >HTML</span
-            >
-          </li>
-          <li class="tooltip">
-            <img src="/src/assets/logos/CSS.png" alt="logo css" /><span class="tooltiptext"
-              >CSS</span
+            <img src="/src/assets/logos/java.png" alt="logo Java" /><span class="tooltiptext"
+              >Java</span
             >
           </li>
           <li class="tooltip">
@@ -69,26 +64,6 @@
           <li class="tooltip">
             <img src="/src/assets/logos/php.png" alt="logo PHP" /><span class="tooltiptext"
               >PHP</span
-            >
-          </li>
-          <li class="tooltip">
-            <img src="/src/assets/logos/java.png" alt="logo Java" /><span class="tooltiptext"
-              >Java</span
-            >
-          </li>
-          <li class="tooltip">
-            <img src="/src/assets/logos/MySQL-logo.png" alt="logo sql" /><span class="tooltiptext"
-              >SQL</span
-            >
-          </li>
-          <li class="tooltip">
-            <img src="/src/assets/logos/Group-59.webp" alt="logo agile" /><span class="tooltiptext"
-              >Développement Agile</span
-            >
-          </li>
-          <li class="tooltip">
-            <img src="/src/assets/logos/agile_logo.png" alt="logo scrum" /><span class="tooltiptext"
-              >Méthodologie Scrum</span
             >
           </li>
           <li class="tooltip">
@@ -107,6 +82,31 @@
             >
           </li>
           <li class="tooltip">
+            <img src="/src/assets/logos/HTML5.png" alt="logo html" /><span class="tooltiptext"
+              >HTML</span
+            >
+          </li>
+          <li class="tooltip">
+            <img src="/src/assets/logos/CSS.png" alt="logo css" /><span class="tooltiptext"
+              >CSS</span
+            >
+          </li>
+          <li class="tooltip">
+            <img src="/src/assets/logos/MySQL-logo.png" alt="logo sql" /><span class="tooltiptext"
+              >SQL</span
+            >
+          </li>
+          <li class="tooltip">
+            <img src="/src/assets/logos/Group-59.webp" alt="logo agile" /><span class="tooltiptext"
+              >Développement Agile</span
+            >
+          </li>
+          <li class="tooltip">
+            <img src="/src/assets/logos/agile_logo.png" alt="logo scrum" /><span class="tooltiptext"
+              >Méthodologie Scrum</span
+            >
+          </li>
+          <li class="tooltip">
             <img src="/src/assets/logos/wp.png" alt="logo wordpress" /><span class="tooltiptext"
               >WordPress</span
             >
@@ -119,7 +119,7 @@
         <ul>
           <li class="tooltip">
             <img src="/src/assets/logos/pt.png" alt="Portugal" /><span class="tooltiptext"
-              >Portugal</span
+              >Português</span
             >
           </li>
           <li class="tooltip">
@@ -259,7 +259,6 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: #222; /* Fond sombre pour un look futuriste */
   color: #fff; /* Texte blanc pour contraste */
 }
@@ -273,13 +272,13 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.25rem;
 }
 
 .left-side,
 .right-side {
   width: 100%;
-  padding: 15px;
+  padding: 2rem;
 }
 
 .left-side {
@@ -310,15 +309,15 @@ body {
 
 .left-side ul li a,
 .left-side ul li p {
-  color: #0ff;
-  text-decoration: none;
+  color: #c9720e;
+  on: none;
   transition: color 0.3s ease;
   font-size: 1rem;
 }
 
 .left-side ul li a:hover,
 .references ul li a:hover {
-  color: #a2cbf5; /* Couleur de lien au survol */
+  color: #fdc17b; /* Couleur de lien au survol */
 }
 
 .education ul li {
@@ -331,7 +330,7 @@ body {
   height: 1px;
   margin: auto;
   content: '';
-  border-bottom: 1px solid #0ff;
+  border-bottom: 1px solid #c9720e;
 }
 
 .links ul li {
@@ -391,8 +390,8 @@ header {
   padding: 20px;
   border-radius: 0 70px 70px 0; /* Coins arrondis sur le header */
   margin-bottom: 20px;
-  margin-left: -20px;
-  text-align: center; /* Centre le texte sur les petits écrans */
+  margin-left: -32px;
+  text-align: left;
 }
 
 header h1 {
@@ -413,8 +412,8 @@ section {
 
 section h3 {
   font-size: 1.5rem;
-  color: #009fff;
-  border-bottom: 2px solid #009fff;
+  color: #c9720e;
+  border-bottom: 2px solid #c9720e;
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
@@ -452,7 +451,7 @@ section h3 {
 .references ul li a {
   display: flex;
   align-items: center;
-  color: #009fff;
+  color: #c9720e;
 }
 
 .references ul li a:hover {
@@ -516,7 +515,7 @@ section h3 {
 
   .left-side ul li a,
   .left-side ul li p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .right-side {
@@ -538,10 +537,6 @@ section h3 {
   .languages ul li span {
     font-size: 1rem;
   }
-
-  header {
-    margin-left: -15px;
-  }
 }
 @media (min-width: 1024px) {
   #left-side .personal-info {
@@ -552,6 +547,10 @@ section h3 {
     display: flex;
     place-content: space-between;
     flex-direction: row;
+  }
+  .left-side ul li a,
+  .left-side ul li p {
+    font-size: 1rem;
   }
 
   .education ul li:after {
@@ -568,8 +567,8 @@ section h3 {
 @media (min-width: 1200px) {
   .skills img,
   .languages img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
   }
 }
 </style>

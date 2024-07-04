@@ -203,7 +203,7 @@ window.onclick = function (event) {
 }
 
 .read-more:hover {
-  background-color: #00ffff;
+  background-color: #c9720e;
   color: #111;
 }
 
