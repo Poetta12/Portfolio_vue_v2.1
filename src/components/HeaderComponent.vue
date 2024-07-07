@@ -83,8 +83,8 @@ const goToHome = () => {
 
 /* Styles par défaut pour mobile */
 header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
