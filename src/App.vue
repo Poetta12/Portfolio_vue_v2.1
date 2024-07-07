@@ -21,7 +21,7 @@ import '@/assets/Icomoon/style.css'
 main {
   max-width: 1600px;
   margin: auto;
-  padding: 1rem; /* Réduit le padding pour les petits écrans */
+  padding: 0; /* Réduit le padding pour les petits écrans */
 }
 
 header {

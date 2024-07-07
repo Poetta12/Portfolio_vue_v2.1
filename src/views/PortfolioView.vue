@@ -1,34 +1,3 @@
-<template>
-  <div id="portfolio">
-    <section class="portfolio-section">
-      <article v-for="(project, index) in projects" :key="index" class="portfolio-item">
-        <h3>{{ project.title }}</h3>
-        <figure class="portfolio-image">
-          <img :src="project.imageUrl" :alt="project.title" />
-        </figure>
-        <div class="portfolio-description">
-          <!-- Utilisation correcte de v-html pour interpréter le HTML -->
-          <div v-html="project.description"></div>
-          <div id="more-btn-container">
-            <a href="#" @click.prevent="openModal(project)">Voir plus</a>
-            <a :href="project.link" target="_blank">Aller au site</a>
-          </div>
-        </div>
-      </article>
-    </section>
-    <Modal v-if="selectedProject" @close="closeModal">
-      <template #header>
-        <h2>{{ selectedProject.title }}</h2>
-      </template>
-      <template #body>
-        <div class="modal-description">
-          <p v-html="selectedProject.description"></p>
-        </div>
-      </template>
-    </Modal>
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import Modal from '../components/ModalComponent.vue'
@@ -93,6 +62,37 @@ const closeModal = () => {
   selectedProject.value = null
 }
 </script>
+
+<template>
+  <div id="portfolio">
+    <section class="portfolio-section">
+      <article v-for="(project, index) in projects" :key="index" class="portfolio-item">
+        <h3>{{ project.title }}</h3>
+        <figure class="portfolio-image">
+          <img :src="project.imageUrl" :alt="project.title" />
+        </figure>
+        <div class="portfolio-description">
+          <!-- Utilisation correcte de v-html pour interpréter le HTML -->
+          <div v-html="project.description"></div>
+          <div id="more-btn-container">
+            <a href="#" @click.prevent="openModal(project)">Voir plus</a>
+            <a :href="project.link" target="_blank">Aller au site</a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <Modal v-if="selectedProject" @close="closeModal">
+      <template #header>
+        <h2>{{ selectedProject.title }}</h2>
+      </template>
+      <template #body>
+        <div class="modal-description">
+          <p v-html="selectedProject.description"></p>
+        </div>
+      </template>
+    </Modal>
+  </div>
+</template>
 
 <style scoped>
 #portfolio {

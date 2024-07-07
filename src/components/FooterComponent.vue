@@ -42,9 +42,10 @@ const goToHome = () => {
         <div>
           <h5>Frameworks</h5>
           <ul>
+            <li>Springboot</li>
             <li>Vue.JS</li>
-            <li>Laravel</li>
             <li>Symfony</li>
+            <li>Laravel</li>
             <li>Atisu</li>
           </ul>
         </div>
@@ -63,6 +64,7 @@ const goToHome = () => {
             <li>Situé à Annecy</li>
             <li><a href="tel:+33753812381">Je contacte par téléphone</a></li>
             <li><a href="mailto:pedro.costa@poettatech.fr">Je contacte par email</a></li>
+            <li></li>
           </ul>
         </div>
       </div>
@@ -104,25 +106,29 @@ const goToHome = () => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+/* Styles de base pour le footer */
 footer {
   background-color: #111;
   color: #fff;
-  padding: 2rem;
+  padding: 1rem; /* Réduit le padding pour les petits écrans */
   text-align: center;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.25rem;
   box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
 }
 
+/* Styles pour la navigation du footer */
 #footerNav ul {
   font-size: 1.5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column; /* Changement de direction pour les petits écrans */
+  align-items: center;
+  justify-content: center;
   border-top: 1px solid #fdc17b;
   border-bottom: 1px solid #fdc17b;
   margin-bottom: 2rem;
   list-style: none;
+  line-height: 2.5; /* Espacement des lignes pour une meilleure lisibilité */
 }
 
 #footerNav li {
@@ -150,36 +156,28 @@ footer {
   text-decoration: underline; /* Soulignement pour la page active */
 }
 
-#responsive_footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-#about_resp {
-  text-align: justify;
-  width: 85%;
-  margin: auto;
-}
-
-#about_resp h4 {
-  font-size: 2em;
-  margin-bottom: 1rem;
-  color: #fdc17b;
-  text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
-}
-
+/* Styles pour les colonnes du footer */
 #footerColumn {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly; /* Ajustement pour les petits écrans */
   width: 100%;
 }
 
 #footerColumn > div {
-  flex: 0 0 23%;
-  max-width: 23%;
+  flex: 0 0 100%; /* Réduction de la largeur des colonnes pour les petits écrans */
+  max-width: 100%;
+  margin-bottom: 1rem;
+  min-height: 220px;
+}
+
+#footerColumn > div::after {
+  content: '';
+  display: block;
+  border-bottom: 1px dotted #fdc17b;
+  width: 200px;
+  margin: auto;
 }
 
 #footerColumn h5 {
@@ -208,19 +206,19 @@ footer {
   color: #fdc17b;
 }
 
+/* Styles pour les réseaux sociaux du footer */
 #footerNetwork {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column; /* Réorganisation pour les petits écrans */
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 #footerNetwork h5 {
-  font-size: 2rem;
+  font-size: 1.5rem; /* Réduction de la taille pour les petits écrans */
   color: #fdc17b;
   margin-bottom: 0.5rem;
-  padding-right: 20px;
   text-shadow: 0 0 10px rgba(253, 193, 123, 0.8);
 }
 
@@ -228,7 +226,7 @@ footer {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 #footerNetwork li {
@@ -237,7 +235,7 @@ footer {
 }
 
 #footerNetwork a {
-  font-size: 2.5em;
+  font-size: 2rem;
   color: #fdc17b;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -247,6 +245,7 @@ footer {
   color: #c9720e;
 }
 
+/* Tooltip */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 150px;
@@ -269,6 +268,7 @@ footer {
   opacity: 1;
 }
 
+/* Droits d'auteur */
 #footerRights {
   border-top: 1px solid #fdc17b;
   padding-top: 1rem;
@@ -287,50 +287,65 @@ footer {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  footer {
-    padding: 1rem;
-  }
-
-  #footerNav ul {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #fdc17b;
-    border-bottom: 1px solid #fdc17b;
-    margin-bottom: 2rem;
-    list-style: none;
-    line-height: 2.5;
-  }
-
+@media (min-width: 400px) {
   #footerColumn {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; /* Ajustement pour les petits écrans */
+    width: 100%;
   }
 
   #footerColumn > div {
-    flex: 0 0 45%;
-    max-width: 45%;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
+    max-width: 50%;
+    width: 45%;
+    height: 220px;
+    min-height: 220px;
+  }
+  #footerColumn > div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* Media query pour les écrans plus larges */
+@media (min-width: 769px) {
+  footer {
+    padding: 2rem; /* Retour au padding initial pour les écrans plus larges */
+  }
+
+  #footerNav ul {
+    flex-direction: row; /* Revenir à la direction horizontale */
+    justify-content: space-evenly;
+    line-height: initial; /* Réinitialisation de l'espacement des lignes */
+  }
+
+  #footerColumn {
+    justify-content: space-evenly; /* Réglage pour les écrans plus larges */
+  }
+
+  #footerColumn > div {
+    flex: 0 0 23%; /* Réinitialisation de la largeur */
+    max-width: 23%;
   }
 
   #footerNetwork {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #footerNetwork h5 {
-    font-size: 1.5rem;
-  }
-
-  #footerNetwork ul {
+    flex-direction: row; /* Revenir à la direction horizontale */
     justify-content: center;
   }
 
-  #footerNetwork a {
-    font-size: 2rem;
+  #footerNetwork h5 {
+    font-size: 2rem; /* Réinitialisation de la taille de police */
+    padding-right: 20px; /* Réinitialisation du padding */
+  }
+
+  #footerNetwork ul {
+    justify-content: flex-start;
   }
 }
 </style>
