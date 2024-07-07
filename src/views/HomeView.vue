@@ -206,14 +206,14 @@ onUnmounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 .hero-content .mobile-text {
-  overflow: hidden; /* Cache le texte qui dépasse de max-height */
-  max-height: 60vh; /* Hauteur maximale initiale du texte court */
-  transition: max-height 3s ease; /* Transition douce de la hauteur */
+  overflow: hidden;
+  max-height: 60vh;
+  transition: max-height 3s ease;
 }
 
 .about-content .mobile-text {
   overflow: hidden;
-  max-height: 50vh; /* Hauteur maximale initiale du texte court */
+  max-height: 50vh;
   transition: max-height 3s ease;
 }
 
@@ -325,7 +325,6 @@ onUnmounted(() => {
   text-align: center;
 }
 
-/* Styles spécifiques à chaque section */
 .hero-section::before,
 .about-section::before,
 .services-section::before {
@@ -345,7 +344,7 @@ onUnmounted(() => {
   margin-bottom: 8rem;
   border-radius: 10px;
   position: relative;
-  overflow: hidden; /* Assure que le reflet reste à l'intérieur */
+  overflow: hidden;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -427,7 +426,7 @@ onUnmounted(() => {
 }
 
 .service-item {
-  position: relative; /* Position relative pour contenir la pastille */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -461,8 +460,8 @@ onUnmounted(() => {
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
   border-radius: 5px;
-  transform: rotate(5deg); /* Rotation pour l'effet incliné */
-  transform-origin: top right; /* Point d'origine de la rotation */
+  transform: rotate(5deg);
+  transform-origin: top right;
   box-shadow: 0 0 20px rgba(253, 193, 123, 0.5);
 }
 
@@ -474,7 +473,7 @@ onUnmounted(() => {
   text-align: left !important;
 }
 .mobile-text .short-text {
-  max-height: 60vh; /* Ajuster la hauteur selon votre besoin */
+  max-height: 60vh;
   overflow: hidden;
 }
 
@@ -487,6 +486,23 @@ onUnmounted(() => {
   text-decoration: underline;
 }
 @media (min-width: 768px) {
+  #carousel-container {
+    height: 100vh;
+  }
+
+  .hero-section,
+  .about-section,
+  .services-section {
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
   #carousel-container h2 {
     display: block;
     position: absolute;
@@ -503,39 +519,6 @@ onUnmounted(() => {
   #carousel-container h2:last-child {
     color: green;
   }
-
-  /* .button-container-3 {
-    position: relative;
-    margin: 5% auto 0;
-    bottom: 0rem;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border: 1px solid #000;
-    transition: 0.5s;
-    border-radius: 8px;
-    background: #c9720e;
-  }
-
-  .button-container-3 button {
-    width: 100%;
-    -webkit-mask: url('https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png');
-    mask: url('https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png');
-    -webkit-mask-size: 7100% 100%;
-    mask-size: 7100% 100%;
-    cursor: pointer;
-    -webkit-animation: ani2 1s steps(70) forwards;
-    animation: ani2 1s steps(70) forwards;
-  }
-
-  .button-container-3 button:hover {
-    -webkit-animation: ani 1s steps(70) forwards;
-    animation: ani 1s steps(70) forwards;
-  }
-  .button-container-3 button:hover .arrow.down,
-  .button-container-3 button:hover .arrow.down {
-    background: #fdc17b;
-  } */
 
   .hero-content h1 {
     font-size: 3.5rem;
@@ -601,7 +584,7 @@ onUnmounted(() => {
     margin-bottom: 5rem;
     border-radius: 10px;
     position: relative;
-    overflow: hidden; /* Assure que le reflet reste à l'intérieur */
+    overflow: hidden;
     font-size: 1rem;
     line-height: 1.6;
   }
@@ -616,6 +599,10 @@ onUnmounted(() => {
     font-family: 'Roboto', sans-serif;
     font-size: 34px;
     margin-top: 12vh;
+  }
+  #carousel-container {
+    display: flex;
+    margin-bottom: 1rem;
   }
 
   .footer {
@@ -650,7 +637,7 @@ onUnmounted(() => {
     margin: 0;
   }
 }
-/* Styles pour l'effet de reflet aléatoire */
+
 .reflection {
   position: relative;
 }
@@ -662,21 +649,19 @@ onUnmounted(() => {
   left: 200px;
   right: 0;
   bottom: 0;
-  z-index: 1; /* Pour placer le reflet sous le contenu */
-  pointer-events: none; /* Assure que le reflet n'interfère pas avec les événements */
-  opacity: 0.3; /* Opacité du reflet */
-  border-radius: 10px; /* Arrondi des coins */
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.3;
+  border-radius: 10px;
   transform: rotate(-4deg) translateY(-20%);
-  filter: blur(4px); /* Flou pour simuler le reflet */
+  filter: blur(4px);
 }
 
-/* Classe pour le contenu qui doit être animé */
 .fade-in {
   opacity: 1;
   transition: opacity 4s ease;
 }
 
-/* Classe pour masquer le contenu */
 .fade-out {
   opacity: 0;
   transition: opacity 4s ease;
@@ -714,9 +699,26 @@ onUnmounted(() => {
   }
 }
 
+@-webkit-keyframes move {
+  to {
+    transform: translateX(-25%) var(--s, scaleY(1)) skew(45deg);
+  }
+}
+
 @keyframes move {
   to {
     transform: translateX(-25%) var(--s, scaleY(1)) skew(45deg);
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
   }
 }
 
@@ -728,6 +730,17 @@ onUnmounted(() => {
   to {
     -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
   }
 }
 

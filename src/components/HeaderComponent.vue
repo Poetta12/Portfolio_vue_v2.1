@@ -222,6 +222,9 @@ header {
 
 /* Media queries pour les écrans plus larges */
 @media (min-width: 769px) {
+  header {
+    top: 0;
+  }
   #header-reseaux {
     display: flex;
     justify-content: space-evenly;
