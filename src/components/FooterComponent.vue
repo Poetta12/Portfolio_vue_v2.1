@@ -312,6 +312,13 @@ footer {
     flex-direction: column;
     justify-content: space-between;
   }
+  #footerColumn > div::after {
+    content: '';
+    display: block;
+    border-bottom: none;
+    width: 0;
+    margin: auto;
+  }
 }
 
 /* Media query pour les écrans plus larges */

@@ -227,11 +227,12 @@ onUnmounted(() => {
 
 #carousel-container {
   width: 100%;
-  height: 88vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8rem;
 }
 
 #carousel-container h2 {
