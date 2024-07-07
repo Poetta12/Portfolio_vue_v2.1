@@ -342,7 +342,7 @@ onUnmounted(() => {
   border-radius: 20px;
   text-align: center;
   color: #fff;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   border-radius: 10px;
   position: relative;
   overflow: hidden; /* Assure que le reflet reste à l'intérieur */
