@@ -26,7 +26,16 @@ const redirectToPortfolio = () => {
 
 const scrollToNextSection = () => {
   const nextSection = document.querySelector('.hero-section')
-  const offset = 135
+  let offset = 170 // Offset par défaut
+
+  // Définir des offsets différents en fonction de la taille de l'écran
+  if (window.innerWidth >= 1024) {
+    offset = 200 // Offset pour les écrans larges (par exemple, desktop)
+  } else if (window.innerWidth >= 768) {
+    offset = 160 // Offset pour les tablettes (par exemple, iPad)
+  } else {
+    offset = 110 // Offset pour les petits écrans (par exemple, mobile)
+  }
 
   if (nextSection) {
     window.scrollTo({
@@ -211,7 +220,7 @@ onUnmounted(() => {
 .home-container {
   overflow-x: hidden;
   margin: auto;
-  padding: 1rem;
+  padding: 0 1rem;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.25rem;
 }
@@ -226,6 +235,10 @@ onUnmounted(() => {
 }
 
 #carousel-container h2 {
+  font-size: 10vw;
+  cursor: pointer;
+}
+#carousel-container h2:first-child {
   display: none;
 }
 
@@ -293,13 +306,6 @@ onUnmounted(() => {
   --s: scaleY(-1);
 }
 
-/* Styles spécifiques à chaque section */
-.hero-section::before,
-.about-section::before,
-.services-section::before {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
-}
-
 .scroll-button {
   width: 5%;
   background-color: #fdc17b;
@@ -316,6 +322,13 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   text-align: center;
+}
+
+/* Styles spécifiques à chaque section */
+.hero-section::before,
+.about-section::before,
+.services-section::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .scroll-button:hover {
@@ -480,10 +493,11 @@ onUnmounted(() => {
     cursor: pointer;
   }
   #carousel-container h2:first-child {
+    display: block;
     color: transparent;
     z-index: 100;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #fdc17b;
+    -webkit-text-stroke-color: #c9720e;
   }
   #carousel-container h2:last-child {
     color: green;
@@ -577,12 +591,18 @@ onUnmounted(() => {
     font-size: 1rem;
     padding: 0.3rem 0.5rem;
   }
-
-  .desktop-text {
-    display: block;
-  }
-  .mobile-text {
-    display: none;
+  .hero-section,
+  .about-section,
+  .services-section {
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Assure que le reflet reste à l'intérieur */
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
 
@@ -607,6 +627,12 @@ onUnmounted(() => {
 
   a {
     color: #00ff95;
+  }
+  .desktop-text {
+    display: block;
+  }
+  .mobile-text {
+    display: none;
   }
 }
 @media (min-width: 1124px) {

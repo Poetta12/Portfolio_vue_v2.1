@@ -49,7 +49,7 @@ function resetTimer() {
   clearInterval(timer)
   timer = setInterval(() => {
     nextSlide()
-  }, 7500)
+  }, 3000)
 }
 
 function handleResize() {
@@ -60,7 +60,7 @@ onMounted(() => {
   window.addEventListener('resize', handleResize)
   timer = setInterval(() => {
     nextSlide()
-  }, 7500)
+  }, 3000)
 })
 
 onUnmounted(() => {
