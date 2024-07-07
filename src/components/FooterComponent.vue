@@ -115,6 +115,7 @@ footer {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.25rem;
   box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
+  padding-bottom: 5rem;
 }
 
 /* Styles pour la navigation du footer */
