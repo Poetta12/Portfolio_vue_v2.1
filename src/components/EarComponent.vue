@@ -26,17 +26,18 @@ const props = defineProps({
   bottom: 24%;
   height: 10%;
   width: 5%;
-  border-radius: 50%;
   background: #161616;
 }
 
 .ear--left {
   left: -7%;
-  transform: rotate(-15deg);
+  transform: rotate(-25deg);
+  border-radius: 5px 20px 0 0;
 }
 
 .ear--right {
   right: -7%;
-  transform: rotate(15deg);
+  transform: rotate(25deg);
+  border-radius: 20px 5px 0 0;
 }
 </style>

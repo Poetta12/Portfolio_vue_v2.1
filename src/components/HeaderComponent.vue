@@ -48,6 +48,7 @@ const goToHome = () => {
         <span></span>
       </div>
       <!-- Navigation Menu -->
+
       <nav :class="{ 'main-nav': true, flex: menuOpen, hidden: !menuOpen }">
         <ul>
           <li>

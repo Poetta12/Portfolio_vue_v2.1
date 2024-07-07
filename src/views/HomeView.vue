@@ -4,6 +4,10 @@ import { useRouter } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const heroSection = ref(null)
+const heroParaf = ref(null)
+const heroHeight = ref(null)
+const aboutParaf = ref(null)
+const aboutHeight = ref(null)
 const aboutSection = ref(null)
 const servicesSection = ref(null)
 const router = useRouter()
@@ -14,10 +18,14 @@ const showFullAboutText = ref(false)
 
 const toggleFullHeroText = () => {
   showFullHeroText.value = !showFullHeroText.value
+  heroHeight.value = heroParaf.value ? heroParaf.value.getBoundingClientRect() : null
+  console.log(heroHeight.value)
 }
 
 const toggleFullAboutText = () => {
   showFullAboutText.value = !showFullAboutText.value
+  aboutHeight.value = aboutParaf.value ? aboutParaf.value.getBoundingClientRect() : null
+  console.log(aboutHeight.value)
 }
 
 const redirectToPortfolio = () => {
@@ -30,7 +38,7 @@ const scrollToNextSection = () => {
 
   // Définir des offsets différents en fonction de la taille de l'écran
   if (window.innerWidth >= 1024) {
-    offset = 200 // Offset pour les écrans larges (par exemple, desktop)
+    offset = 170 // Offset pour les écrans larges (par exemple, desktop)
   } else if (window.innerWidth >= 768) {
     offset = 160 // Offset pour les tablettes (par exemple, iPad)
   } else {
@@ -78,6 +86,14 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
+  // Access heroParaf.value here after the component is mounted
+  heroHeight.value = heroParaf.value ? heroParaf.value.getBoundingClientRect() : null
+  console.log(heroHeight.value)
+  aboutHeight.value = aboutParaf.value ? aboutParaf.value.getBoundingClientRect() : null
+  console.log(aboutHeight.value)
+  observeSections()
+  window.addEventListener('scroll', handleScroll)
+
   observeSections()
   window.addEventListener('scroll', handleScroll)
 
@@ -108,7 +124,7 @@ onUnmounted(() => {
 
     <!-- Hero section -->
     <section ref="heroSection" class="hero-section reflection fade-out">
-      <div class="hero-content">
+      <div class="hero-content" ref="heroParaf">
         <h1>Bienvenue sur PoettaTech</h1>
         <p class="desktop-text">
           Actuellement en formation avancée de Développeur, je suis activement à la recherche d'une
@@ -143,7 +159,7 @@ onUnmounted(() => {
 
     <!-- About section -->
     <section ref="aboutSection" class="about-section reflection fade-out">
-      <div class="about-content">
+      <div class="about-content" ref="aboutParaf">
         <h2>A propos de Pedro Costa</h2>
         <p class="desktop-text">
           Je suis récemment passé au domaine du développement numérique pour relever les défis et
@@ -370,6 +386,7 @@ onUnmounted(() => {
   max-width: 900px;
   margin: auto;
   padding: 1rem;
+  transition: all 3s;
 }
 
 .hero-content h1 {
@@ -493,16 +510,9 @@ onUnmounted(() => {
   .hero-section,
   .about-section,
   .services-section {
-    border-radius: 20px;
-    text-align: center;
-    color: #fff;
     margin-bottom: 5rem;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    font-size: 1rem;
-    line-height: 1.6;
   }
+
   #carousel-container h2 {
     display: block;
     position: absolute;
@@ -591,6 +601,11 @@ onUnmounted(() => {
 }
 
 @media (min-width: 1024px) {
+  .hero-section,
+  .about-section,
+  .services-section {
+    margin-bottom: 8rem;
+  }
   .home-container {
     padding: 0 2rem 1rem;
   }

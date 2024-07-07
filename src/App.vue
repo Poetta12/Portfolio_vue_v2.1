@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router'
 import HeaderComponent from './components/HeaderComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
-import HomeView from './views/HomeView.vue'
+import CatComponent from './components/CatComponent.vue'
 import '@/assets/css/main.css' // Assurez-vous d'importer le bon chemin
 import '@/assets/Icomoon/style.css'
 </script>
@@ -13,6 +13,9 @@ import '@/assets/Icomoon/style.css'
     <main>
       <RouterView />
     </main>
+    <div id="cat-eye">
+      <CatComponent />
+    </div>
     <FooterComponent />
   </div>
 </template>
@@ -58,6 +61,19 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+#cat-eye {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 10vh;
+  right: 0;
+  z-index: 100;
 }
 
 @media (min-width: 768px) {

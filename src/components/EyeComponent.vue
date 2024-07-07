@@ -24,6 +24,7 @@ const props = defineProps({
   position: absolute;
   top: 25%;
   height: 50%;
+  left: 50%;
   width: 20%;
   background: #161616;
   border-radius: 50%;
@@ -35,16 +36,16 @@ const props = defineProps({
     transform: translate(0);
   }
   5% {
-    transform: translate(50%, -25%);
+    transform: translate(-100%, -25%);
   }
   10% {
-    transform: translate(50%, -25%);
+    transform: translate(-100%, -25%);
   }
   15% {
-    transform: translate(200%, -25%);
+    transform: translate(-200%, -25%);
   }
   20% {
-    transform: translate(200%, -25%);
+    transform: translate(-200%, -25%);
   }
   25% {
     transform: translate(0, 0);
