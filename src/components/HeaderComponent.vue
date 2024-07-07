@@ -91,7 +91,7 @@ header {
   padding: 1rem;
   background-color: #111;
   color: #fff;
-  height: 12vh;
+  height: 10vh;
   box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.25rem;
@@ -105,7 +105,7 @@ header {
 }
 
 .logo {
-  width: 100px;
+  width: 65px;
   cursor: pointer;
 }
 
