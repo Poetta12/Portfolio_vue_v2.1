@@ -264,6 +264,7 @@ body {
 }
 
 .container {
+  max-width: 1200px;
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
@@ -497,6 +498,7 @@ section h3 {
 }
 
 @media (min-width: 768px) {
+
   .container {
     flex-direction: row;
     max-width: 1200px; /* Largeur maximale ajustée pour le contenu */
@@ -533,10 +535,15 @@ section h3 {
     height: 65px;
   }
 
+  .skills ul li{
+    margin-top: 1rem;
+  }
+
   .skills ul li span,
   .languages ul li span {
     font-size: 1rem;
   }
+
 }
 @media (min-width: 1024px) {
   #left-side .personal-info {
