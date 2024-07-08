@@ -24,7 +24,8 @@ import '@/assets/Icomoon/style.css'
 main {
   max-width: 1600px;
   margin: auto;
-  padding: 0; /* Réduit le padding pour les petits écrans */
+  padding: 0 10px; /* Réduit le padding pour les petits écrans */
+  margin-top: 1rem;
 }
 
 header {
@@ -79,6 +80,7 @@ nav a:first-of-type {
 @media (min-width: 768px) {
   main {
     padding: 0 2rem; /* Augmente le padding pour les écrans moyens et plus grands */
+    margin-top: 6rem;
   }
 
   header {
@@ -115,5 +117,17 @@ nav a:first-of-type {
   nav a:first-of-type {
     border: 0;
   }
+
+  #cat-eye {
+    bottom: 0;
+  }
+
+
+   
+}
+@media (min-width: 1024px) {
+  main {
+    margin-top: 7rem;
+    }
 }
 </style>

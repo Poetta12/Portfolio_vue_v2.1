@@ -243,7 +243,7 @@ onUnmounted(() => {
 
 #carousel-container {
   width: 100%;
-  height: 80vh;
+  height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -601,6 +601,9 @@ onUnmounted(() => {
 }
 
 @media (min-width: 1024px) {
+  #carousel-container {
+    height: 100vh;
+  }
   .hero-section,
   .about-section,
   .services-section {

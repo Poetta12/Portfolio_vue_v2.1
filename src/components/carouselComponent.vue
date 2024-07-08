@@ -293,7 +293,7 @@ button.prev:active {
     width: 80%;
     height: 450px;
     position: relative;
-    margin: 7% auto;
+    margin: 0 auto;
     margin-bottom: 0;
     background: #222;
     padding: 0;
