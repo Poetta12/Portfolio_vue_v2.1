@@ -32,12 +32,6 @@ function nextSlide() {
   resetTimer()
 }
 
-// function prevSlide() {
-//   direction = 'down'
-//   currentIndex.value = (currentIndex.value - 1 + totalSlides.value) % totalSlides.value
-//   resetTimer()
-// }
-
 function goToSlide(index) {
   direction = index > currentIndex.value ? 'up' : 'down'
   currentIndex.value = index
@@ -88,12 +82,6 @@ onUnmounted(() => {
     </div>
 
     <div class="button-slide">
-      <!-- <button class="prev" @click="prevSlide">
-        <i class="icon-triangle-up" style="font-size: 55px"></i>
-      </button>
-      <button class="next" @click="nextSlide">
-        <i class="icon-triangle-up" style="font-size: 55px"></i>
-      </button> -->
       <ul id="dots" class="dots-container">
         <li
           v-for="(article, index) in articles"
@@ -272,18 +260,6 @@ button.prev:active {
   background-color: #c9720e;
   -webkit-transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-#slides article.active {
-  opacity: 1;
-  z-index: 1;
-  animation: slideFromUp 0.5s ease forwards; /* Animation par défaut */
-}
-
-#slides article.active.slide-from-down {
-  opacity: 1;
-  z-index: 1;
-  animation: slideFromDown 0.5s ease forwards;
 }
 
 @media (min-width: 768px) {

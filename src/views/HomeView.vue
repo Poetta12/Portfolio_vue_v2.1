@@ -686,12 +686,12 @@ onUnmounted(() => {
 }
 
 .slide-in-left {
-  animation: slideFromLeft 3s ease forwards;
+  animation: slideFromLeft 1s ease forwards;
   opacity: 0;
 }
 
 .slide-in-right {
-  animation: slideFromRight 3s ease forwards;
+  animation: slideFromRight 1s ease forwards;
   opacity: 0;
 }
 
