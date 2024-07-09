@@ -498,7 +498,6 @@ section h3 {
 }
 
 @media (min-width: 768px) {
-
   .container {
     flex-direction: row;
     max-width: 1200px; /* Largeur maximale ajustée pour le contenu */
@@ -535,7 +534,7 @@ section h3 {
     height: 65px;
   }
 
-  .skills ul li{
+  .skills ul li {
     margin-top: 1rem;
   }
 
@@ -543,7 +542,6 @@ section h3 {
   .languages ul li span {
     font-size: 1rem;
   }
-
 }
 @media (min-width: 1024px) {
   #left-side .personal-info {
@@ -576,6 +574,56 @@ section h3 {
   .languages img {
     width: 80px;
     height: 80px;
+  }
+}
+
+@media print {
+  @page {
+    size: 8.5in 11in;
+    margin: 0;
+    padding: 0;
+  }
+
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  p:first-line,
+  div:first-line,
+  blockquote:first-line,
+  li:first-line {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster:
+								   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  #header,
+  #footer,
+  #nav {
+    display: none !important;
+  }
+
+  .container {
+    width: 100vw !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .left-side {
+    width: 30%;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .right-side {
+    width: 60%;
+    padding-right: 0;
+    margin-right: 0;
   }
 }
 </style>
