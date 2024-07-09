@@ -254,6 +254,8 @@ onUnmounted(() => {
 #carousel-container h2 {
   font-size: 10vw;
   cursor: pointer;
+}
+#carousel-container h2:first-child {
   display: none;
 }
 
