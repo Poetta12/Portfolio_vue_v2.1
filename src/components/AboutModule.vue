@@ -83,8 +83,6 @@ const viewCV = () => {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 #about {
   width: 100%; /* Largeur maximale par défaut pour les appareils mobiles */
   margin: auto;

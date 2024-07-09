@@ -247,8 +247,6 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 /* Assurez-vous d'inclure ce reset au début de votre fichier CSS */
 *,
 *::before,

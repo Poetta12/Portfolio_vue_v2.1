@@ -110,8 +110,12 @@ onUnmounted(() => {
 <template>
   <div class="home-container">
     <div id="carousel-container">
-      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio">PORTFOLIO</h2>
-      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio">PORTFOLIO</h2>
+      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio" loading="lazy">
+        PORTFOLIO
+      </h2>
+      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio" loading="lazy">
+        PORTFOLIO
+      </h2>
       <Carousel :class="{ 'slide-in-right': loaded }" />
 
       <div class="button-container-3">
@@ -219,8 +223,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 .hero-content .mobile-text {
   overflow: hidden;
   max-height: 60vh;
@@ -677,12 +679,12 @@ onUnmounted(() => {
 
 .fade-in {
   opacity: 1;
-  transition: opacity 4s ease;
+  transition: opacity 2s ease;
 }
 
 .fade-out {
   opacity: 0;
-  transition: opacity 4s ease;
+  transition: opacity 2s ease;
 }
 
 .slide-in-left {

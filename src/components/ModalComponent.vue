@@ -29,7 +29,6 @@ document.body.classList.add('modal-open')
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 .modal {
   position: fixed;
   top: 0;

@@ -86,7 +86,6 @@ window.onclick = function (event) {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 #info-module {
   width: 100%;
 
