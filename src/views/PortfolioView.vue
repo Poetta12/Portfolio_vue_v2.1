@@ -5,7 +5,7 @@ import Modal from '../components/ModalComponent.vue'
 const projects = ref([
   {
     title: 'HandiPhil',
-    imageUrl: '/HandiPhil.png',
+    imageUrl: '/HandiPhil.webp',
     description: `<p>En tant que développeur web, j'ai eu l'opportunité enrichissante de travailler sur mon tout premier projet client, Handiphil, pour le Fonds de Dotation Handiphil. Ce projet revêt une importance particulière car il soutient activement l'inclusion des personnes handicapées mentales, cognitives ou psychiques en Île-de-France.</p>
 
     <p>Mon rôle central dans ce projet comprenait la conception et le développement d'un site web dynamique utilisant WordPress. J'ai été chargé de personnaliser le thème WordPress avec du code JavaScript, CSS, HTML et PHP pour répondre aux besoins spécifiques de l'association et assurer une expérience utilisateur optimale.</p>
@@ -15,7 +15,7 @@ const projects = ref([
   },
   {
     title: 'La Cravate Solidaire',
-    imageUrl: '/La_Cravate_Solidaire.png',
+    imageUrl: '/La_Cravate_Solidaire.webp',
     description: `<p>Pour mon deuxième projet client, j'ai collaboré avec La Cravate Solidaire (https://lacravatesolidaire.org/), une association œuvrant pour l'emploi des personnes en difficulté.</p>
 
     <p>J'ai développé des compétences approfondies en Vue.js pour créer des composants interactifs et dynamiques, améliorant ainsi l'expérience utilisateur du site. En parallèle, j'ai assuré un design responsive en utilisant CSS, SASS et Bootstrap, garantissant une navigation optimale sur tous les appareils.</p>
@@ -27,7 +27,7 @@ const projects = ref([
   },
   {
     title: 'Sumika',
-    imageUrl: '/Sumika.png',
+    imageUrl: '/Sumika.webp',
     description: `<p>Pour mon troisième projet avec Sumika Europe (https://www.sumikaeurope.com), j'ai dirigé le développement d'un site web dynamique en utilisant WordPress, tout en intégrant des animations personnalisées avec CSS et JavaScript conformément au cahier des charges.</p>
 
     <p>J'ai également configuré un module avancé avec Advanced Custom Fields (ACF) en PHP et HTML, offrant au client un tableau de bord sécurisé pour gérer efficacement le contenu du site.</p>
@@ -39,7 +39,7 @@ const projects = ref([
   },
   {
     title: 'PoettaTech WSDS',
-    imageUrl: '/PoettaTech_WSDS.png',
+    imageUrl: '/PoettaTech_WSDS.webp',
     description: `<p>Poettatch.fr est mon portfolio personnel développé avec Vue.js, mettant en avant mes compétences en développement web. Le site présente une interface interactive avec un design responsive optimisé pour tous les appareils.</p>
     
     <p>J'ai intégré des animations fluides et des fonctionnalités avancées en JavaScript pour enrichir l'expérience utilisateur. Les sections incluent mes informations personnelles, mes liens professionnels (LinkedIn, GitHub), mon parcours éducatif, mes compétences techniques (HTML, CSS, JavaScript, PHP, Vue.js, etc.), ainsi que mes expériences professionnelles précédentes.</p>
