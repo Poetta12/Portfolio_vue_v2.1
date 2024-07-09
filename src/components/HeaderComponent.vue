@@ -33,7 +33,7 @@ const goToHome = () => {
   <header>
     <div id="header-container">
       <div class="logo" @click="goToHome">
-        <img src="/src/assets/logos/logo_2.png" alt="Logo" />
+        <img src="/src/assets/logos/logo_2.webp" alt="Logo" />
       </div>
       <ul id="header-reseaux">
         <li><a href="https://www.poettatech.fr" class="icon-profile"></a></li>
