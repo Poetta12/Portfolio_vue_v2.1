@@ -110,17 +110,13 @@ onUnmounted(() => {
 <template>
   <div class="home-container">
     <div id="carousel-container">
-      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio" loading="lazy">
-        PORTFOLIO
-      </h2>
-      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio" loading="lazy">
-        PORTFOLIO
-      </h2>
+      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio">PORTFOLIO</h2>
+      <h2 :class="{ 'slide-in-left': loaded }" @click="redirectToPortfolio">PORTFOLIO</h2>
       <Carousel :class="{ 'slide-in-right': loaded }" />
 
       <div class="button-container-3">
         <span class="mas"></span>
-        <button @click="scrollToNextSection" class="scroll-button">
+        <button @click="scrollToNextSection" class="scroll-button" aria-label="scrollToNextSection">
           <div class="arrow down"></div>
         </button>
       </div>
@@ -152,7 +148,7 @@ onUnmounted(() => {
             volonté forte de contribuer au succès de votre entreprise et de développer mes
             compétences dans un environnement professionnel stimulant et dynamique.
           </span>
-          <button @click="toggleFullHeroText">
+          <button @click="toggleFullHeroText" aria-label="toggleFullHeroText">
             {{ showFullHeroText ? 'Réduire' : 'Lire la suite' }}
           </button>
         </p>
@@ -189,7 +185,7 @@ onUnmounted(() => {
             algorithmes et programmation. Passionné par l'innovation technologique, je suis prêt à
             relever de nouveaux défis et à contribuer au succès de projets numériques ambitieux.
           </span>
-          <button @click="toggleFullAboutText">
+          <button @click="toggleFullAboutText" aria-label="toggleFullAboutText">
             {{ showFullAboutText ? 'Réduire' : 'Lire la suite' }}
           </button>
         </p>
