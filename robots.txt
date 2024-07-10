@@ -1,0 +1,34 @@
+# robots.txt for www.poettatech.fr
+
+User-agent: \*
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+
+# Allow specific resources
+
+Allow: /public/
+
+# Sitemap location
+
+Sitemap: https://www.poettatech.fr/sitemap.xml
+
+# Example of a specific bot block
+
+User-agent: BadBot
+Disallow: /
+
+# Example of allowing specific bots
+
+User-agent: Googlebot
+Allow: /
+
+# Example of blocking specific files
+
+User-agent: \*
+Disallow: /secret.html
+
+# Example of allowing all files in a specific directory
+
+User-agent: \*
+Allow: /public/

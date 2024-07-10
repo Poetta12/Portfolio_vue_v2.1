@@ -244,6 +244,18 @@
 
 <script setup>
 //import jsLogo from '@/assets/logos/js.png' // Utilisation d'un chemin d'importation absolu avec Vite
+import { useMeta } from 'vue-meta'
+
+useMeta({
+  title: 'PoettaTech - CV',
+  meta: [
+    {
+      name: 'description',
+      content:
+        "Bienvenue sur PoettaTech, votre source d'informations sur la technologie et le développement web. Découvrez nos projets, notre portfolio et plus encore."
+    }
+  ]
+})
 </script>
 
 <style scoped>

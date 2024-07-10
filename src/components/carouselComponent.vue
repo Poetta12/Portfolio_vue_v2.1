@@ -5,17 +5,17 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const desktopArticles = ref([
-  { image: '/HandiPhil.png' },
-  { image: '/La_Cravate_Solidaire.png' },
-  { image: '/Sumika.png' },
-  { image: '/PoettaTech_WSDS.png' }
+  { image: '/HandiPhil.webp' },
+  { image: '/La_Cravate_Solidaire.webp' },
+  { image: '/Sumika.webp' },
+  { image: '/PoettaTech_WSDS.webp' }
 ])
 
 const mobileArticles = ref([
-  { image: '/HandiPhil-mobile.png' },
-  { image: '/La_Cravate_Solidaire-mobile.png' },
-  { image: '/Sumika-mobile.png' },
-  { image: '/PoettaTech_WSDS-mobile.png' }
+  { image: '/HandiPhil-mobile.webp' },
+  { image: '/La_Cravate_Solidaire-mobile.webp' },
+  { image: '/Sumika-mobile.webp' },
+  { image: '/PoettaTech_WSDS-mobile.webp' }
 ])
 
 const isMobile = ref(window.innerWidth <= 768)

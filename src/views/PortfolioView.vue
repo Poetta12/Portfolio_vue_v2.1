@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { useMeta } from 'vue-meta'
 import Modal from '../components/ModalComponent.vue'
 
 const projects = ref([
@@ -61,6 +62,17 @@ const openModal = (project) => {
 const closeModal = () => {
   selectedProject.value = null
 }
+
+useMeta({
+  title: 'PoettaTech - PortFolio',
+  meta: [
+    {
+      name: 'description',
+      content:
+        "Bienvenue sur PoettaTech, votre source d'informations sur la technologie et le développement web. Découvrez nos projets, notre portfolio et plus encore."
+    }
+  ]
+})
 </script>
 
 <template>

@@ -1,4 +1,5 @@
 <script setup>
+import { useMeta } from 'vue-meta'
 import Carousel from '@/components/carouselComponent.vue'
 import { useRouter } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
@@ -104,6 +105,17 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+})
+
+useMeta({
+  title: 'PoettaTech - Accueil',
+  meta: [
+    {
+      name: 'description',
+      content:
+        "Bienvenue sur PoettaTech, votre source d'informations sur la technologie et le développement web. Découvrez nos projets, notre portfolio et plus encore."
+    }
+  ]
 })
 </script>
 

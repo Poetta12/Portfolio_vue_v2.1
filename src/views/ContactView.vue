@@ -94,6 +94,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import { useMeta } from 'vue-meta'
 
 const name = ref('')
 const email = ref('')
@@ -186,6 +187,17 @@ onMounted(() => {
     }
   }
   document.head.appendChild(script)
+})
+
+useMeta({
+  title: 'PoettaTech - Contact',
+  meta: [
+    {
+      name: 'description',
+      content:
+        "Bienvenue sur PoettaTech, votre source d'informations sur la technologie et le développement web. Découvrez nos projets, notre portfolio et plus encore."
+    }
+  ]
 })
 </script>
 

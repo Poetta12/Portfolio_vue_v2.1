@@ -8,6 +8,18 @@
 <script setup>
 import AboutModule from '../components/AboutModule.vue'
 import InfoModule from '../components/InfoModule.vue'
+import { useMeta } from 'vue-meta'
+
+useMeta({
+  title: 'PoettaTech - Pedro Costa',
+  meta: [
+    {
+      name: 'description',
+      content:
+        "Bienvenue sur PoettaTech, votre source d'informations sur la technologie et le développement web. Découvrez nos projets, notre portfolio et plus encore."
+    }
+  ]
+})
 </script>
 
 <style scoped>
