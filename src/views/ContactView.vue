@@ -94,7 +94,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
-import { useMeta } from 'vue-meta'
+import { useHead } from '@vueuse/head'
 
 const name = ref('')
 const email = ref('')
@@ -189,7 +189,7 @@ onMounted(() => {
   document.head.appendChild(script)
 })
 
-useMeta({
+useHead({
   title: 'PoettaTech - Contact',
   meta: [
     {
@@ -202,8 +202,6 @@ useMeta({
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 #contact-header {
   display: flex;
   flex-direction: column;

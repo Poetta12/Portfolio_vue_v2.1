@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { useMeta } from 'vue-meta'
+import { useHead } from '@vueuse/head'
 import Modal from '../components/ModalComponent.vue'
 
 const projects = ref([
@@ -63,7 +63,7 @@ const closeModal = () => {
   selectedProject.value = null
 }
 
-useMeta({
+useHead({
   title: 'PoettaTech - PortFolio',
   meta: [
     {

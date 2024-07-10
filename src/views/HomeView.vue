@@ -1,5 +1,5 @@
 <script setup>
-import { useMeta } from 'vue-meta'
+import { useHead } from '@vueuse/head'
 import Carousel from '@/components/carouselComponent.vue'
 import { useRouter } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
@@ -107,8 +107,8 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-useMeta({
-  title: 'PoettaTech - Accueil',
+useHead({
+  title: 'Poettatech - Accueil',
   meta: [
     {
       name: 'description',

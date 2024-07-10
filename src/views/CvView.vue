@@ -244,9 +244,9 @@
 
 <script setup>
 //import jsLogo from '@/assets/logos/js.png' // Utilisation d'un chemin d'importation absolu avec Vite
-import { useMeta } from 'vue-meta'
+import { useHead } from '@vueuse/head'
 
-useMeta({
+useHead({
   title: 'PoettaTech - CV',
   meta: [
     {

@@ -8,9 +8,9 @@
 <script setup>
 import AboutModule from '../components/AboutModule.vue'
 import InfoModule from '../components/InfoModule.vue'
-import { useMeta } from 'vue-meta'
+import { useHead } from '@vueuse/head'
 
-useMeta({
+useHead({
   title: 'PoettaTech - Pedro Costa',
   meta: [
     {
