@@ -60,13 +60,13 @@ const mobileImages = [
 
 const desktopImages = [
   {
-    src: '/public/La_Cravate_Solidaire.webp',
+    src: 'La_Cravate_Solidaire.webp',
     alt: 'La_Cravate_Solidaire-mobile',
     color: '#3d2d57'
   },
-  { src: '/public/HandiPhil.webp', alt: 'HandiPhil', color: '#b6b7f2' },
-  { src: '/public/Sumika.webp', alt: 'Sumika', color: '#3e9ce3' },
-  { src: '/public/PoettaTech_WSDS.webp', alt: 'PoettaTech_WSDS', color: '#222' }
+  { src: 'HandiPhil.webp', alt: 'HandiPhil', color: '#b6b7f2' },
+  { src: 'Sumika.webp', alt: 'Sumika', color: '#3e9ce3' },
+  { src: 'PoettaTech_WSDS.webp', alt: 'PoettaTech_WSDS', color: '#222' }
 ]
 
 const images = ref(mobileImages) // Valeur par défaut pour mobile
