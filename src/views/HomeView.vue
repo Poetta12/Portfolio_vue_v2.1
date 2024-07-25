@@ -50,12 +50,12 @@ const leftSlides = [
 
 const mobileImages = [
   {
-    src: '/public/La_Cravate_Solidaire-mobile.webp',
+    src: 'La_Cravate_Solidaire-mobile.webp',
     alt: 'La_Cravate_Solidaire-mobile'
   },
-  { src: '/public/HandiPhil-mobile.webp', alt: 'HandiPhil-mobile' },
-  { src: '/public/Sumika-mobile.webp', alt: 'Sumika-mobile' },
-  { src: '/public/PoettaTech_WSDS-mobile.webp', alt: 'PoettaTech_WSDS-mobile' }
+  { src: 'HandiPhil-mobile.webp', alt: 'HandiPhil-mobile' },
+  { src: 'Sumika-mobile.webp', alt: 'Sumika-mobile' },
+  { src: 'PoettaTech_WSDS-mobile.webp', alt: 'PoettaTech_WSDS-mobile' }
 ]
 
 const desktopImages = [
