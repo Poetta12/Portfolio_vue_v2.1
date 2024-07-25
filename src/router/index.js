@@ -5,6 +5,7 @@ import PoettaView from '../views/PoettaView.vue'
 import CvView from '../views/CvView.vue'
 import ContactView from '../views/ContactView.vue'
 import PortfolioView from '../views/PortfolioView.vue'
+import GlossaireView from '../views/GlossaireView.vue' // Importez la vue du glossaire
 
 const routes = [
   {
@@ -59,6 +60,17 @@ const routes = [
         path: '',
         name: 'Portfolio',
         component: PortfolioView
+      }
+    ]
+  },
+  {
+    path: '/glossaire', // Nouvelle route pour le glossaire
+    component: DefaultLayout,
+    children: [
+      {
+        path: '',
+        name: 'Glossaire',
+        component: GlossaireView
       }
     ]
   }

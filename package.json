@@ -14,8 +14,10 @@
   "dependencies": {
     "@vueuse/head": "^2.0.0",
     "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
+    "express": "^4.19.2",
     "pinia": "^2.1.7",
     "sitemap": "^8.0.0",
     "vue": "^3.4.29",

@@ -72,6 +72,11 @@ const goToHome = () => {
               >Contact</router-link
             >
           </li>
+          <li>
+            <router-link to="/glossaire" @click="closeMenu" active-class="active-link"
+              >Glossaire Web Dev</router-link
+            >
+          </li>
         </ul>
       </nav>
     </div>

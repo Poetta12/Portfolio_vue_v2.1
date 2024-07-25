@@ -1,0 +1,530 @@
+[
+	{
+		"title": "Architecture Logicielle",
+		"definition": "Structure organisée de systèmes ou d'applications, incluant leurs composants, leurs relations et leurs interactions. Cela inclut des décisions sur l'architecture des logiciels, comme l'utilisation de microservices, de monolithes, etc.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "CONNECT",
+		"definition": "Méthode HTTP utilisée par les clients pour établir une connexion réseau avec un serveur via un tunnel, souvent utilisé pour les connexions sécurisées HTTPS via des proxys HTTP.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "CRUD (Create, Read, Update, Delete)",
+		"definition": "Acronyme désignant les quatre opérations de base pour la gestion des données persistantes : création, lecture, mise à jour et suppression. Ces opérations sont fondamentales dans les applications utilisant des bases de données.",
+		"theme": "Base de données"
+	},
+	{
+		"title": "DELETE",
+		"definition": "Méthode HTTP utilisée pour supprimer une ressource spécifiée par l'URI. Elle est souvent utilisée dans les API RESTful pour supprimer des enregistrements de base de données.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "Eloquent (ORM)",
+		"definition": "ORM (Object-Relational Mapping) fourni avec le framework Laravel. Il permet de gérer les interactions avec la base de données en utilisant des objets PHP, simplifiant ainsi les opérations CRUD et les requêtes complexes.",
+		"theme": "ORM"
+	},
+	{
+		"title": "GET",
+		"definition": "Méthode HTTP utilisée pour demander une représentation d'une ressource spécifique. Les requêtes utilisant cette méthode ne doivent produire aucun effet de modification. Souvent utilisée pour récupérer des données de manière sécurisée.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "HEAD",
+		"definition": "Méthode HTTP similaire à GET, mais qui demande seulement les en-têtes de la réponse, sans le corps de la ressource. Utile pour vérifier si une ressource a été modifiée.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "HTTP (HyperText Transfer Protocol)",
+		"definition": "Protocole de communication utilisé pour transférer des documents hypertextes sur le Web. C'est le fondement des échanges de données sur le web, et il est utilisé pour toutes les opérations de navigation et d'accès aux services web.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "JSON (JavaScript Object Notation)",
+		"definition": "Format de fichier et de données léger et lisible par les humains, utilisé principalement pour l'échange de données entre un serveur et une application web. JSON est souvent préféré à XML pour sa simplicité et sa facilité d'utilisation.",
+		"theme": "Format de données"
+	},
+	{
+		"title": "OPTIONS",
+		"definition": "Méthode HTTP utilisée pour décrire les options de communication pour la ressource cible. Elle est souvent utilisée dans la gestion des CORS (Cross-Origin Resource Sharing) pour déterminer les méthodes HTTP autorisées pour une ressource.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "PATCH",
+		"definition": "Méthode HTTP utilisée pour appliquer des modifications partielles à une ressource. Contrairement à PUT, qui remplace l'ensemble de la ressource, PATCH ne met à jour que certaines parties.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "POST",
+		"definition": "Méthode HTTP utilisée pour envoyer des données au serveur pour créer ou mettre à jour une ressource. Elle est souvent utilisée pour soumettre des formulaires ou télécharger des fichiers.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "PUT",
+		"definition": "Méthode HTTP utilisée pour créer une nouvelle ressource ou remplacer une ressource cible avec les données de la requête. Cette méthode est idempotente, ce qui signifie que plusieurs requêtes identiques auront le même effet.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "REST (Representational State Transfer)",
+		"definition": "Style architectural pour concevoir des services web, basé sur des opérations stateless (sans état) et l'utilisation des verbes HTTP standard (GET, POST, PUT, DELETE). Les API RESTful suivent ces principes pour interagir avec les ressources web.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "RESTful",
+		"definition": "Qualificatif désignant une application ou un service web qui implémente les principes REST. Cela implique une utilisation cohérente des méthodes HTTP et une structuration claire des URI pour accéder aux ressources.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "Ressources Web",
+		"definition": "Entités ou objets accessibles via le Web, identifiés par des URIs et manipulés à l'aide de protocoles comme HTTP. Ces ressources peuvent être des pages HTML, des images, des services API, etc.",
+		"theme": "Web"
+	},
+	{
+		"title": "SOAP (Simple Object Access Protocol)",
+		"definition": "Protocole pour l'échange d'informations structurées dans la mise en œuvre de services web, utilisant XML pour le format de message. SOAP est souvent utilisé pour des services web nécessitant un niveau de sécurité élevé et des transactions complexes.",
+		"theme": "Web"
+	},
+	{
+		"title": "TRACE",
+		"definition": "Méthode HTTP utilisée pour faire écho à ce que le serveur reçoit, principalement à des fins de test et de diagnostic. Elle peut être utilisée pour voir les changements ou les transformations apportées par les intermédiaires (comme les proxys).",
+		"theme": "HTTP"
+	},
+	{
+		"title": "URI (Uniform Resource Identifier)",
+		"definition": "Chaîne de caractères qui identifie de manière unique une ressource sur le Web. Un URI peut être une URL ou un URN.",
+		"theme": "Web"
+	},
+	{
+		"title": "URL (Uniform Resource Locator)",
+		"definition": "Sous-ensemble d'URI qui, en plus d'identifier une ressource, fournit les moyens de la localiser sur le réseau. Une URL contient des informations sur le protocole à utiliser (http, https), l'adresse de la ressource et son chemin.",
+		"theme": "Web"
+	},
+	{
+		"title": "XML (eXtensible Markup Language)",
+		"definition": "Langage de balisage flexible utilisé pour structurer, stocker et transporter des données. XML est extensible et permet de définir ses propres balises pour représenter les données.",
+		"theme": "Format de données"
+	},
+	{
+		"title": "API (Application Programming Interface)",
+		"definition": "Ensemble de définitions et de protocoles pour construire et intégrer des logiciels. Une API spécifie comment les composants logiciels doivent interagir et est utilisée pour permettre l'interaction entre différents systèmes logiciels.",
+		"theme": "API"
+	},
+	{
+		"title": "Bootstrap",
+		"definition": "Framework front-end open source pour le développement de sites web et d'applications. Fournit des outils CSS et JavaScript pour des interfaces responsives et modernes.",
+		"theme": "Framework"
+	},
+	{
+		"title": "CSS (Cascading Style Sheets)",
+		"definition": "Langage de feuille de style utilisé pour décrire la présentation d'un document écrit en HTML ou XML. Permet de séparer la structure du contenu et le style visuel.",
+		"theme": "CSS"
+	},
+	{
+		"title": "DOM (Document Object Model)",
+		"definition": "Interface de programmation pour les documents HTML et XML. Représente la structure du document sous forme d'un arbre hiérarchique, permettant aux langages de programmation comme JavaScript d'accéder et de manipuler le contenu, la structure et le style des documents.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "Framework",
+		"definition": "Ensemble d'outils, de bibliothèques et de bonnes pratiques destiné à simplifier le développement de logiciels en fournissant une base structurée. Les frameworks peuvent être utilisés pour le développement front-end (ex. React, Angular) ou back-end (ex. Laravel, Django).",
+		"theme": "Framework"
+	},
+	{
+		"title": "Node.js",
+		"definition": "Environnement d'exécution JavaScript côté serveur basé sur le moteur V8 de Google Chrome. Permet de créer des applications réseau rapides et évolutives en utilisant JavaScript.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "NPM (Node Package Manager)",
+		"definition": "Gestionnaire de paquets pour le runtime Node.js. Permet d'installer, de gérer et de partager des bibliothèques et des outils JavaScript.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "React",
+		"definition": "Bibliothèque JavaScript pour la construction d'interfaces utilisateur, développée par Facebook. Utilise une approche basée sur des composants pour faciliter la création d'applications web dynamiques et réactives.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "Vue.js",
+		"definition": "Framework JavaScript progressif pour construire des interfaces utilisateur. Conçu pour être adoptable de manière incrémentielle et facilite le développement de SPA (Single Page Applications) avec des fonctionnalités modernes.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "SQL (Structured Query Language)",
+		"definition": "Langage de programmation utilisé pour gérer et manipuler des bases de données relationnelles. Permet de créer, lire, mettre à jour et supprimer des données dans une base de données.",
+		"theme": "Base de données"
+	},
+	{
+		"title": "WebSocket",
+		"definition": "Protocole de communication permettant une interaction bidirectionnelle en temps réel entre le client et le serveur. Utilisé pour des applications nécessitant des mises à jour en temps réel, comme les chats en ligne ou les jeux multi-joueurs.",
+		"theme": "Communication"
+	},
+	{
+		"title": "GraphQL",
+		"definition": "Langage de requête pour les API, développé par Facebook, permettant de demander uniquement les données nécessaires, facilitant ainsi l'évolution des API et leur intégration avec des clients variés.",
+		"theme": "API"
+	},
+	{
+		"title": "JWT (JSON Web Token)",
+		"definition": "Standard ouvert (RFC 7519) qui définit un moyen compact et autonome pour transmettre des informations de manière sécurisée entre les parties en utilisant des tokens signés numériquement.",
+		"theme": "Sécurité"
+	},
+	{
+		"title": "Microservices",
+		"definition": "Architecture où une application est constituée de petits services indépendants qui communiquent entre eux via des API. Chaque microservice gère une fonctionnalité ou un domaine spécifique.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "Middleware",
+		"definition": "Logiciel qui se situe entre le système d'exploitation et les applications sur un réseau. Il permet aux applications de communiquer entre elles et d'exécuter des tâches plus efficacement.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "ORM (Object-Relational Mapping)",
+		"definition": "Technique qui permet de convertir les données entre des systèmes incompatibles en utilisant un langage orienté objet pour interagir avec une base de données relationnelle.",
+		"theme": "ORM"
+	},
+	{
+		"title": "SPA (Single Page Application)",
+		"definition": "Application web qui se charge en une seule page HTML et met à jour le contenu de cette page dynamiquement au fur et à mesure que l'utilisateur interagit avec l'application.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "SSR (Server-Side Rendering)",
+		"definition": "Technique où le rendu de l'application web se fait côté serveur, produisant du HTML pré-rendu qui est envoyé au client, améliorant ainsi le temps de chargement et le SEO.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "CDN (Content Delivery Network)",
+		"definition": "Réseau de serveurs répartis géographiquement qui délivrent du contenu web à l'utilisateur final de manière plus rapide et efficace en fonction de la localisation géographique.",
+		"theme": "Infrastructure"
+	},
+	{
+		"title": "CI/CD (Continuous Integration / Continuous Deployment)",
+		"definition": "Pratiques de développement logiciel où les changements de code sont régulièrement intégrés, testés et déployés automatiquement pour améliorer la qualité et la rapidité des livraisons de logiciels.",
+		"theme": "DevOps"
+	},
+	{
+		"title": "Versioning",
+		"definition": "Pratique de gestion des versions du code source ou des API pour maintenir la compatibilité entre différentes versions et faciliter le suivi des évolutions et des changements.",
+		"theme": "Gestion de version"
+	},
+	{
+		"title": "Scalability",
+		"definition": "Capacité d'un système à gérer une augmentation de la charge de travail ou à être facilement agrandi pour gérer une croissance accrue des demandes.",
+		"theme": "Infrastructure"
+	},
+	{
+		"title": "Cloud Computing",
+		"definition": "Fourniture de services informatiques (tels que des serveurs, du stockage, des bases de données, des réseaux, des logiciels) via Internet, offrant des économies d'échelle, une flexibilité et une efficacité accrues.",
+		"theme": "Infrastructure"
+	},
+	{
+		"title": "Virtualization",
+		"definition": "Technologie qui permet de créer plusieurs environnements simulés ou machines virtuelles à partir d'une seule machine physique. Cela optimise les ressources matérielles et réduit les coûts.",
+		"theme": "Infrastructure"
+	},
+	{
+		"title": "API Gateway",
+		"definition": "Serveur qui agit comme un point d'entrée unique pour un ensemble de microservices, gérant les demandes des clients, l'authentification, la surveillance et le routage des requêtes.",
+		"theme": "API"
+	},
+	{
+		"title": "Docker",
+		"definition": "Plateforme de conteneurisation qui permet de créer, déployer et exécuter des applications dans des conteneurs légers et portables, facilitant la portabilité et la gestion des environnements.",
+		"theme": "DevOps"
+	},
+	{
+		"title": "Kubernetes",
+		"definition": "Système open source de gestion de conteneurs qui automatise le déploiement, la mise à l'échelle et la gestion des applications conteneurisées.",
+		"theme": "DevOps"
+	},
+	{
+		"title": "Load Balancer",
+		"definition": "Dispositif ou logiciel qui distribue le trafic réseau ou applicatif à travers plusieurs serveurs, optimisant ainsi l'utilisation des ressources, maximisant la débit et minimisant le temps de réponse.",
+		"theme": "Infrastructure"
+	},
+	{
+		"title": "Machine Learning",
+		"definition": "Domaine de l'intelligence artificielle qui permet aux ordinateurs d'apprendre à partir de données et de faire des prédictions ou des décisions sans être explicitement programmés pour chaque tâche.",
+		"theme": "Intelligence Artificielle"
+	},
+	{
+		"title": "NoSQL",
+		"definition": "Type de système de gestion de base de données qui ne repose pas sur le modèle relationnel traditionnel. Utilisé pour les grandes quantités de données non structurées ou semi-structurées.",
+		"theme": "Base de données"
+	},
+	{
+		"title": "OAuth",
+		"definition": "Protocole d'autorisation open standard qui permet à une application d'accéder aux ressources d'un utilisateur sur un autre service de manière sécurisée, sans divulguer les informations de connexion.",
+		"theme": "Sécurité"
+	},
+	{
+		"title": "SSL/TLS",
+		"definition": "Protocoles cryptographiques qui sécurisent les communications sur un réseau informatique, particulièrement pour les transactions sur Internet. SSL (Secure Sockets Layer) est l'ancêtre de TLS (Transport Layer Security).",
+		"theme": "Sécurité"
+	},
+	{
+		"title": "DevOps",
+		"definition": "Ensemble de pratiques qui combinent le développement de logiciels (Dev) et les opérations informatiques (Ops) pour raccourcir le cycle de développement et fournir des livraisons continues avec une haute qualité logicielle.",
+		"theme": "DevOps"
+	},
+	{
+		"title": "Scrum",
+		"definition": "Cadre agile pour gérer le développement de logiciels, basé sur des itérations courtes et incrémentales appelées sprints, permettant des ajustements fréquents aux besoins et aux priorités.",
+		"theme": "Méthodologie"
+	},
+	{
+		"title": "Kanban",
+		"definition": "Méthodologie de gestion des flux de travail qui visualise les tâches à travers des colonnes représentant les différentes étapes de leur réalisation. Utilisé pour optimiser l'efficacité et la productivité.",
+		"theme": "Méthodologie"
+	},
+	{
+		"title": "Big Data",
+		"definition": "Ensemble des technologies et des techniques utilisées pour traiter et analyser de très grandes volumes de données, souvent hétérogènes, pour en extraire des informations exploitables.",
+		"theme": "Données"
+	},
+	{
+		"title": "Data Mining",
+		"definition": "Processus d'exploration de grandes bases de données pour découvrir des modèles et des informations significatives. Utilisé en Big Data et en analyse des données pour faire des prédictions et des décisions.",
+		"theme": "Données"
+	},
+	{
+		"title": "Microfrontend",
+		"definition": "Architecture d'application front-end où une interface utilisateur est décomposée en composants indépendants, développés et déployés séparément. Permet une plus grande flexibilité et modularité.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "Progressive Web App (PWA)",
+		"definition": "Type d'application qui utilise les technologies web modernes pour offrir une expérience similaire à celle d'une application native sur mobile et ordinateur, incluant des fonctionnalités telles que le travail hors ligne et les notifications push.",
+		"theme": "Web"
+	},
+	{
+		"title": "GitHub API",
+		"definition": "Permet d'accéder aux données de GitHub, telles que les dépôts, les utilisateurs, les issues, et plus encore. Les développeurs peuvent utiliser cette API pour intégrer les fonctionnalités de GitHub dans leurs applications.",
+		"url": "https://api.github.com",
+		"theme": "API REST"
+	},
+	{
+		"title": "Twitter API",
+		"definition": "Fournit des accès aux fonctionnalités de Twitter, y compris la publication de tweets, la lecture de timeline, la gestion des followers, etc. Elle est largement utilisée pour l'analyse de données sociales et l'intégration des fonctionnalités Twitter.",
+		"url": "https://api.twitter.com",
+		"theme": "API REST"
+	},
+	{
+		"title": "OpenWeatherMap API",
+		"definition": "Fournit des données météorologiques actuelles, prévisions, et historiques. Utilisée par des applications pour afficher la météo et les alertes météorologiques.",
+		"url": "https://api.openweathermap.org",
+		"theme": "API REST"
+	},
+	{
+		"title": "Google Maps API",
+		"definition": "Permet de travailler avec les services de cartographie, y compris l'affichage des cartes, la recherche d'adresses, les itinéraires, les données de trafic, et plus encore. Très utilisé pour les services de localisation et de navigation.",
+		"url": "https://maps.googleapis.com",
+		"theme": "API REST"
+	},
+	{
+		"title": "Spotify API",
+		"definition": "Fournit un accès aux données de Spotify, y compris les albums, les artistes, les playlists, les profils utilisateurs, et la lecture de musique. Utilisée pour intégrer les fonctionnalités de Spotify dans les applications.",
+		"url": "https://api.spotify.com",
+		"theme": "API REST"
+	},
+	{
+		"title": "REST Countries API",
+		"definition": "Offre des informations sur les pays du monde entier, y compris les données géographiques, les populations, les langues, les monnaies, et plus encore. Utilisée pour des applications d'apprentissage, de géographie, et de voyage.",
+		"url": "https://restcountries.com",
+		"theme": "API REST"
+	},
+	{
+		"title": "NASA API",
+		"definition": "Propose des données issues des missions et des recherches de la NASA, y compris les images de l'espace, les données astronomiques, les informations sur les astéroïdes, etc. Utile pour les applications d'éducation et d'astronomie.",
+		"url": "https://api.nasa.gov",
+		"theme": "API REST"
+	},
+	{
+		"title": "YouTube Data API",
+		"definition": "Permet d'accéder aux données de YouTube, y compris les vidéos, les playlists, les chaînes, les statistiques de visionnage, et plus encore. Utilisée pour intégrer les fonctionnalités de YouTube dans d'autres applications.",
+		"url": "https://www.googleapis.com/youtube/v3",
+		"theme": "API REST"
+	},
+	{
+		"title": "Architecture Logicielle",
+		"definition": "Structure organisée de systèmes ou d'applications, incluant leurs composants, leurs relations et leurs interactions. Cela inclut des décisions sur l'architecture des logiciels, comme l'utilisation de microservices, de monolithes, etc.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "CONNECT",
+		"definition": "Méthode HTTP utilisée par les clients pour établir une connexion réseau avec un serveur via un tunnel, souvent utilisé pour les connexions sécurisées HTTPS via des proxys HTTP.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "CRUD (Create, Read, Update, Delete)",
+		"definition": "Acronyme désignant les quatre opérations de base pour la gestion des données persistantes : création, lecture, mise à jour et suppression. Ces opérations sont fondamentales dans les applications utilisant des bases de données.",
+		"theme": "Base de données"
+	},
+	{
+		"title": "DELETE",
+		"definition": "Méthode HTTP utilisée pour supprimer une ressource spécifiée par l'URI. Elle est souvent utilisée dans les API RESTful pour supprimer des enregistrements de base de données.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "Eloquent (ORM)",
+		"definition": "ORM (Object-Relational Mapping) fourni avec le framework Laravel. Il permet de gérer les interactions avec la base de données en utilisant des objets PHP, simplifiant ainsi les opérations CRUD et les requêtes complexes.",
+		"theme": "ORM"
+	},
+	{
+		"title": "GET",
+		"definition": "Méthode HTTP utilisée pour demander une représentation d'une ressource spécifique. Les requêtes utilisant cette méthode ne doivent produire aucun effet de modification. Souvent utilisée pour récupérer des données de manière sécurisée.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "HEAD",
+		"definition": "Méthode HTTP similaire à GET, mais qui demande seulement les en-têtes de la réponse, sans le corps de la ressource. Utile pour vérifier si une ressource a été modifiée.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "HTTP (HyperText Transfer Protocol)",
+		"definition": "Protocole de communication utilisé pour transférer des documents hypertextes sur le Web. C'est le fondement des échanges de données sur le web, et il est utilisé pour toutes les opérations de navigation et d'accès aux services web.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "JSON (JavaScript Object Notation)",
+		"definition": "Format de fichier et de données léger et lisible par les humains, utilisé principalement pour l'échange de données entre un serveur et une application web. JSON est souvent préféré à XML pour sa simplicité et sa facilité d'utilisation.",
+		"theme": "Format de données"
+	},
+	{
+		"title": "OPTIONS",
+		"definition": "Méthode HTTP utilisée pour décrire les options de communication pour la ressource cible. Elle est souvent utilisée dans la gestion des CORS (Cross-Origin Resource Sharing) pour déterminer les méthodes HTTP autorisées pour une ressource.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "PATCH",
+		"definition": "Méthode HTTP utilisée pour appliquer des modifications partielles à une ressource. Contrairement à PUT, qui remplace l'ensemble de la ressource, PATCH ne met à jour que certaines parties.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "POST",
+		"definition": "Méthode HTTP utilisée pour envoyer des données au serveur pour créer ou mettre à jour une ressource. Elle est souvent utilisée pour soumettre des formulaires ou télécharger des fichiers.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "PUT",
+		"definition": "Méthode HTTP utilisée pour créer une nouvelle ressource ou remplacer une ressource cible avec les données de la requête. Cette méthode est idempotente, ce qui signifie que plusieurs requêtes identiques auront le même effet.",
+		"theme": "HTTP"
+	},
+	{
+		"title": "REST (Representational State Transfer)",
+		"definition": "Style architectural pour concevoir des services web, basé sur des opérations stateless (sans état) et l'utilisation des verbes HTTP standard (GET, POST, PUT, DELETE). Les API RESTful suivent ces principes pour interagir avec les ressources web.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "RESTful",
+		"definition": "Qualificatif désignant une application ou un service web qui implémente les principes REST. Cela implique une utilisation cohérente des méthodes HTTP et une structuration claire des URI pour accéder aux ressources.",
+		"theme": "Architecture"
+	},
+	{
+		"title": "Ressources Web",
+		"definition": "Entités ou objets accessibles via le Web, identifiés par des URIs et manipulés à l'aide de protocoles comme HTTP. Ces ressources peuvent être des pages HTML, des images, des services API, etc.",
+		"theme": "Web"
+	},
+	{
+		"title": "SOAP (Simple Object Access Protocol)",
+		"definition": "Protocole pour l'échange d'informations structurées dans la mise en œuvre de services web, utilisant XML pour le format de message. SOAP est souvent utilisé pour des services web nécessitant un niveau de sécurité élevé et des transactions complexes.",
+		"theme": "Web"
+	},
+	{
+		"title": "TRACE",
+		"definition": "Méthode HTTP utilisée pour faire écho à ce que le serveur reçoit, principalement à des fins de test et de diagnostic. Elle peut être utilisée pour voir les changements ou les transformations apportées par les intermédiaires (comme les proxys).",
+		"theme": "HTTP"
+	},
+	{
+		"title": "URI (Uniform Resource Identifier)",
+		"definition": "Chaîne de caractères qui identifie de manière unique une ressource sur le Web. Un URI peut être une URL ou un URN.",
+		"theme": "Web"
+	},
+	{
+		"title": "URL (Uniform Resource Locator)",
+		"definition": "Sous-ensemble d'URI qui, en plus d'identifier une ressource, fournit les moyens de la localiser sur le réseau. Une URL contient des informations sur le protocole à utiliser (http, https), l'adresse de la ressource et son chemin.",
+		"theme": "Web"
+	},
+	{
+		"title": "XML (eXtensible Markup Language)",
+		"definition": "Langage de balisage flexible utilisé pour structurer, stocker et transporter des données. XML est extensible et permet de définir ses propres balises pour représenter les données.",
+		"theme": "Format de données"
+	},
+	{
+		"title": "API (Application Programming Interface)",
+		"definition": "Ensemble de définitions et de protocoles pour construire et intégrer des logiciels. Une API spécifie comment les composants logiciels doivent interagir et est utilisée pour permettre l'interaction entre différents systèmes logiciels.",
+		"theme": "API"
+	},
+	{
+		"title": "AJAX (Asynchronous JavaScript and XML)",
+		"definition": "Technique de développement web permettant de mettre à jour des parties d'une page web de manière asynchrone sans recharger la page entière. Utilise JavaScript et XML (ou JSON) pour les communications serveur.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "Bootstrap",
+		"definition": "Framework front-end open source pour le développement de sites web et d'applications. Fournit des outils CSS et JavaScript pour des interfaces responsives et modernes.",
+		"theme": "Framework"
+	},
+	{
+		"title": "CSS (Cascading Style Sheets)",
+		"definition": "Langage de feuille de style utilisé pour décrire la présentation d'un document écrit en HTML ou XML. Permet de séparer la structure du contenu et le style visuel.",
+		"theme": "CSS"
+	},
+	{
+		"title": "DOM (Document Object Model)",
+		"definition": "Interface de programmation pour les documents HTML et XML. Représente la structure du document sous forme d'un arbre hiérarchique, permettant aux langages de programmation comme JavaScript d'accéder et de manipuler le contenu, la structure et le style des documents.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "Framework",
+		"definition": "Ensemble d'outils, de bibliothèques et de bonnes pratiques destiné à simplifier le développement de logiciels en fournissant une base structurée. Les frameworks peuvent être utilisés pour le développement front-end (ex. React, Angular) ou back-end (ex. Laravel, Django).",
+		"theme": "Framework"
+	},
+	{
+		"title": "Node.js",
+		"definition": "Environnement d'exécution JavaScript côté serveur basé sur le moteur V8 de Google Chrome. Permet de créer des applications réseau rapides et évolutives en utilisant JavaScript.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "NPM (Node Package Manager)",
+		"definition": "Gestionnaire de paquets pour le runtime Node.js. Permet d'installer, de gérer et de partager des bibliothèques et des outils JavaScript.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "React",
+		"definition": "Bibliothèque JavaScript pour la construction d'interfaces utilisateur, développée par Facebook. Utilise une approche basée sur les composants et un DOM virtuel pour optimiser les performances de mise à jour de l'interface.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "TypeScript",
+		"definition": "Superset de JavaScript qui ajoute des types statiques et des fonctionnalités orientées objet au langage. Développé par Microsoft, il se compile en JavaScript pour une utilisation dans des applications web.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "Vue.js",
+		"definition": "Framework JavaScript progressif pour la construction d'interfaces utilisateur. Il se concentre sur la couche de vue et est conçu pour être adopté de manière incrémentielle, offrant une approche flexible pour la gestion des composants et de l'état.",
+		"theme": "JavaScript"
+	},
+	{
+		"title": "Laravel",
+		"definition": "Framework PHP pour le développement d'applications web, connu pour son élégance et sa simplicité. Il fournit des outils et des fonctionnalités pour les opérations CRUD, l'authentification, les migrations de base de données et plus encore.",
+		"theme": "PHP"
+	},
+	{
+		"title": "PHP (Hypertext Preprocessor)",
+		"definition": "Langage de script côté serveur largement utilisé pour le développement web. PHP permet de générer dynamiquement du contenu HTML et de gérer des opérations côté serveur comme la gestion des bases de données et l'authentification des utilisateurs.",
+		"theme": "PHP"
+	},
+	{
+		"title": "Java",
+		"definition": "Langage de programmation orienté objet, concurrent, basé sur la plateforme Java, qui est utilisé pour développer des applications robustes, sécurisées et portables sur différentes plateformes. Java est largement utilisé pour le développement côté serveur, les applications mobiles (Android), et les systèmes embarqués.",
+		"theme": "Java"
+	},
+	{
+		"title": "JavaScript",
+		"definition": "Langage de programmation de haut niveau, orienté objet et interprété, principalement utilisé pour le développement web côté client. JavaScript permet de créer des pages web interactives et dynamiques et est également utilisé côté serveur avec des environnements comme Node.js.",
+		"theme": "JavaScript"
+	}
+]
