@@ -8,60 +8,65 @@
       <img src="/src/assets/logos/logo_2.png" alt="Logo" class="logo hidden" />
     </div>
     <form @submit.prevent="handleSubmit" id="contact_form" novalidate>
-      <div class="form-group" :class="{ invalid: !isNameValid }">
-        <label for="name">Nom</label>
-        <input
-          v-model="name"
-          type="text"
-          placeholder="Je m'appelle ..."
-          name="name"
-          id="name_input"
-          pattern="[A-Za-zÀ-ÖØ-öø-ÿ-' ]+"
-          title="Nom invalide. Utilisez uniquement des lettres, des tirets ou des espaces."
-          required
-        />
-        <span class="tooltip" v-if="!isNameValid"
-          >Nom invalide. Utilisez uniquement des lettres, des tirets ou des espaces.</span
-        >
+      <div class="group-container">
+        <div class="form-group" :class="{ invalid: !isNameValid }">
+          <label for="name">Nom</label>
+          <input
+            v-model="name"
+            type="text"
+            placeholder="Je m'appelle ..."
+            name="name"
+            id="name_input"
+            pattern="[A-Za-zÀ-ÖØ-öø-ÿ-' ]+"
+            title="Nom invalide. Utilisez uniquement des lettres, des tirets ou des espaces."
+            required
+          />
+          <span class="tooltip" v-if="!isNameValid"
+            >Nom invalide. Utilisez uniquement des lettres, des tirets ou des espaces.</span
+          >
+        </div>
+        <div class="form-group" :class="{ invalid: !isEmailValid }">
+          <label for="email">Email</label>
+          <input
+            v-model="email"
+            type="email"
+            placeholder="Mon adresse e-mail est ..."
+            name="email"
+            id="email_input"
+            required
+          />
+          <span class="tooltip" v-if="!isEmailValid"
+            >Email invalide. Veuillez entrer une adresse email valide.</span
+          >
+        </div>
       </div>
-      <div class="form-group" :class="{ invalid: !isEmailValid }">
-        <label for="email">Email</label>
-        <input
-          v-model="email"
-          type="email"
-          placeholder="Mon adresse e-mail est ..."
-          name="email"
-          id="email_input"
-          required
-        />
-        <span class="tooltip" v-if="!isEmailValid"
-          >Email invalide. Veuillez entrer une adresse email valide.</span
-        >
-      </div>
-      <div class="form-group" :class="{ invalid: !isTelephoneValid }">
-        <label for="telephone">Téléphone</label>
-        <input
-          v-model="telephone"
-          type="text"
-          placeholder="Mon numéro est ..."
-          name="telephone"
-          id="telephone_input"
-          pattern="[0-9]{10}"
-          title="Numéro de téléphone invalide. Veuillez entrer 10 chiffres."
-          required
-        />
-        <span class="tooltip" v-if="!isTelephoneValid"
-          >Numéro de téléphone invalide. Veuillez entrer 10 chiffres.</span
-        >
-      </div>
-      <div class="form-group">
-        <label for="subject">Sujet</label>
-        <select v-model="subject" name="subject" id="subject_input" required>
-          <option disabled hidden value="">J'écris à propos de :</option>
-          <option>J'aimerais démarrer un projet.</option>
-          <option>J'aimerais poser une question.</option>
-          <option>J'aimerais faire une proposition.</option>
-        </select>
+
+      <div class="group-container">
+        <div class="form-group" :class="{ invalid: !isTelephoneValid }">
+          <label for="telephone">Téléphone</label>
+          <input
+            v-model="telephone"
+            type="text"
+            placeholder="Mon numéro est ..."
+            name="telephone"
+            id="telephone_input"
+            pattern="[0-9]{10}"
+            title="Numéro de téléphone invalide. Veuillez entrer 10 chiffres."
+            required
+          />
+          <span class="tooltip" v-if="!isTelephoneValid"
+            >Numéro de téléphone invalide. Veuillez entrer 10 chiffres.</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <select v-model="subject" name="subject" id="subject_input" required>
+            <option disabled hidden value="">J'écris à propos de :</option>
+            <option>J'aimerais démarrer un projet.</option>
+            <option>J'aimerais poser une question.</option>
+            <option>J'aimerais faire une proposition.</option>
+          </select>
+        </div>
       </div>
       <div class="form-group">
         <label for="message">Message</label>
@@ -133,9 +138,6 @@ const handleSubmit = async () => {
   } else {
     isTelephoneValid.value = true
   }
-
-  // Autres validations selon vos besoins
-  // ...
 
   // Envoyer le formulaire si tout est valide
   const formData = {
@@ -270,6 +272,8 @@ textarea {
 option {
   color: #222;
   text-shadow: none;
+  background: #fdc17b;
+  border: none;
 }
 
 select {
@@ -387,6 +391,16 @@ textarea::placeholder {
 @media (min-width: 768px) {
   #contact-container {
     margin: 1rem auto;
+    padding-top: 6vh;
+  }
+
+  .group-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .group-container .form-group {
+    width: 49%;
   }
 
   #contact-header img.hidden {

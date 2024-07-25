@@ -84,6 +84,7 @@ const viewCV = () => {
 
 <style scoped>
 #about {
+  max-width: 1400px;
   width: 100%; /* Largeur maximale par défaut pour les appareils mobiles */
   margin: auto;
   padding: 3rem 1rem;
@@ -93,7 +94,7 @@ const viewCV = () => {
   box-shadow: 0 0 20px rgba(253, 193, 123, 0.3);
   border-radius: 15px;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.3rem;
   transition: transform 0.3s ease;
 }
 
@@ -228,10 +229,10 @@ const viewCV = () => {
 }
 
 .cv-download button {
-  width: 100%; /* Largeur maximale par défaut pour les appareils mobiles */
+  width: 30%; /* Largeur maximale par défaut pour les appareils mobiles */
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #333;
   background-color: #fdc17b;
   border: none;
@@ -262,15 +263,17 @@ const viewCV = () => {
 
   .about-content {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
-  .about-profile {
-    width: 45%;
-  }
-
+  .about-profile,
   .about-contact {
-    width: 45%;
+    width: 40%;
+  }
+
+  #about-descrip {
+    max-width: 80%;
+    margin: 2rem auto 0;
   }
 }
 </style>

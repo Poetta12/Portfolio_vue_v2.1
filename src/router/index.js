@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LandingLayout from '../layouts/landingLayout.vue'
 import DefaultLayout from '../layouts/defaultLayout.vue'
 import HomeView from '../views/HomeView.vue'
 import PoettaView from '../views/PoettaView.vue'
@@ -10,17 +9,6 @@ import PortfolioView from '../views/PortfolioView.vue'
 const routes = [
   {
     path: '/',
-    component: LandingLayout,
-    children: [
-      {
-        path: '',
-        name: 'Landing',
-        component: LandingPage
-      }
-    ]
-  },
-  {
-    path: '/home',
     component: DefaultLayout,
     children: [
       {

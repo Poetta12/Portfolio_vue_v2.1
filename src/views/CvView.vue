@@ -1,3 +1,19 @@
+<script setup>
+//import jsLogo from '@/assets/logos/js.png' // Utilisation d'un chemin d'importation absolu avec Vite
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'PoettaTech - CV',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez le CV de Pedro Costa, Développeur Full Stack Jr avec expertise en Java, JavaScript, PHP et frameworks modernes. Actuellement en formation avancée, il cherche une alternance de 12 mois pour renforcer ses compétences techniques. Passionné par le développement web, il est dynamique, engagé et aime collaborer avec divers interlocuteurs. Explorez ses expériences et projets sur PoettaTech.'
+    }
+  ]
+})
+</script>
+
 <template>
   <div class="container">
     <div class="left-side">
@@ -62,13 +78,13 @@
             >
           </li>
           <li class="tooltip">
-            <img src="/src/assets/logos/php.png" alt="logo PHP" /><span class="tooltiptext"
-              >PHP</span
+            <img src="/src/assets/logos/logo.svg" alt="logo vue" /><span class="tooltiptext"
+              >Vue.js</span
             >
           </li>
           <li class="tooltip">
-            <img src="/src/assets/logos/logo.svg" alt="logo vue" /><span class="tooltiptext"
-              >Vue.js</span
+            <img src="/src/assets/logos/php.png" alt="logo PHP" /><span class="tooltiptext"
+              >PHP</span
             >
           </li>
           <li class="tooltip">
@@ -93,7 +109,7 @@
           </li>
           <li class="tooltip">
             <img src="/src/assets/logos/MySQL-logo.png" alt="logo sql" /><span class="tooltiptext"
-              >SQL</span
+              >MySQL</span
             >
           </li>
           <li class="tooltip">
@@ -241,22 +257,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-//import jsLogo from '@/assets/logos/js.png' // Utilisation d'un chemin d'importation absolu avec Vite
-import { useHead } from '@vueuse/head'
-
-useHead({
-  title: 'PoettaTech - CV',
-  meta: [
-    {
-      name: 'description',
-      content:
-        "Bienvenue sur PoettaTech, votre source d'informations sur la technologie et le développement web. Découvrez nos projets, notre portfolio et plus encore."
-    }
-  ]
-})
-</script>
 
 <style scoped>
 /* Assurez-vous d'inclure ce reset au début de votre fichier CSS */
@@ -512,6 +512,7 @@ section h3 {
     flex-direction: row;
     max-width: 1200px; /* Largeur maximale ajustée pour le contenu */
     border-radius: 10px;
+    padding-top: 5vh;
   }
 
   .left-side {

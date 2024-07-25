@@ -34,6 +34,11 @@ body {
   box-sizing: border-box;
 }
 
+#app {
+  width: 100vw;
+  height: 90vh;
+}
+
 .hidden {
   display: none;
 }
@@ -60,4 +65,8 @@ a,
   }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+  #app {
+    margin-top: 10vh !important;
+  }
+}

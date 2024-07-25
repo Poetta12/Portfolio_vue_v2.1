@@ -195,6 +195,13 @@ useHead({
 @media (min-width: 768px) {
   #portfolio {
     margin: 1rem auto;
+    padding-top: 4vh;
+  }
+
+  .portfolio-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
   }
 
   .portfolio-item {

@@ -7,28 +7,46 @@
     <div id="cat-eye">
       <CatComponent />
     </div>
-    <FooterComponent />
+    <FooterComponent v-if="showFooter" />
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, watch } from 'vue'
 import HeaderComponent from '../components/HeaderComponent.vue'
 import FooterComponent from '../components/FooterComponent.vue'
 import CatComponent from '../components/CatComponent.vue'
+import { useRoute } from 'vue-router'
 import '@/assets/css/main.css' // Assurez-vous d'importer le bon chemin
 import '@/assets/Icomoon/style.css'
+
+// Créer une référence réactive pour contrôler l'affichage du footer
+const showFooter = ref(true)
+
+// Utilisation de useRoute pour obtenir des informations sur la route actuelle
+const route = useRoute()
+
+// Mettre à jour showFooter en fonction du nom de la route
+const updateFooterVisibility = () => {
+  showFooter.value = route.name !== 'Home' // Remplacez 'Home' par le nom exact de la route pour la page d'accueil
+}
+
+// Appeler la fonction updateFooterVisibility lors du montage
+onMounted(updateFooterVisibility)
+
+// Écouter les changements de route pour mettre à jour showFooter
+watch(route, updateFooterVisibility)
 </script>
 
 <style scoped>
 main {
   max-width: none;
   margin: auto;
-  margin-top: 1rem;
 }
 
 header {
   line-height: 1.5;
-  max-height: 100vh;
+  max-height: 10vh;
 }
 
 .logo {
@@ -121,5 +139,8 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
+  main {
+    margin-top: 10vh;
+  }
 }
 </style>

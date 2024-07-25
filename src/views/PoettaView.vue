@@ -23,5 +23,9 @@ useHead({
 </script>
 
 <style scoped>
-/* Styles spécifiques à PoettaView.vue si nécessaire */
+@media (min-width: 768px) {
+  div {
+    padding-top: 4vh;
+  }
+}
 </style>

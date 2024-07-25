@@ -111,18 +111,18 @@ window.onclick = function (event) {
 .modal-content {
   background-color: #111;
   padding: 20px;
-  border: 1px solid #00ffff;
+  border: 1px solid rgba(253, 193, 123, 0.5);
   width: 80%;
   max-width: 600px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
   color: #fff;
   position: relative;
   top: 50%;
   left: 50%; /* Centrer horizontalement */
   transform: translate(-50%, -50%); /* Centrer verticalement et horizontalement */
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.3rem;
 }
 
 .close {
@@ -137,7 +137,7 @@ window.onclick = function (event) {
 
 .close:hover,
 .close:focus {
-  color: #00ffff;
+  color: rgba(253, 193, 123, 1);
 }
 
 /* Ajout de la classe .show */
@@ -156,7 +156,7 @@ window.onclick = function (event) {
   width: 100%;
   margin: auto;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.3rem;
 }
 
 #bloc1 article {
@@ -170,7 +170,7 @@ window.onclick = function (event) {
   padding: 15px;
   margin: 10px 0;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
   transition: transform 0.3s ease;
 }
 
