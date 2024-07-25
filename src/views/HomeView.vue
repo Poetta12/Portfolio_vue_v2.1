@@ -156,7 +156,7 @@ h2 {
   display: inline-block;
   width: 80%;
   font-size: 4vw;
-  letter-spacing: 1.5rem;
+  letter-spacing: 7vw;
   color: transparent !important;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #c9720e;
@@ -244,7 +244,7 @@ button:focus {
     top: 8vh;
     left: 5%;
     font-size: 4vw;
-    letter-spacing: 10rem;
+    letter-spacing: 8vw;
     text-align: center;
   }
   h2#first {
