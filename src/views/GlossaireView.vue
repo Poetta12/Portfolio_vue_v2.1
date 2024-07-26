@@ -81,7 +81,7 @@ const addTerm = async () => {
     </header>
 
     <!-- Formulaire d'ajout de termes -->
-    <section class="add-term-form">
+    <!-- <section class="add-term-form">
       <h2>Ajouter un terme</h2>
       <form @submit.prevent="addTerm">
         <input v-model="newTerm.title" placeholder="Titre" required />
@@ -89,7 +89,7 @@ const addTerm = async () => {
         <input v-model="newTerm.theme" placeholder="Thème" />
         <button type="submit">Ajouter</button>
       </form>
-    </section>
+    </section> -->
 
     <section class="terms">
       <transition-group name="fade" tag="div">
@@ -109,11 +109,20 @@ const addTerm = async () => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'orbitron', sans-serif;
+  letter-spacing: 0.3rem;
   background: #222;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: #fdc17b;
+}
+
+::placeholder,
+::-webkit-input-placeholder,
+select,
+option {
+  font-family: 'orbitron', sans-serif;
+  letter-spacing: 0.3rem;
 }
 
 /* Styles pour l'en-tête */
@@ -144,7 +153,7 @@ p {
   border: 1px solid #c9720e;
   background: #333;
   color: #fdc17b;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Styles pour les boutons de filtre alphabétique */
