@@ -19,7 +19,7 @@
           :key="index"
           :style="{ backgroundColor: image.color }"
         >
-          <img :src="image.src" :alt="image.alt" />
+          <img :src="image.src" :alt="image.alt" loading="lazy" />
         </figure>
       </div>
       <h2>PORTFOLIO</h2>
@@ -74,8 +74,6 @@ const changeSlide = (direction) => {
     }
   }
 
-  slideRight.value.style.transition = 'transform 0.5s ease-in-out'
-  slideLeft.value.style.transition = 'transform 0.5s ease-in-out'
   slideRight.value.style.transform = `translateY(-${activeSlideIndex.value * sliderHeight}px)`
   slideLeft.value.style.transform = `translateY(${activeSlideIndex.value * sliderHeight}px)`
 }
@@ -107,7 +105,6 @@ onUnmounted(() => {
   box-sizing: border-box !important;
   margin: 0 !important;
   padding: 0 !important;
-  max-width: none !important;
 }
 
 img {
