@@ -24,10 +24,10 @@
     </div>
 
     <div class="action-buttons">
-      <button class="down-button" @click="changeSlide('down')">
+      <button class="down-button" @click="changeSlide('down')" aria-label="down">
         <i class="icon-arrow-bold-down"></i>
       </button>
-      <button class="up-button" @click="changeSlide('up')">
+      <button class="up-button" @click="changeSlide('up')" aria-label="up">
         <i class="icon-arrow-bold-up"></i>
       </button>
     </div>
