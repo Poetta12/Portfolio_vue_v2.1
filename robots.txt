@@ -1,20 +1,11 @@
-# Global rules for all user-agents
 User-agent: *
 Disallow: /private/
-Disallow: /tmp/
-Disallow: /test/
-Disallow: /secret.html
 Allow: /public/
 
-# Sitemap location
 Sitemap: https://www.poettatech.fr/sitemap.xml
 
-# Specific rules for individual bots
-
-# Block BadBot
 User-agent: BadBot
 Disallow: /
 
-# Allow Googlebot
 User-agent: Googlebot
 Allow: /
