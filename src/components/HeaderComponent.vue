@@ -116,6 +116,7 @@ header {
   height: auto;
   max-width: 100%;
   transition: transform 0.3s ease;
+  /*filter: drop-shadow(0px 0px 10px rgba(253, 193, 123, .7));*/
 }
 
 .logo img:hover {
