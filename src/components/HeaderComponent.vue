@@ -36,10 +36,10 @@ const goToHome = () => {
         <img src="/src/assets/logos/logo_2.webp" alt="Logo" />
       </div>
       <ul id="header-reseaux">
-        <li><a href="https://www.poettatech.fr" class="icon-profile"></a></li>
-        <li><a href="https://x.com/poettawds" class="icon-x"></a></li>
-        <li><a href="https://github.com/Poetta12" class="icon-github"></a></li>
-        <li><a href="https://www.linkedin.com/in/pedronfcosta/" class="icon-linkedin"></a></li>
+        <li><a href="https://www.poettatech.fr" class="icon-profile" aria-label="Site Web PoettaTech"></a></li>
+        <li><a href="https://x.com/poettawds" class="icon-x" aria-label="Suivez-moi sur X"></a></li>
+        <li><a href="https://github.com/Poetta12" class="icon-github" aria-label="Mon profil GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/pedronfcosta/" class="icon-linkedin" aria-label="Mon profil LinkedIn"></a></li>
       </ul>
       <!-- Burger Button -->
       <div @click="toggleMenu" :class="{ open: menuOpen }" class="menu-button hide-desktop">
