@@ -43,6 +43,9 @@ import { ref, onMounted, onUnmounted } from 'vue'
 // Données pour les images
 const leftSlides = [
   { color: '#222', title: 'POETTATECH', description: 'Mon PortFolio' },
+  { color: '#c9720e', title: 'MOUSE FOLLOWER', description: 'Follow the mouse, mouse, mouse' },
+  { color: '#c9720e', title: 'LOGIN ANIME', description: 'La joie de la connexion' },
+  { color: '#003cff', title: 'SLIDER PORTUGAL', description: 'Un carousel nature' },
   { color: '#3e9ce3', title: 'SUMIKA', description: 'Polymer Compounds' },
   { color: '#b6b7f2', title: 'HANDIPHIL', description: 'Fonds de dotation' },
   { color: '#3d2d57', title: 'LA CRAVATE SOLIDAIRE', description: 'Réseau d’associations,' }
@@ -66,6 +69,9 @@ const desktopImages = [
   },
   { src: 'HandiPhil.webp', alt: 'HandiPhil', color: '#b6b7f2' },
   { src: 'Sumika.webp', alt: 'Sumika', color: '#3e9ce3' },
+  { src: '/pt_slider.png', alt: '3.webp', color: '#003cff' },
+  { src: '/animated_login.png', alt: '3.webp', color: '#c9720e' },
+  { src: '/mouse_follower.png', alt: '3.webp', color: '#c9720e' },
   { src: 'PoettaTech_WSDS.webp', alt: 'PoettaTech_WSDS', color: '#222' }
 ]
 

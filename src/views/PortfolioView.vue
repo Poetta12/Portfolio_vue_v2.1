@@ -6,17 +6,17 @@ import Modal from '../components/ModalComponent.vue'
 const projects = ref([
   {
     title: 'HandiPhil',
-    imageUrl: '/HandiPhil.webp',
+    imageUrl: '/img/HandiPhil.webp',
     description: `<p>En tant que développeur web, j'ai eu l'opportunité enrichissante de travailler sur mon tout premier projet client, Handiphil, pour le Fonds de Dotation Handiphil. Ce projet revêt une importance particulière car il soutient activement l'inclusion des personnes handicapées mentales, cognitives ou psychiques en Île-de-France.</p>
 
     <p>Mon rôle central dans ce projet comprenait la conception et le développement d'un site web dynamique utilisant WordPress. J'ai été chargé de personnaliser le thème WordPress avec du code JavaScript, CSS, HTML et PHP pour répondre aux besoins spécifiques de l'association et assurer une expérience utilisateur optimale.</p>
-    
+
     <p>En collaborant étroitement avec l'équipe du Fonds de Dotation Handiphil, j'ai pu intégrer des fonctionnalités essentielles telles que la gestion de contenu flexible, des formulaires interactifs et une navigation intuitive. J'ai également mis en œuvre des améliorations de performance et d'accessibilité conformes aux normes WCAG, garantissant ainsi une accessibilité maximale pour tous les utilisateurs.</p>`,
     link: 'https://www.handiphil.fr/'
   },
   {
     title: 'La Cravate Solidaire',
-    imageUrl: '/La_Cravate_Solidaire.webp',
+    imageUrl: '/img/La_Cravate_Solidaire.webp',
     description: `<p>Pour mon deuxième projet client, j'ai collaboré avec La Cravate Solidaire (https://lacravatesolidaire.org/), une association œuvrant pour l'emploi des personnes en difficulté.</p>
 
     <p>J'ai développé des compétences approfondies en Vue.js pour créer des composants interactifs et dynamiques, améliorant ainsi l'expérience utilisateur du site. En parallèle, j'ai assuré un design responsive en utilisant CSS, SASS et Bootstrap, garantissant une navigation optimale sur tous les appareils.</p>
@@ -28,25 +28,55 @@ const projects = ref([
   },
   {
     title: 'Sumika',
-    imageUrl: '/Sumika.webp',
+    imageUrl: '/img/Sumika.webp',
     description: `<p>Pour mon troisième projet avec Sumika Europe (https://www.sumikaeurope.com), j'ai dirigé le développement d'un site web dynamique en utilisant WordPress, tout en intégrant des animations personnalisées avec CSS et JavaScript conformément au cahier des charges.</p>
 
     <p>J'ai également configuré un module avancé avec Advanced Custom Fields (ACF) en PHP et HTML, offrant au client un tableau de bord sécurisé pour gérer efficacement le contenu du site.</p>
-    
+
     <p>J'ai optimisé le site pour assurer des performances optimales, avec une vitesse de chargement rapide et une expérience utilisateur fluide.</p>
-    
+
     <p>Ce projet a consolidé ma capacité à répondre aux besoins spécifiques des clients tout en maintenant une haute qualité de développement et une gestion de projet efficace, respectant les délais et les attentes. Mon travail a significativement amélioré la présence en ligne de Sumika Europe et a renforcé son image dans le secteur des matériaux de haute performance.</p>`,
     link: 'https://www.sumikaeurope.com/'
   },
   {
+    title: 'Animated Login',
+    imageUrl: '/animated_login.png',
+    description: `<p>Pour le projet "Animated Login", j'ai développé une interface de connexion avec des animations CSS et JavaScript fluides. L'objectif était de rendre l'expérience utilisateur plus engageante grâce à des transitions animées et des effets interactifs lors de la connexion.</p>
+  
+  <p>J'ai utilisé CSS pour les animations et JavaScript pour gérer les interactions dynamiques, tout en veillant à l'optimisation des performances.</p>
+  
+  <p>Ce projet a mis en avant mes compétences en design d'interfaces intuitives et dynamiques, tout en assurant la sécurité et la fluidité des interactions.</p>`,
+    link: 'https://animated-login-page-omega-eight.vercel.app/#'
+  },
+  {
+    title: 'PT Slider',
+    imageUrl: '/pt_slider.png',
+    description: `<p>Le projet "PT Slider" consistait à développer un slider personnalisé pour présenter du contenu de manière fluide et dynamique.</p>
+    
+    <p>J'ai intégré des animations CSS complexes pour les transitions entre les différentes diapositives, tout en utilisant JavaScript pour la gestion des contrôles et des interactions.</p>
+    
+    <p>L'optimisation des performances était au cœur de ce projet, garantissant une expérience utilisateur rapide et sans accroc. Ce travail a permis de renforcer l'attractivité visuelle du site de Sumika Europe.</p>`,
+    link: 'https://pt-slide.vercel.app/'
+  },
+  {
+    title: 'Mouse Follower',
+    imageUrl: '/mouse_follower.png',
+    description: `<p>Le projet "Mouse Follower" était centré sur la création d'une expérience utilisateur immersive en utilisant JavaScript et CSS pour synchroniser des cartes visuelles avec le mouvement de la souris.</p>
+    
+    <p>Le défi consistait à rendre l'interaction fluide et réactive tout en maintenant des performances optimales, même avec des animations complexes. Ce projet illustre ma capacité à créer des interfaces dynamiques qui captent l'attention de l'utilisateur.</p>
+    
+    <p>Grâce à cette technique, le projet a renforcé l'image innovante de Sumika Europe en ligne, en proposant une interface à la fois moderne et captivante.</p>`,
+    link: 'https://cards-mouse-follow.vercel.app/'
+  },
+  {
     title: 'PoettaTech WSDS',
-    imageUrl: '/PoettaTech_WSDS.webp',
+    imageUrl: '/img/PoettaTech_WSDS.webp',
     description: `<p>Poettatch.fr est mon portfolio personnel développé avec Vue.js, mettant en avant mes compétences en développement web. Le site présente une interface interactive avec un design responsive optimisé pour tous les appareils.</p>
-    
+
     <p>J'ai intégré des animations fluides et des fonctionnalités avancées en JavaScript pour enrichir l'expérience utilisateur. Les sections incluent mes informations personnelles, mes liens professionnels (LinkedIn, GitHub), mon parcours éducatif, mes compétences techniques (HTML, CSS, JavaScript, PHP, Vue.js, etc.), ainsi que mes expériences professionnelles précédentes.</p>
-    
+
     <p>Une attention particulière a été portée à l'esthétique et à la fonctionnalité, avec l'utilisation de CSS personnalisé pour styliser chaque élément de manière harmonieuse.</p>
-    
+
     <p>Poettatch.fr représente non seulement mon expertise technique mais aussi ma capacité à concevoir des interfaces utilisateur modernes et ergonomiques, essentielles pour répondre aux attentes actuelles du marché du développement web.</p>`,
     link: 'https://www.poettatech.fr/'
   }

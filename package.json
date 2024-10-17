@@ -15,6 +15,7 @@
     "@vueuse/head": "^2.0.0",
     "axios": "^1.7.5",
     "body-parser": "^1.20.2",
+    "bodymovin": "^4.13.0",
     "bootstrap": "^5.3.3",
     "bootstrap-vue-next": "^0.24.23",
     "express": "^4.19.2",

@@ -47,10 +47,13 @@ const leftSlides = [
 ]
 
 const images = [
-  { src: '/public/La_Cravate_Solidaire.webp', alt: '1.webp', color: '#778fa4' },
-  { src: '/public/HandiPhil.webp', alt: '2.webp', color: '#b6b7f2' },
-  { src: '/public/Sumika.webp', alt: '3.webp', color: '#3d2d57' },
-  { src: '/public/PoettaTech_WSDS.webp', alt: '4.webp', color: '#222' }
+  { src: '/La_Cravate_Solidaire.webp', alt: '1.webp', color: '#778fa4' },
+  { src: '/HandiPhil.webp', alt: '2.webp', color: '#b6b7f2' },
+  { src: '/Sumika.webp', alt: '3.webp', color: '#3d2d57' },
+  { src: '/pt_slider.png', alt: '3.webp', color: '#3d2d57' },
+  { src: '/animated_login.png', alt: '3.webp', color: '#3d2d57' },
+  { src: '/mouse_follower.png', alt: '3.webp', color: '#3d2d57' },
+  { src: '/PoettaTech_WSDS.webp', alt: '4.webp', color: '#222' }
 ]
 
 const slideLeft = ref(null)

@@ -11,7 +11,7 @@ const downloadCV = () => {
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
   document.body.appendChild(link)
   link.click()
-  document.body.removeChild(link) 
+  document.body.removeChild(link)
 }
 
 const viewCV = () => {
