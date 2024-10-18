@@ -55,7 +55,8 @@ const projects = ref([
     
     <p>J'ai intégré des animations CSS complexes pour les transitions entre les différentes diapositives, tout en utilisant JavaScript pour la gestion des contrôles et des interactions.</p>
     
-    <p>L'optimisation des performances était au cœur de ce projet, garantissant une expérience utilisateur rapide et sans accroc. Ce travail a permis de renforcer l'attractivité visuelle du site de Sumika Europe.</p>`,
+    <p>L'optimisation des performances était au cœur de ce projet, garantissant une expérience utilisateur rapide et sans accroc. Ce travail a permis d'améliorer l'attractivité visuelle et l'interactivité des cartes synchronisées avec le mouvement de la souris.</p>
+`,
     link: 'https://pt-slide.vercel.app/'
   },
   {
@@ -64,8 +65,8 @@ const projects = ref([
     description: `<p>Le projet "Mouse Follower" était centré sur la création d'une expérience utilisateur immersive en utilisant JavaScript et CSS pour synchroniser des cartes visuelles avec le mouvement de la souris.</p>
     
     <p>Le défi consistait à rendre l'interaction fluide et réactive tout en maintenant des performances optimales, même avec des animations complexes. Ce projet illustre ma capacité à créer des interfaces dynamiques qui captent l'attention de l'utilisateur.</p>
-    
-    <p>Grâce à cette technique, le projet a renforcé l'image innovante de Sumika Europe en ligne, en proposant une interface à la fois moderne et captivante.</p>`,
+
+    <p>Ce projet met en avant l'importance d'allier esthétique et fonctionnalité pour offrir une expérience engageante et intuitive aux utilisateurs.</p>`,
     link: 'https://cards-mouse-follow.vercel.app/'
   },
   {
