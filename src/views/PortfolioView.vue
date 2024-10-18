@@ -54,9 +54,8 @@ const projects = ref([
     description: `<p>Le projet "PT Slider" consistait à développer un slider personnalisé pour présenter du contenu de manière fluide et dynamique.</p>
     
     <p>J'ai intégré des animations CSS complexes pour les transitions entre les différentes diapositives, tout en utilisant JavaScript pour la gestion des contrôles et des interactions.</p>
-    
-    <p>L'optimisation des performances était au cœur de ce projet, garantissant une expérience utilisateur rapide et sans accroc. Ce travail a permis d'améliorer l'attractivité visuelle et l'interactivité des cartes synchronisées avec le mouvement de la souris.</p>
-`,
+        
+    <p>L'optimisation des performances était au cœur de ce projet, garantissant une expérience utilisateur rapide et sans accroc. Ce projet met en avant ma capacité à créer des composants visuellement attrayants et efficaces.</p>`,
     link: 'https://pt-slide.vercel.app/'
   },
   {
