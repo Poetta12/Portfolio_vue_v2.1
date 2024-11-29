@@ -8,7 +8,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Découvrez le CV de Pedro Costa, Développeur Full Stack Jr avec expertise en Java, JavaScript, PHP et frameworks modernes. Actuellement en formation avancée, il cherche une alternance de 12 mois pour renforcer ses compétences techniques. Passionné par le développement web, il est dynamique, engagé et aime collaborer avec divers interlocuteurs. Explorez ses expériences et projets sur PoettaTech.'
+        'Découvrez le CV de Pedro Costa, Développeur Full Stack avec expertise en Java, JavaScript, PHP et frameworks modernes. Actuellement en formation avancée, il cherche une alternance de 12 mois pour renforcer ses compétences techniques. Passionné par le développement web, il est dynamique, engagé et aime collaborer avec divers interlocuteurs. Explorez ses expériences et projets sur PoettaTech.'
     }
   ]
 })
@@ -159,7 +159,7 @@ useHead({
     <div class="right-side">
       <header>
         <h1>Pedro Costa</h1>
-        <h2>Développeur Full Stack Jr</h2>
+        <h2>Développeur Full Stack</h2>
       </header>
 
       <section class="profile">
@@ -283,7 +283,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.25rem;
+  /*letter-spacing: 0.25rem;*/
 }
 
 .left-side,
