@@ -226,7 +226,7 @@ useHead({
   transition: transform 0.5s ease;
   width: 100%;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
 }
 
 #contact-container:hover {
@@ -279,7 +279,7 @@ option {
 select {
   color: rgba(255, 255, 255, 0.5);
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
   text-shadow: 1px 1px 1px #333;
 }
 
@@ -294,7 +294,7 @@ textarea::placeholder {
   text-shadow: 1px 1px 2px #000;
   opacity: 0.5; /* Firefox */
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
 }
 
 #form_button {

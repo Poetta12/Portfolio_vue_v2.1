@@ -110,7 +110,7 @@ const addTerm = async () => {
   margin: 0 auto;
   padding: 20px;
   font-family: 'orbitron', sans-serif;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0;
   background: #222;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -122,7 +122,7 @@ const addTerm = async () => {
 select,
 option {
   font-family: 'orbitron', sans-serif;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0;
 }
 
 /* Styles pour l'en-tête */

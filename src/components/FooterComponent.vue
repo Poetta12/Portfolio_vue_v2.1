@@ -116,7 +116,7 @@ footer {
   padding: 1rem; /* Réduit le padding pour les petits écrans */
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0;
   box-shadow: 0 0 20px rgba(253, 193, 123, 0.2);
   padding-bottom: 7rem;
 }

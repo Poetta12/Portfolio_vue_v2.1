@@ -42,7 +42,7 @@ document.body.classList.add('modal-open')
   overflow-y: auto;
   z-index: 9999;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
 }
 .modal-content {
   background: #222;

@@ -122,7 +122,7 @@ window.onclick = function (event) {
   left: 50%; /* Centrer horizontalement */
   transform: translate(-50%, -50%); /* Centrer verticalement et horizontalement */
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0;
 }
 
 .close {
@@ -156,7 +156,7 @@ window.onclick = function (event) {
   width: 100%;
   margin: auto;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0;
 }
 
 #bloc1 article {

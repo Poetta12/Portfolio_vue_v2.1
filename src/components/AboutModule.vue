@@ -94,7 +94,7 @@ const viewCV = () => {
   box-shadow: 0 0 20px rgba(253, 193, 123, 0.3);
   border-radius: 15px;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0;
   transition: transform 0.3s ease;
 }
 
