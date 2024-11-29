@@ -307,7 +307,7 @@ body {
 .left-side ul {
   list-style: none;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
 }
 
 .left-side ul li {
@@ -349,7 +349,7 @@ body {
 }
 .links ul li a {
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
 }
 
 .links ul li:before,
